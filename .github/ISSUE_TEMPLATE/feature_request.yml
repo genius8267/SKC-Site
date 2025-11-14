@@ -1,0 +1,51 @@
+name: Feature Request
+description: Suggest an idea for Intune Labs projects.
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting improvements.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Quick overview of the proposal.
+      placeholder: Add Slack notification to release workflow
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this important?
+      placeholder: Improves release visibility...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Outline your approach; link docs/ADRs if available.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+  - type: dropdown
+    id: repo
+    attributes:
+      label: Repository category
+      options:
+        - service-*
+        - sdk-*
+        - lib-*
+        - research-*
+        - infra-*
+        - docs-*
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context

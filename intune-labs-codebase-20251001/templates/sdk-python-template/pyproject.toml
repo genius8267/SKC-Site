@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sdk-python-template"
+version = "0.1.0"
+description = "Python SDK template for Intune Labs APIs"
+readme = "README.md"
+authors = [{name = "Intune Labs", email = "sdk@intunelabs.example"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.11"
+keywords = ["intune", "sdk", "template"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: Apache Software License"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "pytest-cov>=4.1",
+  "ruff>=0.4.2",
+  "mypy>=1.9"
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --cov=sdk_package"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["sdk_package"]

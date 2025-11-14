@@ -1,0 +1,41 @@
+name: Reusable Security
+on:
+  workflow_call:
+    secrets:
+      GH_TOKEN:
+        required: false
+jobs:
+  security_suite:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependabot audit (npm/pip/go)
+        run: |
+          if [ -f package-lock.json ]; then
+            npm audit --audit-level=high || true
+          elif [ -f poetry.lock ]; then
+            pip install poetry && poetry export -f requirements.txt --without-hashes | pip-audit -r - || true
+          else
+            echo "No supported lockfile found for audit"
+          fi
+      - name: TruffleHog secret scan
+        uses: trufflesecurity/trufflehog@v3
+        with:
+          scan: git
+          extra_args: "--since-commit HEAD~100"
+      - name: OpenSSF Scorecard (security focus)
+        uses: ossf/scorecard-action@v2
+        with:
+          results_file: results.sarif
+          checks: |-
+            Binary-Artifacts
+            Branch-Protection
+            Dangerous-Workflow
+            Token-Permissions
+      - name: Upload SARIF
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: results.sarif

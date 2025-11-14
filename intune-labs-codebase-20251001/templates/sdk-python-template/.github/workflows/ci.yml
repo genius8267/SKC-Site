@@ -1,0 +1,15 @@
+name: CI
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - main
+jobs:
+  call-org-ci:
+    # Use a strategy matrix if additional runtimes are needed.
+    uses: your-org/.github/.github/workflows/reusable-ci.yml@main
+    with:
+      language: python
+    secrets: inherit

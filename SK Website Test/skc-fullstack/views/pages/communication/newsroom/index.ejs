@@ -1,0 +1,30 @@
+<section class="section">
+  <div class="section__container">
+    <div class="section-heading">
+      <h1 class="section-heading__title">Newsroom</h1>
+      <p class="section-heading__subtitle">Latest updates from SKC</p>
+    </div>
+
+    <div style="display: flex; gap: var(--space-4); margin-bottom: var(--space-8); flex-wrap: wrap;">
+      <a href="/eng/communication/newsroom" class="btn btn--primary">All News</a>
+      <a href="/eng/communication/newsroom/battery" class="btn btn--ghost">Battery</a>
+      <a href="/eng/communication/newsroom/semiconductor" class="btn btn--ghost">Semiconductor</a>
+      <a href="/eng/communication/newsroom/eco-friendly" class="btn btn--ghost">Eco-friendly</a>
+      <a href="/eng/communication/newsroom/esg" class="btn btn--ghost">ESG</a>
+    </div>
+
+    <div class="communication__news">
+      <% articles.forEach(article => { %>
+        <a href="/eng/communication/pr/news/<%= article.id %>" class="news-card">
+          <div class="news-card__title"><%= article.title %></div>
+          <div class="news-card__date"><%= article.date %></div>
+          <% if (article.excerpt) { %>
+            <p style="margin-top: var(--space-2); color: var(--color-text-secondary); font-size: var(--font-size-sm);">
+              <%= article.excerpt %>
+            </p>
+          <% } %>
+        </a>
+      <% }); %>
+    </div>
+  </div>
+</section>

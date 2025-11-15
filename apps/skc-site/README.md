@@ -162,6 +162,7 @@ We use the Shadcn CLI (via MCP) as the component workbench so new UI building bl
 
 - Replace the component slugs above with whichever entries you discovered while running the `view` command.
 - Imported files should stay under `src/components/ui` so they can be composed inside the existing `Hero`, `StatsRibbon`, and `ProductsSection` sections without breaking locale-aware routing.
+- `src/components/ui` already contains SKC-flavored wrappers (`SkcHeroPanel`, `SkcStatsGrid`, `SkcProductShowcase`, `SkcNewsList`) that were modeled after the ElevenLabs registry blueprints and the static “SK Website Test” prototype—reuse these when assembling new pages.
 - If MCP is not available, you can still inspect the ElevenLabs blueprints manually with `pnpm dlx shadcn@latest view @elevenlabs-ui`.
 
 After pulling a component, map its tokens to the CSS custom properties defined above (e.g., set accent and surface colors to `var(--skc-red)` / `var(--glass)` and use the spacing scales from the SK Website Test docs). This keeps parity between the static HTML prototype and the dynamic Next.js experience.

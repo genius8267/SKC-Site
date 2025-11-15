@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-<%= page %>">
+  <!-- Skip Link -->
+  <a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+  <!-- Header -->
+  <%- include('../layouts/partials/header') %>
+
+  <!-- Page Navigation (Side dots) -->
+  <% if (page === 'home') { %>
+    <%- include('../layouts/partials/page-nav') %>
+  <% } %>
+
+  <!-- Main Content -->
+  <main id="main-content" class="main-content">
+    <%- body %>
+  </main>
+
+  <!-- Footer -->
+  <%- include('../layouts/partials/footer') %>
+
+  <!-- JavaScript -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

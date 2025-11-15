@@ -1,0 +1,46 @@
+{
+  "family": {
+    "title": "SKC Family Culture",
+    "description": "Join a global family committed to innovation and sustainability",
+    "values": ["Respect", "Collaboration", "Growth", "Innovation"]
+  },
+  "life": {
+    "title": "Life at SKC",
+    "description": "Experience a dynamic work environment with growth opportunities",
+    "perks": [
+      "Competitive compensation",
+      "Health & wellness programs",
+      "Career development",
+      "Work-life balance",
+      "Global opportunities"
+    ]
+  },
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Senior Materials Engineer",
+      "department": "R&D",
+      "location": "Seoul, Korea",
+      "type": "Full-time",
+      "posted": "2025-11-01"
+    },
+    {
+      "id": 2,
+      "title": "Product Manager - Semiconductor",
+      "department": "Business Development",
+      "location": "Seoul, Korea",
+      "type": "Full-time",
+      "posted": "2025-10-15"
+    }
+  ],
+  "recruitment": {
+    "title": "Recruitment Process",
+    "steps": [
+      { "step": 1, "name": "Application", "description": "Submit your resume and cover letter online" },
+      { "step": 2, "name": "Screening", "description": "Resume review by hiring team" },
+      { "step": 3, "name": "Interview", "description": "Multiple rounds with team and management" },
+      { "step": 4, "name": "Offer", "description": "Receive and accept offer letter" },
+      { "step": 5, "name": "Onboarding", "description": "Welcome to SKC!" }
+    ]
+  }
+}

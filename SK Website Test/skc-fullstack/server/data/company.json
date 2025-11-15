@@ -1,0 +1,75 @@
+{
+  "intro": {
+    "company": {
+      "title": "About SKC",
+      "subtitle": "Technology Transformation by SKC Changes the World",
+      "description": "SKC is a global ESG material solutions company dedicated to creating sustainable value through innovative technologies in rechargeable batteries, semiconductors, and eco-friendly materials.",
+      "stats": {
+        "establishment": "1976",
+        "employees": "2,910",
+        "sales": "1.7 trillion won",
+        "ceo": "Woncheol Park"
+      },
+      "values": [
+        "Customer First",
+        "Innovation", "Sustainability",
+        "Integrity"
+      ]
+    },
+    "ceo": {
+      "name": "Woncheol Park",
+      "title": "CEO and President",
+      "message": "At SKC, we are committed to transforming technology for a sustainable future. Our focus on ESG materials positions us as a leader in creating solutions that benefit both business and society.",
+      "image": "/images/ceo-placeholder.jpg"
+    },
+    "history": {
+      "milestones": [
+        { "year": "1976", "event": "SKC Founded" },
+        { "year": "1980", "event": "Entered film business" },
+        { "year": "2000", "event": "Semiconductor materials division established" },
+        { "year": "2020", "event": "Focus on ESG materials and sustainability" },
+        { "year": "2024", "event": "Global expansion in green technology" }
+      ]
+    },
+    "vision": {
+      "mission": "To be the world's leading ESG material solutions provider",
+      "vision": "Creating a sustainable future through innovative materials technology",
+      "coreValues": ["Innovation", "Sustainability", "Excellence", "Integrity"]
+    },
+    "ci": {
+      "logo": "SKC Logo represents our commitment to innovation and sustainability",
+      "colors": { "primary": "#E00529", "secondary": "#E67525" },
+      "tagline": "Global ESG material solutions company"
+    },
+    "affiliates": {
+      "companies": [
+        { "name": "SK Nexilis", "url": "http://www.sknexilis.com/en/", "business": "Copper foil for batteries" },
+        { "name": "SK Picglobal", "url": "http://www.skpicglobal.com/", "business": "CMP materials" },
+        { "name": "SK Leaveo", "url": "http://www.skleaveo.com/", "business": "Biodegradable materials" },
+        { "name": "Absolics", "url": "https://www.absolicsinc.com/", "business": "Glass substrates" },
+        { "name": "ISC", "url": "https://kor.isc21.kr/main_e/", "business": "Semiconductor equipment" }
+      ]
+    }
+  },
+  "sustain": {
+    "governance": { "title": "Governance Structure", "description": "SKC maintains transparent governance practices aligned with global standards." },
+    "dbl": { "title": "Double Bottom Line", "description": "Creating both economic and social value through sustainable business practices." },
+    "csr": { "title": "Corporate Social Responsibility", "description": "Committed to positive social impact in communities where we operate." },
+    "she": { "title": "Safety, Health, Environment", "description": "Zero accidents, zero occupational diseases, zero environmental incidents." },
+    "report": { "title": "Sustainability Reports", "reports": [{ "year": "2024", "file": "/reports/2024-sustainability.pdf" }] },
+    "climate": { "title": "Climate Action", "description": "Net-zero commitment by 2050 through renewable energy and carbon reduction." },
+    "supplyChain": { "title": "Supply Chain Management", "description": "Ethical and sustainable practices throughout our supply chain." },
+    "humanRights": { "title": "Human Rights Management", "description": "Respecting human rights across all operations and partnerships." }
+  },
+  "ethics": {
+    "management": { "title": "Ethical Management System", "description": "Comprehensive ethics framework guiding all business decisions." },
+    "antiCorruption": { "title": "Anti-Corruption System", "description": "Zero tolerance for corruption and bribery." },
+    "reporting": { "title": "Ethical Reporting & Counseling", "hotline": "ethics@skc.com", "phone": "+82-2-3787-1234" }
+  },
+  "hiring": {
+    "recruit": { "title": "Current Openings", "positions": [] },
+    "talents": { "title": "Talents We Seek", "qualities": ["Passionate", "Innovative", "Collaborative", "Results-oriented"] },
+    "process": { "title": "Hiring Process", "steps": ["Application", "Resume Screening", "Interview", "Offer"] },
+    "hrPolicies": { "title": "HR Policies", "benefits": ["Competitive salary", "Health insurance", "Work-life balance", "Career development"] }
+  }
+}

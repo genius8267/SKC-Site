@@ -1,0 +1,49 @@
+<section class="section">
+  <div class="section__container">
+    <div class="section-heading">
+      <h1 class="section-heading__title"><%= data.title %></h1>
+      <p class="section-heading__subtitle"><%= data.subtitle %></p>
+    </div>
+
+    <div class="card" style="margin-bottom: var(--space-12);">
+      <p style="font-size: var(--font-size-lg); line-height: var(--line-height-relaxed);">
+        <%= data.description %>
+      </p>
+    </div>
+
+    <div class="corporation__stats">
+      <div class="stat-card">
+        <div class="stat-card__label">Establishment</div>
+        <div class="stat-card__value"><%= data.stats.establishment %></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__label">Employees</div>
+        <div class="stat-card__value"><%= data.stats.employees %></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__label">Sales</div>
+        <div class="stat-card__value"><%= data.stats.sales %></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__label">CEO</div>
+        <div class="stat-card__value" style="font-size: var(--font-size-2xl);"><%= data.stats.ceo %></div>
+      </div>
+    </div>
+
+    <div style="margin-top: var(--space-16);">
+      <h2 style="margin-bottom: var(--space-6);">Our Values</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4);">
+        <% data.values.forEach(value => { %>
+          <div class="card" style="text-align: center; padding: var(--space-8);">
+            <h3><%= value %></h3>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+
+    <div style="margin-top: var(--space-12); text-align: center;">
+      <a href="/eng/corporation/intro/ceo" class="btn btn--primary">Meet Our CEO →</a>
+      <a href="/eng/corporation/intro/history" class="btn btn--secondary">Our History →</a>
+    </div>
+  </div>
+</section>

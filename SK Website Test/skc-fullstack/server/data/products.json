@@ -1,0 +1,56 @@
+{
+  "battery": {
+    "title": "Rechargeable Battery Materials",
+    "description": "Leading-edge materials for next-generation batteries",
+    "copperFoil": {
+      "name": "Copper Foil",
+      "description": "Ultra-thin copper foil for lithium-ion batteries with superior conductivity and durability.",
+      "applications": ["Electric Vehicles", "Energy Storage Systems", "Consumer Electronics"],
+      "specs": { "thickness": "4-12μm", "purity": "99.99%" }
+    },
+    "siliconAnodes": {
+      "name": "Silicon Anodes",
+      "description": "Next-generation silicon anode materials offering 10x capacity increase over graphite.",
+      "applications": ["High-capacity Batteries", "Fast-charging Systems"],
+      "specs": { "capacity": "3000+ mAh/g", "cycleLife": "500+ cycles" }
+    }
+  },
+  "semiconductor": {
+    "title": "Semiconductor Materials & Equipment",
+    "description": "Advanced materials for semiconductor manufacturing",
+    "glassSubstrate": {
+      "name": "Glass Substrate",
+      "description": "High-precision glass substrates for advanced packaging and display applications."
+    },
+    "testSocket": {
+      "name": "Test Socket",
+      "description": "Precision test sockets for semiconductor device testing and validation."
+    },
+    "cmpPad": {
+      "name": "CMP Pad",
+      "description": "Chemical Mechanical Polishing pads for wafer planarization."
+    },
+    "cmpSlurry": {
+      "name": "CMP Slurry",
+      "description": "Advanced slurry for precise material removal in semiconductor fabrication."
+    },
+    "blankMask": {
+      "name": "Blank Mask",
+      "description": "High-quality photomask blanks for advanced lithography."
+    }
+  },
+  "ecoFriendly": {
+    "title": "Eco-friendly Materials",
+    "description": "Sustainable materials for a greener future",
+    "pbat": {
+      "name": "High-strength PBAT",
+      "description": "Biodegradable polyester with enhanced mechanical properties for packaging applications.",
+      "benefits": ["100% biodegradable", "Compostable", "High strength"]
+    },
+    "limex": {
+      "name": "Biodegradable LIMEX",
+      "description": "Limestone-based material reducing plastic and paper consumption.",
+      "benefits": ["Waterproof", "Tree-free", "Recyclable"]
+    }
+  }
+}

@@ -90,7 +90,7 @@ Intune Labs Codebase/
 **SuperClaude v4.0**
 - 20 core commands + 5 ACE commands
 - 40+ aliases for quick actions
-- MCP-powered (Context7, Sequential, Magic, Puppeteer)
+- MCP-powered (Context7, Sequential, Magic, Puppeteer, Playwright)
 - ACE methodology integration (HumanLayer)
 - Universal flags (--think, --ultrathink, --c7, --seq, --magic, --pup)
 

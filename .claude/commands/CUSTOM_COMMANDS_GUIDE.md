@@ -37,7 +37,7 @@ This is Claude Code's **user-level commands directory**, which means:
 
 **Features:**
 - Adaptive thinking mode (auto-detects complexity)
-- MCP-powered exploration (Context7, Sequential, Magic, Puppeteer)
+- MCP-powered exploration (Context7, Sequential, Magic, Puppeteer, Playwright)
 - Evidence-based findings (confidence scoring)
 - Validated planning (6 mandatory sections)
 - Multi-state approval (iterative refinement)

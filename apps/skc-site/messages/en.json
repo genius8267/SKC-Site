@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "corporation": "Corporation",
+    "creation": "Creation",
+    "communication": "Communication",
+    "career": "Career",
+    "search": "Search",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "Creating Tomorrow's",
+    "subtitle": "Materials Today",
+    "description": "Leading global ESG material solutions company specializing in rechargeable batteries, semiconductors, and eco-friendly materials",
+    "cta": "Explore Our Solutions",
+    "categories": {
+      "battery": "Battery Materials",
+      "semiconductor": "Semiconductors",
+      "eco": "Eco-Friendly"
+    }
+  },
+  "stats": {
+    "years": {
+      "value": "60+",
+      "label": "Years of Innovation"
+    },
+    "countries": {
+      "value": "15",
+      "label": "Countries Worldwide"
+    },
+    "employees": {
+      "value": "3,500+",
+      "label": "Global Team"
+    },
+    "revenue": {
+      "value": "$2.5B",
+      "label": "Annual Revenue"
+    }
+  },
+  "products": {
+    "title": "Our Solutions",
+    "battery": {
+      "title": "Rechargeable Battery Materials",
+      "description": "Ultra-thin copper foil and silicon anodes for next-gen EVs",
+      "cta": "Learn More"
+    },
+    "semiconductor": {
+      "title": "Semiconductor Materials",
+      "description": "Advanced materials for cutting-edge chip manufacturing",
+      "cta": "Learn More"
+    },
+    "eco": {
+      "title": "Eco-Friendly Materials",
+      "description": "Sustainable solutions for a greener future",
+      "cta": "Learn More"
+    }
+  },
+  "news": {
+    "title": "Latest News",
+    "categories": {
+      "press": "Press Release",
+      "esg": "ESG",
+      "innovation": "Innovation"
+    },
+    "readMore": "Read More"
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Get the latest news and insights from SKC",
+    "placeholder": "Enter your email",
+    "button": "Subscribe",
+    "success": "Thank you for subscribing!",
+    "error": "Please enter a valid email address"
+  },
+  "footer": {
+    "tagline": "Creating sustainable materials for a better tomorrow",
+    "company": {
+      "title": "Company",
+      "about": "About SKC",
+      "history": "History",
+      "leadership": "Leadership",
+      "careers": "Careers"
+    },
+    "products": {
+      "title": "Products",
+      "battery": "Battery Materials",
+      "semiconductor": "Semiconductors",
+      "eco": "Eco Materials"
+    },
+    "resources": {
+      "title": "Resources",
+      "news": "News",
+      "investors": "Investors",
+      "sustainability": "Sustainability",
+      "contact": "Contact"
+    },
+    "copyright": "© 2025 SKC Corporation. All rights reserved."
+  },
+  "advanced": {
+    "title": "Advanced Features",
+    "subtitle": "World-class UX features: dark mode, accessibility, social sharing, and more",
+    "darkMode": {
+      "title": "Dark Mode",
+      "description": "System preference detection + manual toggle"
+    },
+    "scrollProgress": {
+      "title": "Scroll Progress",
+      "description": "Visual reading progress indicator at the top"
+    },
+    "backToTop": {
+      "title": "Back to Top Button",
+      "description": "Floating button with scroll progress circle"
+    },
+    "cookieConsent": {
+      "title": "Cookie Consent",
+      "description": "GDPR-compliant cookie consent banner"
+    },
+    "accessibility": {
+      "title": "Accessibility Menu",
+      "description": "Font size, contrast, and motion controls"
+    },
+    "socialShare": {
+      "title": "Social Sharing",
+      "description": "Share to Twitter, LinkedIn, Facebook, Email"
+    },
+    "readingTime": {
+      "title": "Reading Time Estimator",
+      "description": "Automatically calculates reading time for articles"
+    },
+    "printOptimization": {
+      "title": "Print Optimization",
+      "description": "Printer-friendly styles"
+    }
+  },
+  "features": {
+    "title": "Premium Features",
+    "subtitle": "World-class UX components for modern websites",
+    "search": {
+      "title": "Site-Wide Search",
+      "description": "Powered by Fuse.js fuzzy search"
+    },
+    "contact": {
+      "title": "Contact Form",
+      "description": "Validated with React Hook Form + Zod"
+    },
+    "newsletter": {
+      "title": "Newsletter Signup",
+      "description": "Email validation and success states"
+    },
+    "gallery": {
+      "title": "Image Gallery",
+      "description": "Lightbox viewer with keyboard navigation"
+    },
+    "videos": {
+      "title": "Video Embeds",
+      "description": "YouTube integration with lazy loading"
+    }
+  }
+}

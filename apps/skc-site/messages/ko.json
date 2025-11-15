@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "corporation": "기업정보",
+    "creation": "제품소개",
+    "communication": "소통공간",
+    "career": "인재채용",
+    "search": "검색",
+    "contact": "문의하기"
+  },
+  "hero": {
+    "title": "내일의 소재를",
+    "subtitle": "오늘 만듭니다",
+    "description": "2차전지, 반도체, 친환경 소재 분야의 글로벌 ESG 소재 솔루션 기업",
+    "cta": "솔루션 보기",
+    "categories": {
+      "battery": "배터리 소재",
+      "semiconductor": "반도체",
+      "eco": "친환경 소재"
+    }
+  },
+  "stats": {
+    "years": {
+      "value": "60+",
+      "label": "혁신의 역사"
+    },
+    "countries": {
+      "value": "15",
+      "label": "글로벌 진출국"
+    },
+    "employees": {
+      "value": "3,500+",
+      "label": "임직원 수"
+    },
+    "revenue": {
+      "value": "$2.5B",
+      "label": "연간 매출"
+    }
+  },
+  "products": {
+    "title": "주요 제품",
+    "battery": {
+      "title": "2차전지 소재",
+      "description": "차세대 전기차를 위한 초박 동박 및 실리콘 음극재",
+      "cta": "자세히 보기"
+    },
+    "semiconductor": {
+      "title": "반도체 소재",
+      "description": "첨단 반도체 제조를 위한 고성능 소재",
+      "cta": "자세히 보기"
+    },
+    "eco": {
+      "title": "친환경 소재",
+      "description": "지속 가능한 미래를 위한 친환경 솔루션",
+      "cta": "자세히 보기"
+    }
+  },
+  "news": {
+    "title": "최신 소식",
+    "categories": {
+      "press": "보도자료",
+      "esg": "ESG",
+      "innovation": "혁신"
+    },
+    "readMore": "더 보기"
+  },
+  "newsletter": {
+    "title": "뉴스레터 구독",
+    "description": "SKC의 최신 소식과 인사이트를 받아보세요",
+    "placeholder": "이메일 주소 입력",
+    "button": "구독하기",
+    "success": "구독해 주셔서 감사합니다!",
+    "error": "올바른 이메일 주소를 입력해주세요"
+  },
+  "footer": {
+    "tagline": "더 나은 내일을 위한 지속 가능한 소재 개발",
+    "company": {
+      "title": "회사소개",
+      "about": "SKC 소개",
+      "history": "연혁",
+      "leadership": "경영진",
+      "careers": "채용정보"
+    },
+    "products": {
+      "title": "제품",
+      "battery": "배터리 소재",
+      "semiconductor": "반도체",
+      "eco": "친환경 소재"
+    },
+    "resources": {
+      "title": "정보",
+      "news": "뉴스",
+      "investors": "투자정보",
+      "sustainability": "지속가능경영",
+      "contact": "문의"
+    },
+    "copyright": "© 2025 SKC Corporation. All rights reserved."
+  },
+  "advanced": {
+    "title": "고급 기능",
+    "subtitle": "세계 수준의 UX 기능: 다크 모드, 접근성, 소셜 공유 등",
+    "darkMode": {
+      "title": "다크 모드",
+      "description": "시스템 설정 감지 + 수동 전환"
+    },
+    "scrollProgress": {
+      "title": "스크롤 진행률",
+      "description": "상단 시각적 읽기 진행 표시기"
+    },
+    "backToTop": {
+      "title": "맨 위로 버튼",
+      "description": "스크롤 진행률이 포함된 플로팅 버튼"
+    },
+    "cookieConsent": {
+      "title": "쿠키 동의",
+      "description": "GDPR 준수 쿠키 동의 배너"
+    },
+    "accessibility": {
+      "title": "접근성 메뉴",
+      "description": "글꼴 크기, 대비, 모션 제어"
+    },
+    "socialShare": {
+      "title": "소셜 공유",
+      "description": "트위터, 링크드인, 페이스북, 이메일 공유"
+    },
+    "readingTime": {
+      "title": "읽기 시간 계산",
+      "description": "기사의 읽기 시간을 자동으로 계산"
+    },
+    "printOptimization": {
+      "title": "인쇄 최적화",
+      "description": "프린터 친화적 스타일"
+    }
+  },
+  "features": {
+    "title": "프리미엄 기능",
+    "subtitle": "현대적인 웹사이트를 위한 세계 수준의 UX 컴포넌트",
+    "search": {
+      "title": "사이트 전체 검색",
+      "description": "Fuse.js 퍼지 검색 기반"
+    },
+    "contact": {
+      "title": "문의 양식",
+      "description": "React Hook Form + Zod 유효성 검사"
+    },
+    "newsletter": {
+      "title": "뉴스레터 가입",
+      "description": "이메일 유효성 검사 및 성공 상태"
+    },
+    "gallery": {
+      "title": "이미지 갤러리",
+      "description": "키보드 탐색 가능한 라이트박스 뷰어"
+    },
+    "videos": {
+      "title": "비디오 임베드",
+      "description": "지연 로딩이 적용된 YouTube 통합"
+    }
+  }
+}

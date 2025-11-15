@@ -129,6 +129,13 @@ disable-model-invocation: true
 # → Automated browser testing
 ```
 
+**Playwright MCP** (structured DOM automation)
+```bash
+codex mcp list        # Verify the server is registered
+npx @playwright/mcp@latest --caps=vision
+# → Launches accessibility-tree driven browser tooling for agents
+```
+
 ### Thinking Modes (Complexity Levels)
 
 | Flag | Tokens | Use When |

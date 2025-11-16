@@ -5,9 +5,10 @@ import { PageHero } from '@/components/sections/PageHero';
 import { ContentSection } from '@/components/sections/ContentSection';
 import { CTASection } from '@/components/sections/CTASection';
 
-type PageProps = { params: { locale: string } };
+type PageProps = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params: { locale } }: PageProps) {
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.career.overview.meta' });
   return {
     title: t('title'),
@@ -15,9 +16,10 @@ export async function generateMetadata({ params: { locale } }: PageProps) {
   };
 }
 
-export default function CareerOverviewPage({ params }: PageProps) {
+export default async function CareerOverviewPage({ params }: PageProps) {
+  const { locale } = await params;
   const t = useTranslations('pages.career.overview');
-  const prefix = (href: string) => (href.startsWith('/') ? `/${params.locale}${href}` : href);
+  const prefix = (href: string) => (href.startsWith('/') ? `/${locale}${href}` : href);
 
   const heroStats = t.raw('hero.stats') as { label: string; value: string }[];
   const heroActions = (t.raw('hero.actions') as { label: string; href: string }[]).map((action) => ({

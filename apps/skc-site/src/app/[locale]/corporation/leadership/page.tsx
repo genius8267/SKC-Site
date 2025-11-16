@@ -6,9 +6,10 @@ import { LeadershipGrid } from '@/components/sections/LeadershipGrid';
 import { CTASection } from '@/components/sections/CTASection';
 import { leadershipProfiles } from '@/data/corporation';
 
-type PageProps = { params: { locale: string } };
+type PageProps = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params: { locale } }: PageProps) {
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.corporation.leadership.meta' });
   return {
     title: t('title'),
@@ -16,9 +17,10 @@ export async function generateMetadata({ params: { locale } }: PageProps) {
   };
 }
 
-export default function LeadershipPage({ params }: PageProps) {
+export default async function LeadershipPage({ params }: PageProps) {
+  const { locale } = await params;
   const t = useTranslations('pages.corporation.leadership');
-  const prefix = (href: string) => (href.startsWith('/') ? `/${params.locale}${href}` : href);
+  const prefix = (href: string) => (href.startsWith('/') ? `/${locale}${href}` : href);
 
   const heroActions = (t.raw('hero.actions') as { label: string; href: string }[]).map((action) => ({
     ...action,

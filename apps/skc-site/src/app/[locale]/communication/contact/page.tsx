@@ -7,9 +7,10 @@ import { CTASection } from '@/components/sections/CTASection';
 import { ContactForm } from '@/components/features/ContactForm';
 import { contactChannels } from '@/data/communication';
 
-type PageProps = { params: { locale: string } };
+type PageProps = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params: { locale } }: PageProps) {
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.communication.contact.meta' });
   return {
     title: t('title'),
@@ -17,9 +18,10 @@ export async function generateMetadata({ params: { locale } }: PageProps) {
   };
 }
 
-export default function ContactPage({ params }: PageProps) {
+export default async function ContactPage({ params }: PageProps) {
+  const { locale } = await params;
   const t = useTranslations('pages.communication.contact');
-  const prefix = (href: string) => (href.startsWith('/') ? `/${params.locale}${href}` : href);
+  const prefix = (href: string) => (href.startsWith('/') ? `/${locale}${href}` : href);
 
   const cta = t.raw('cta') as {
     eyebrow: string;

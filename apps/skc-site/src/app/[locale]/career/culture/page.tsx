@@ -5,9 +5,10 @@ import { PageHero } from '@/components/sections/PageHero';
 import { CultureValues } from '@/components/sections/CultureValues';
 import { cultureValues, talentPrograms } from '@/data/career';
 
-type PageProps = { params: { locale: string } };
+type PageProps = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params: { locale } }: PageProps) {
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.career.culture.meta' });
   return {
     title: t('title'),
@@ -15,7 +16,8 @@ export async function generateMetadata({ params: { locale } }: PageProps) {
   };
 }
 
-export default function CulturePage({ params }: PageProps) {
+export default async function CulturePage({ params }: PageProps) {
+  const { locale } = await params;
   const t = useTranslations('pages.career.culture');
   const heroStats = t.raw('hero.stats') as { label: string; value: string }[];
 

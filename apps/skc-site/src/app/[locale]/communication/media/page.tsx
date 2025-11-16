@@ -5,9 +5,10 @@ import { PageHero } from '@/components/sections/PageHero';
 import { MediaResourceGrid } from '@/components/sections/MediaResourceGrid';
 import { mediaAssets } from '@/data/communication';
 
-type PageProps = { params: { locale: string } };
+type PageProps = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params: { locale } }: PageProps) {
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.communication.media.meta' });
   return {
     title: t('title'),
@@ -15,7 +16,8 @@ export async function generateMetadata({ params: { locale } }: PageProps) {
   };
 }
 
-export default function MediaLibraryPage({ params }: PageProps) {
+export default async function MediaLibraryPage({ params }: PageProps) {
+  const { locale } = await params;
   const t = useTranslations('pages.communication.media');
 
   return (

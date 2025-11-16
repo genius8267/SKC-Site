@@ -5,9 +5,10 @@ import { PageHero } from '@/components/sections/PageHero';
 import { NewsroomGrid } from '@/components/sections/NewsroomGrid';
 import { featuredNews } from '@/data/communication';
 
-type PageProps = { params: { locale: string } };
+type PageProps = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params: { locale } }: PageProps) {
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.communication.news.meta' });
   return {
     title: t('title'),
@@ -15,7 +16,8 @@ export async function generateMetadata({ params: { locale } }: PageProps) {
   };
 }
 
-export default function NewsroomPage({ params }: PageProps) {
+export default async function NewsroomPage({ params }: PageProps) {
+  const { locale } = await params;
   const t = useTranslations('pages.communication.news');
   const heroStats = t.raw('hero.stats') as { label: string; value: string }[];
 

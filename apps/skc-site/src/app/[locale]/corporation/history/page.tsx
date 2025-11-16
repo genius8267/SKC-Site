@@ -5,9 +5,10 @@ import { PageHero } from '@/components/sections/PageHero';
 import { Timeline } from '@/components/sections/Timeline';
 import { timelineMilestones } from '@/data/corporation';
 
-type PageProps = { params: { locale: string } };
+type PageProps = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params: { locale } }: PageProps) {
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.corporation.history.meta' });
   return {
     title: t('title'),
@@ -15,7 +16,8 @@ export async function generateMetadata({ params: { locale } }: PageProps) {
   };
 }
 
-export default function CorporationHistoryPage({ params }: PageProps) {
+export default async function CorporationHistoryPage({ params }: PageProps) {
+  const { locale } = await params;
   const t = useTranslations('pages.corporation.history');
   const heroStats = t.raw('hero.stats') as { label: string; value: string }[];
 

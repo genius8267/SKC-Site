@@ -2,9 +2,10 @@ import { ProductPageBody } from '@/components/pages/ProductPageBody';
 import { PageLayout } from '@/components/layout/PageLayout';
 import { getTranslations } from 'next-intl/server';
 
-type PageProps = { params: { locale: string } };
+type PageProps = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params: { locale } }: PageProps) {
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.creation.battery.meta' });
   return {
     title: t('title'),
@@ -12,10 +13,11 @@ export async function generateMetadata({ params: { locale } }: PageProps) {
   };
 }
 
-export default function BatteryMaterialsPage({ params }: PageProps) {
+export default async function BatteryMaterialsPage({ params }: PageProps) {
+  const { locale } = await params;
   return (
     <PageLayout>
-      <ProductPageBody locale={params.locale} namespace="pages.creation.battery" productId="battery" />
+      <ProductPageBody locale={locale} namespace="pages.creation.battery" productId="battery" />
     </PageLayout>
   );
 }

@@ -5,9 +5,10 @@ import { PageHero } from '@/components/sections/PageHero';
 import { BenefitsGrid } from '@/components/sections/BenefitsGrid';
 import { benefits } from '@/data/career';
 
-type PageProps = { params: { locale: string } };
+type PageProps = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params: { locale } }: PageProps) {
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.career.benefits.meta' });
   return {
     title: t('title'),
@@ -15,7 +16,8 @@ export async function generateMetadata({ params: { locale } }: PageProps) {
   };
 }
 
-export default function BenefitsPage({ params }: PageProps) {
+export default async function BenefitsPage({ params }: PageProps) {
+  const { locale } = await params;
   const t = useTranslations('pages.career.benefits');
 
   return (

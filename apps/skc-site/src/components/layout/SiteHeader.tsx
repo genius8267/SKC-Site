@@ -2,18 +2,22 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
 import { SiteSearch } from '@/components/features/SiteSearch';
 import { ThemeToggleCompact } from '@/components/advanced/ThemeToggle';
 import { LanguageSwitcherCompact } from '@/components/advanced/LanguageSwitcher';
 
 const navItems = [
-  { label: 'Corporation', href: '/corporation/intro/company' },
-  { label: 'Creation', href: '/creation/battery' },
-  { label: 'Communication', href: '/communication/newsroom' },
-  { label: 'Career', href: '/career/jobs' },
+  { id: 'corporation', href: '/corporation' },
+  { id: 'creation', href: '/creation' },
+  { id: 'communication', href: '/communication' },
+  { id: 'career', href: '/career' },
 ];
 
 export function SiteHeader() {
+  const t = useTranslations('nav');
+  const locale = useLocale();
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
@@ -62,15 +66,16 @@ export function SiteHeader() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <motion.a
+              <motion.div
                 key={item.href}
-                href={item.href}
                 className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors relative group"
                 whileHover={{ y: -2 }}
               >
-                {item.label}
+                <Link href={`/${locale}${item.href}`} className="inline-flex items-center gap-1">
+                  {t(item.id as 'corporation')}
+                </Link>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-skc group-hover:w-full transition-all duration-300" />
-              </motion.a>
+              </motion.div>
             ))}
           </nav>
 
@@ -88,18 +93,18 @@ export function SiteHeader() {
             whileTap={{ scale: 0.98 }}
           >
             <span>🔍</span>
-            <span className="hidden md:inline">Search</span>
+            <span className="hidden md:inline">{t('search')}</span>
             <kbd className="hidden lg:inline text-xs text-text-tertiary">⌘K</kbd>
           </motion.button>
 
           {/* CTA */}
           <motion.a
-            href="/contact"
+            href={`/${locale}/communication/contact`}
             className="glass-card px-6 py-2 text-sm font-medium hover:border-skc-red/40 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
-            Contact Us
+            {t('contact')}
           </motion.a>
         </div>
       </div>

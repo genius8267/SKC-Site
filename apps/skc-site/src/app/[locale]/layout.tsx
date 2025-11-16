@@ -3,6 +3,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
+import { AnalyticsProvider } from '@/components/providers/AnalyticsProvider';
 import { locales } from '@/i18n';
 import type { Metadata } from 'next';
 import '../globals.css';
@@ -31,10 +32,9 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  // Await params in Next.js 16+
-  const { locale } = await params;
+  const { locale } = params;
 
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) {
@@ -56,6 +56,7 @@ export default async function LocaleLayout({
         >
           <NextIntlClientProvider messages={messages}>
             {children}
+            <AnalyticsProvider />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

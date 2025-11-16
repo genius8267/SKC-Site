@@ -1,8 +1,8 @@
 {
   "nav": {
     "corporation": "기업정보",
-    "creation": "제품소개",
-    "communication": "소통공간",
+    "creation": "제품플랫폼",
+    "communication": "소통채널",
     "career": "인재채용",
     "search": "검색",
     "contact": "문의하기"
@@ -10,8 +10,8 @@
   "hero": {
     "title": "내일의 소재를",
     "subtitle": "오늘 만듭니다",
-    "description": "2차전지, 반도체, 친환경 소재 분야의 글로벌 ESG 소재 솔루션 기업",
-    "cta": "솔루션 보기",
+    "description": "2차전지·반도체·친환경 분야를 아우르는 글로벌 ESG 소재 솔루션 기업",
+    "cta": "솔루션 살펴보기",
     "categories": {
       "battery": "배터리 소재",
       "semiconductor": "반도체",
@@ -19,140 +19,783 @@
     }
   },
   "stats": {
-    "years": {
-      "value": "60+",
-      "label": "혁신의 역사"
-    },
-    "countries": {
-      "value": "15",
-      "label": "글로벌 진출국"
-    },
-    "employees": {
-      "value": "3,500+",
-      "label": "임직원 수"
-    },
-    "revenue": {
-      "value": "$2.5B",
-      "label": "연간 매출"
-    }
+    "years": { "value": "60+", "label": "혁신의 역사" },
+    "countries": { "value": "15", "label": "글로벌 거점" },
+    "employees": { "value": "3,500+", "label": "임직원" },
+    "revenue": { "value": "$2.5B", "label": "연간 매출" }
   },
   "products": {
-    "title": "주요 제품",
+    "title": "주요 솔루션",
     "battery": {
       "title": "2차전지 소재",
-      "description": "차세대 전기차를 위한 초박 동박 및 실리콘 음극재",
+      "description": "초박형 동박과 실리콘 음극재로 차세대 EV 구현",
       "cta": "자세히 보기"
     },
     "semiconductor": {
       "title": "반도체 소재",
-      "description": "첨단 반도체 제조를 위한 고성능 소재",
+      "description": "글라스 서브스트레이트와 CMP 등 첨단 공정 소재",
       "cta": "자세히 보기"
     },
     "eco": {
       "title": "친환경 소재",
-      "description": "지속 가능한 미래를 위한 친환경 솔루션",
+      "description": "지속 가능한 미래를 위한 순환형 소재",
       "cta": "자세히 보기"
     }
   },
   "news": {
     "title": "최신 소식",
-    "categories": {
-      "press": "보도자료",
-      "esg": "ESG",
-      "innovation": "혁신"
-    },
-    "readMore": "더 보기"
+    "categories": { "press": "보도자료", "esg": "ESG", "innovation": "혁신" },
+    "readMore": "더 읽기"
   },
   "newsletter": {
     "title": "뉴스레터 구독",
-    "description": "SKC의 최신 소식과 인사이트를 받아보세요",
-    "placeholder": "이메일 주소 입력",
+    "description": "SKC의 최신 인사이트를 이메일로 받아보세요",
+    "placeholder": "이메일 주소",
     "button": "구독하기",
     "success": "구독해 주셔서 감사합니다!",
     "error": "올바른 이메일 주소를 입력해주세요"
   },
   "footer": {
-    "tagline": "더 나은 내일을 위한 지속 가능한 소재 개발",
+    "tagline": "지속 가능한 소재로 더 나은 내일을 만듭니다",
     "company": {
-      "title": "회사소개",
+      "title": "회사 소개",
       "about": "SKC 소개",
       "history": "연혁",
       "leadership": "경영진",
-      "careers": "채용정보"
+      "careers": "채용"
     },
     "products": {
       "title": "제품",
-      "battery": "배터리 소재",
+      "battery": "배터리",
       "semiconductor": "반도체",
-      "eco": "친환경 소재"
+      "eco": "친환경"
     },
     "resources": {
-      "title": "정보",
+      "title": "리소스",
       "news": "뉴스",
       "investors": "투자정보",
       "sustainability": "지속가능경영",
       "contact": "문의"
     },
-    "copyright": "© 2025 SKC Corporation. All rights reserved."
+    "copyright": "© {year} SKC Corporation. All rights reserved."
   },
   "advanced": {
-    "title": "고급 기능",
-    "subtitle": "세계 수준의 UX 기능: 다크 모드, 접근성, 소셜 공유 등",
-    "darkMode": {
-      "title": "다크 모드",
-      "description": "시스템 설정 감지 + 수동 전환"
-    },
-    "scrollProgress": {
-      "title": "스크롤 진행률",
-      "description": "상단 시각적 읽기 진행 표시기"
-    },
-    "backToTop": {
-      "title": "맨 위로 버튼",
-      "description": "스크롤 진행률이 포함된 플로팅 버튼"
-    },
-    "cookieConsent": {
-      "title": "쿠키 동의",
-      "description": "GDPR 준수 쿠키 동의 배너"
-    },
-    "accessibility": {
-      "title": "접근성 메뉴",
-      "description": "글꼴 크기, 대비, 모션 제어"
-    },
-    "socialShare": {
-      "title": "소셜 공유",
-      "description": "트위터, 링크드인, 페이스북, 이메일 공유"
-    },
-    "readingTime": {
-      "title": "읽기 시간 계산",
-      "description": "기사의 읽기 시간을 자동으로 계산"
-    },
-    "printOptimization": {
-      "title": "인쇄 최적화",
-      "description": "프린터 친화적 스타일"
-    }
+    "title": "고급 UX",
+    "subtitle": "다크 모드, 접근성, 공유 등 프리미엄 기능",
+    "darkMode": { "title": "다크 모드", "description": "시스템 감지 + 수동 전환" },
+    "scrollProgress": { "title": "스크롤 진행률", "description": "읽기 진행 상황 표시" },
+    "backToTop": { "title": "맨 위로", "description": "진행률이 포함된 플로팅 버튼" },
+    "cookieConsent": { "title": "쿠키 동의", "description": "GDPR 준수 배너" },
+    "accessibility": { "title": "접근성 메뉴", "description": "글꼴·대비·모션 제어" },
+    "socialShare": { "title": "소셜 공유", "description": "트위터·링크드인·페이스북·이메일" },
+    "readingTime": { "title": "읽기 시간", "description": "본문 분량 기반 자동 계산" },
+    "printOptimization": { "title": "인쇄 최적화", "description": "출력 친화적 스타일" }
   },
   "features": {
-    "title": "프리미엄 기능",
-    "subtitle": "현대적인 웹사이트를 위한 세계 수준의 UX 컴포넌트",
-    "search": {
-      "title": "사이트 전체 검색",
-      "description": "Fuse.js 퍼지 검색 기반"
+    "title": "프리미엄 컴포넌트",
+    "subtitle": "현대적인 기업 사이트를 위한 핵심 기능",
+    "search": { "title": "사이트 검색", "description": "Fuse.js 퍼지 검색" },
+    "contact": { "title": "문의 폼", "description": "React Hook Form + Zod" },
+    "newsletter": { "title": "뉴스레터", "description": "실시간 이메일 유효성 검사" },
+    "gallery": { "title": "이미지 갤러리", "description": "키보드 네비게이션 지원" },
+    "videos": { "title": "비디오", "description": "YouTube 지연 로딩" }
+  },
+  "search": {
+    "placeholder": "SKC 검색…",
+    "helper": "제품, 뉴스, 페이지, 관계사를 찾아보세요",
+    "empty": "\"{query}\"에 대한 결과가 없습니다",
+    "enter": "선택",
+    "escape": "닫기",
+    "categories": {
+      "page": "페이지",
+      "product": "제품",
+      "news": "뉴스",
+      "company": "관계사"
+    }
+  },
+  "pages": {
+    "corporation": {
+      "overview": {
+        "meta": {
+          "title": "SKC 기업 개요",
+          "description": "첨단 소재, ESG, 거버넌스를 하나로 연결한 운영 방식"
+        },
+        "hero": {
+          "eyebrow": "Corporate",
+          "title": "넷제로 시대를 위한 글라스모픽 시스템",
+          "description": "SKC는 첨단 소재, 제조, 거버넌스를 하나의 경험으로 설계합니다.",
+          "stats": [
+            { "label": "글로벌 계열사", "value": "7" },
+            { "label": "생산 거점", "value": "12" },
+            { "label": "보유 특허", "value": "1,850" },
+            { "label": "ESG 등급", "value": "AA (MSCI)" }
+          ],
+          "actions": [
+            { "label": "회사 소개서", "href": "/downloads/skc-corporate-profile.pdf" },
+            { "label": "투자 브리프", "href": "/downloads/skc-investor-brief.pdf", "variant": "ghost" }
+          ],
+          "highlights": {
+            "research": {
+              "title": "연구 컨스텔레이션",
+              "description": "6개 융합 연구소가 동박·글라스·친환경 소재를 동시에 개발"
+            },
+            "manufacturing": {
+              "title": "인텔리전트 제조",
+              "description": "12개 공장이 예지 보전과 ESG 데이터를 공유"
+            },
+            "alliances": {
+              "title": "전략적 제휴",
+              "description": "SK넥실리스·SK enpulse·Absolics와 함께 EV·AI 고객 지원"
+            },
+            "innovation": {
+              "title": "혁신 속도",
+              "description": "연 220건 이상의 특허와 빠른 파일럿 상용화"
+            }
+          }
+        },
+        "story": {
+          "eyebrow": "전략 축",
+          "title": "모듈형 플랫폼 회사",
+          "description": "Corporate·Creation·Communication·Career 영역이 동일한 토큰과 규범을 공유",
+          "items": [
+            { "icon": "🔋", "title": "에너지 플랫폼", "description": "초박 동박과 열 인터페이스로 EV를 지원" },
+            { "icon": "💠", "title": "반도체 플랫폼", "description": "글라스 서브스트레이트와 CMP 솔루션" },
+            { "icon": "♻️", "title": "서큘러 플랫폼", "description": "PBAT·LIMEX·케미컬 리사이클링" }
+          ]
+        },
+        "capabilities": {
+          "eyebrow": "운영 체계",
+          "title": "상시 동작하는 거버넌스",
+          "description": "디지털 트윈 공장부터 다국어 IR 포털까지 하나의 운영 모델",
+          "items": [
+            { "icon": "🛰️", "title": "디지털 관제", "description": "OT 데이터, ESG KPI, 조달 정보를 한 화면에" },
+            { "icon": "🧭", "title": "규제 인텔리전스", "description": "배터리·반도체·화학 공시를 통합" },
+            { "icon": "🤝", "title": "파트너 생태계", "description": "오픈 API와 디자인 토큰 기반 협업" }
+          ]
+        },
+        "cta": {
+          "eyebrow": "Experience",
+          "title": "운영 청사진 살펴보기",
+          "description": "거버넌스 키트를 내려받거나 리더십 미팅을 예약하세요.",
+          "primary": { "label": "리더십 만나기", "href": "/corporation/leadership" },
+          "secondary": { "label": "거버넌스 키트", "href": "/downloads/skc-governance-kit.pdf" }
+        }
+      },
+      "about": {
+        "meta": { "title": "SKC 소개", "description": "회사 이야기, 연구 모델, 글로벌 거점" },
+        "hero": {
+          "eyebrow": "About",
+          "title": "필름 선구자에서 첨단 소재 아키텍트로",
+          "description": "1976년 설립 이후 배터리·반도체·친환경 소재의 두뇌 역할을 수행",
+          "stats": [
+            { "label": "설립", "value": "1976" },
+            { "label": "임직원", "value": "3,500+" },
+            { "label": "혁신 허브", "value": "8" }
+          ],
+          "actions": [ { "label": "팩트 시트", "href": "/downloads/skc-facts.pdf" } ]
+        },
+        "mission": {
+          "eyebrow": "Mission",
+          "title": "임팩트를 위한 설계",
+          "description": "SK그룹의 더블 바텀라인과 정렬된 거버넌스",
+          "items": [
+            { "icon": "🎯", "title": "목적", "description": "넷제로 소재를 가속" },
+            { "icon": "🌐", "title": "책임", "description": "탄소·물·커뮤니티 기여를 관리" },
+            { "icon": "🧑‍🤝‍🧑", "title": "사람", "description": "포용적 문화와 회전배치, 미래역량 투자" }
+          ]
+        },
+        "labs": {
+          "eyebrow": "Labs",
+          "title": "적용형 혁신 랩",
+          "description": "서울·대전·수원·애틀랜타에서 학습-빌드-스케일 사이클 운영",
+          "items": [
+            { "icon": "🧪", "title": "Battery Foundry", "description": "초박 동박·실리콘·전고체 스택" },
+            { "icon": "🧊", "title": "Substrate Studio", "description": "AI 패키징용 글라스·CMP" },
+            { "icon": "🌱", "title": "Eco Garage", "description": "PBAT·LIMEX·재활용 파일럿" }
+          ]
+        },
+        "global": {
+          "eyebrow": "Global footprint",
+          "title": "15개국이 신뢰",
+          "description": "SK넥실리스·SK enpulse·Absolics와 함께 글로벌 고객 지원",
+          "items": [
+            { "icon": "🇰🇷", "title": "한국 HQ", "description": "서울 본사에서 거버넌스, HR, ESG 총괄" },
+            { "icon": "🇺🇸", "title": "북미", "description": "조지아 Absolics의 AI 패키징" },
+            { "icon": "🇲🇾", "title": "말레이시아/태국", "description": "EV 고객을 위한 동박 메가 플랜트" }
+          ]
+        },
+        "cta": {
+          "eyebrow": "Corporate library",
+          "title": "회사 플레이북",
+          "description": "인트로 덱 다운로드 또는 가상 공장 투어 예약",
+          "primary": { "label": "브리핑 신청", "href": "/communication/contact" },
+          "secondary": { "label": "버추얼 투어", "href": "https://youtube.com" }
+        }
+      },
+      "history": {
+        "meta": { "title": "연혁", "description": "필름에서 첨단 소재까지 이어진 궤적" },
+        "hero": {
+          "eyebrow": "History",
+          "title": "끊임없는 재창조",
+          "description": "PET 필름, 동박, 글라스 서브스트레이트로 이어진 변곡점",
+          "stats": [
+            { "label": "영업 연수", "value": "49" },
+            { "label": "제품 피벗", "value": "6" }
+          ]
+        },
+        "timeline": {
+          "eyebrow": "Milestones",
+          "title": "핵심 이정표",
+          "description": "차세대 모빌리티와 반도체를 향한 로드맵",
+          "items": {
+            "foundation": {
+              "title": "한국 최초 폴리에스터 필름 회사",
+              "description": "PET 생산으로 소재 리더십의 기반 마련"
+            },
+            "materialsExpansion": {
+              "title": "고부가 소재 확장",
+              "description": "필름에서 화학·CMP·특수 수지로 포트폴리오 확장"
+            },
+            "globalAlliances": {
+              "title": "글로벌 얼라이언스",
+              "description": "SK넥실리스와 해외 공장을 세워 글로벌 고객 확보"
+            },
+            "batteryLeadership": {
+              "title": "배터리 소재 리더",
+              "description": "EV OEM을 위한 동박·실리콘 음극 분야 탑티어로 도약"
+            },
+            "esgPledge": {
+              "title": "넷제로 선언",
+              "description": "SBTi 검증 2040 넷제로 경로 채택"
+            },
+            "futureVision": {
+              "title": "SKC 2030",
+              "description": "디지털 트윈·AI·ESG 인텔리전스를 결합한 미래 전략"
+            }
+          }
+        }
+      },
+      "leadership": {
+        "meta": { "title": "경영진", "description": "SKC 플랫폼과 ESG를 이끄는 리더" },
+        "hero": {
+          "eyebrow": "Leadership",
+          "title": "소재·ESG·사람을 아우르는 리더십",
+          "description": "반도체·모빌리티·디지털 경험에 정통한 글로벌 리더",
+          "stats": [ { "label": "평균 근속", "value": "18년" }, { "label": "대표 국적", "value": "5" } ],
+          "actions": [ { "label": "거버넌스 보고서", "href": "/downloads/skc-governance-kit.pdf" } ]
+        },
+        "eyebrow": "Executive team",
+        "title": "SKC 리더 소개",
+        "description": "지속 가능한 소재 성장을 이끄는 핵심 인물",
+        "members": {
+          "ceo": { "name": "박원철", "role": "CEO", "tenure": "2022", "bio": "포트폴리오 전략과 ESG 거버넌스 총괄" },
+          "cto": { "name": "김은지", "role": "CTO", "tenure": "2021", "bio": "연구 컨스텔레이션과 특허 전략 리드" },
+          "cso": { "name": "한진우", "role": "CSO", "tenure": "2020", "bio": "ESG 공시와 책임 있는 조달 담당" },
+          "cfo": { "name": "최미나", "role": "CFO", "tenure": "2019", "bio": "재무 최적화와 투자자 커뮤니케이션" },
+          "coo": { "name": "서다니엘", "role": "COO", "tenure": "2018", "bio": "글로벌 제조와 공급 연속성" },
+          "chro": { "name": "이하나", "role": "CHRO", "tenure": "2023", "bio": "학습 프로그램과 리더십 파이프라인" }
+        },
+        "focus": {
+          "strategy": "전략", "partnerships": "파트너십", "esg": "ESG", "innovation": "혁신",
+          "labs": "랩", "sustainability": "지속가능",
+          "compliance": "컴플라이언스", "finance": "재무", "investors": "투자자",
+          "operations": "운영", "global": "글로벌", "talent": "인재", "culture": "문화"
+        },
+        "cta": {
+          "eyebrow": "Work with us",
+          "title": "SKC 리더와 협업",
+          "description": "라운드테이블 예약 또는 문화 데크 확인",
+          "primary": { "label": "문화 데크", "href": "/career/culture" }
+        }
+      },
+      "esg": {
+        "meta": { "title": "ESG", "description": "넷제로 로드맵과 책임 공급망" },
+        "hero": {
+          "eyebrow": "ESG",
+          "title": "제로에서 시작하는 지속가능 실행",
+          "description": "제품, 공급망, 구성원 경험에 ESG를 기본값으로 설계",
+          "stats": [ { "label": "넷제로 목표", "value": "2040" }, { "label": "공급망 감사", "value": "320+" } ],
+          "actions": [ { "label": "ESG 보고서", "href": "/downloads/skc-esg-report.pdf" } ]
+        },
+        "eyebrow": "Scorecard",
+        "title": "ESG 지표",
+        "description": "탈탄소, 재생에너지, 사회공헌 KPI를 투명하게 공개",
+        "metrics": {
+          "emissions": { "label": "Scope1/2", "description": "2019년 기준 대비 절대량 감축" },
+          "renewableEnergy": { "label": "재생에너지", "description": "글로벌 공장의 친환경 전력 비중" },
+          "circularMaterials": { "label": "순환 소재", "description": "PBAT·LIMEX·재생 폴리머 출하량" },
+          "communityHours": { "label": "커뮤니티", "description": "봉사·STEM 교육 시간" }
+        },
+        "initiatives": {
+          "netZero": { "title": "넷제로 아키텍처", "description": "Scope1/2 제거와 Scope3 참여" },
+          "responsibleSupply": { "title": "책임 공급망", "description": "24/7 모니터링과 AI 추적" },
+          "circularDesign": { "title": "순환 설계", "description": "배터리·패키징에 분해 가능성 내재" },
+          "equity": { "title": "사람과 형평성", "description": "DEI 위원회, 임금 형평성, 접근성 표준" }
+        },
+        "cta": {
+          "eyebrow": "Engage",
+          "title": "ESG 파일럿 공동 설계",
+          "description": "과제를 제시하면 함께 설계하고 확장합니다.",
+          "primary": { "label": "ESG 워크숍", "href": "/communication/contact" },
+          "secondary": { "label": "ESG 정책", "href": "/downloads/skc-esg-policy.pdf" }
+        }
+      }
     },
-    "contact": {
-      "title": "문의 양식",
-      "description": "React Hook Form + Zod 유효성 검사"
+    "creation": {
+      "overview": {
+        "meta": { "title": "Creation 플랫폼", "description": "배터리·반도체·친환경 소재 허브" },
+        "hero": {
+          "eyebrow": "Creation",
+          "title": "글라스모픽 인터페이스로 만나는 소재",
+          "description": "동박, 글라스, 친환경 소재를 하나의 언어로 전달합니다.",
+          "stats": [ { "label": "2024 NPI", "value": "18" }, { "label": "파일럿 라인", "value": "9" } ],
+          "actions": [
+            { "label": "배터리 플랫폼", "href": "/creation/battery" },
+            { "label": "엔지니어 상담", "href": "/communication/contact", "variant": "ghost" }
+          ]
+        },
+        "platforms": {
+          "eyebrow": "Platforms",
+          "title": "세 가지 제품 별자리",
+          "description": "레퍼런스 디자인, 샘플, 온보딩 세션 제공",
+          "items": [
+            { "icon": "🔋", "title": "배터리", "description": "초박 동박, 실리콘 음극, 열 제어" },
+            { "icon": "💠", "title": "반도체", "description": "글라스 서브스트레이트, CMP" },
+            { "icon": "♻️", "title": "친환경", "description": "PBAT, LIMEX, 화학적 재활용" }
+          ]
+        },
+        "roadmap": {
+          "eyebrow": "Roadmap",
+          "title": "출시 예정",
+          "description": "신규 화학·모듈·제조 서비스",
+          "items": [
+            { "icon": "🧪", "title": "전고체용 동박", "description": "전고체 셀을 위한 초박 동박" },
+            { "icon": "🪟", "title": "글라스 확장", "description": "Absolics 메가 라인 고량산출" },
+            { "icon": "🌿", "title": "순환 폴리머", "description": "물류사와 혼합 플라스틱 재활용" }
+          ]
+        },
+        "cta": {
+          "eyebrow": "Engage",
+          "title": "SKC Creation과 프로토타이핑",
+          "description": "샘플 키트를 요청하거나 디자인 스프린트를 예약하세요.",
+          "primary": { "label": "샘플 요청", "href": "/communication/contact" },
+          "secondary": { "label": "기술 문서", "href": "/downloads/skc-tech-brief.pdf" }
+        }
+      },
+      "battery": {
+        "meta": { "title": "배터리 소재", "description": "동박·실리콘·열 관리 기술" },
+        "hero": {
+          "eyebrow": "Battery",
+          "title": "기가팩토리를 위한 동박과 실리콘",
+          "description": "균일한 도전율과 실리콘 혁신으로 에너지 밀도를 높입니다.",
+          "stats": [ { "label": "동박 두께", "value": "2.5 µm" }, { "label": "연간 생산", "value": "250 kt" } ],
+          "actions": [
+            { "label": "스펙 다운로드", "href": "/downloads/skc-battery-spec.pdf" },
+            { "label": "기술 미팅", "href": "/communication/contact", "variant": "ghost" }
+          ],
+          "highlights": [
+            { "icon": "🧲", "title": "고도전성", "description": "높은 C-rate를 견디는 균일 도전율" },
+            { "icon": "🌡️", "title": "열 안정성", "description": "과격한 사이클에도 변형 없는 열 제어" }
+          ]
+        },
+        "details": {
+          "eyebrow": "Platforms",
+          "title": "SKC 배터리 패키지",
+          "description": "동박, 실리콘 음극, 열 제어 솔루션을 하나의 키트로",
+          "metrics": {
+            "energyDensity": { "label": "에너지 밀도", "description": "실리콘 증폭 스택으로 420Wh/kg 달성" },
+            "cycleLife": { "label": "사이클 수명", "description": "3,000회 이상 급속충전 검증" },
+            "thickness": { "label": "두께", "description": "균일한 2.5~8µm 동박" }
+          },
+          "technologies": {
+            "title": "핵심 기술",
+            "items": {
+              "copperFoil": { "title": "초박 동박", "description": "낮은 조도와 탄탄한 기계적 강도" },
+              "siliconAnode": { "title": "실리콘 음극", "description": "10배 이상의 용량을 제공하는 복합 음극" },
+              "thermalControl": { "title": "열 제어", "description": "위험을 줄이는 페이즈 체인지 솔루션" }
+            }
+          }
+        },
+        "specs": {
+          "eyebrow": "Technical specs",
+          "title": "스펙 요약",
+          "standards": "IEC / UL",
+          "items": {
+            "conductivity": { "label": "전도도", "description": "급속 충전을 위한 높은 전도율" },
+            "tensileStrength": { "label": "인장강도", "description": "고속 와인딩에도 형태 유지" },
+            "surfaceRoughness": { "label": "표면 조도", "description": "안정적 SEI 형성" },
+            "capacityRetention": { "label": "용량 유지율", "description": "500회 1C/1C 후 92% 유지" }
+          }
+        },
+        "applications": {
+          "eyebrow": "Use cases",
+          "title": "활용 분야",
+          "description": "EV, 그리드, 항공 등 고난도 시장",
+          "items": {
+            "ev": { "title": "전기차", "description": "고에너지 EV 팩과 초고속 충전" },
+            "grid": { "title": "그리드", "description": "장수명 유틸리티 저장" },
+            "aviation": { "title": "항공/모빌리티", "description": "eVTOL 및 항공용 셀" }
+          }
+        },
+        "cta": {
+          "eyebrow": "Next step",
+          "title": "SKC 동박 파일럿",
+          "description": "샘플, BOM 시뮬레이션, 프로세스 키트를 요청하세요.",
+          "primary": { "label": "샘플 요청", "href": "/communication/contact" },
+          "secondary": { "label": "CAD 파일", "href": "/downloads/skc-battery-cad.zip" }
+        }
+      },
+      "semiconductor": {
+        "meta": { "title": "반도체 소재", "description": "글라스 서브스트레이트와 CMP 솔루션" },
+        "hero": {
+          "eyebrow": "Semiconductor",
+          "title": "AI 메가 팹을 위한 글라스와 CMP",
+          "description": "Absolics 글라스 서브스트레이트와 CMP 화학으로 높은 평탄성과 열 안정성을 확보합니다.",
+          "stats": [ { "label": "패키징 노드", "value": "2.5D / 3D" }, { "label": "라인 폭", "value": "≤ 2 µm" } ],
+          "actions": [
+            { "label": "서브스트레이트 브리프", "href": "/downloads/skc-substrate-brief.pdf" },
+            { "label": "FAB 리뷰", "href": "/communication/contact", "variant": "ghost" }
+          ]
+        },
+        "details": {
+          "eyebrow": "Platforms",
+          "title": "반도체 엑셀런스",
+          "description": "글라스, CMP, 고급 패키징 전문성",
+          "metrics": {
+            "substrateFlatness": { "label": "평탄도", "description": "패널 스케일에서 ±0.5µm" },
+            "thermalStability": { "label": "열 안정성", "description": "400°C 리플로우 사이클에도 안정" },
+            "yield": { "label": "파일럿 수율", "description": "99.3% 수율 검증" }
+          },
+          "technologies": {
+            "title": "핵심 기술",
+            "items": {
+              "glassSubstrate": { "title": "글라스 서브스트레이트", "description": "고강성 패널로 AI 가속기 지원" },
+              "cmpSlurry": { "title": "CMP 슬러리", "description": "Cu와 유전체 공정에 최적화된 슬러리" },
+              "advancedPackaging": { "title": "고급 패키징", "description": "2.5D/3D 통합과 RDL 전문성" }
+            }
+          }
+        },
+        "specs": {
+          "eyebrow": "Technical specs",
+          "title": "제조 목표",
+          "standards": "JEDEC",
+          "items": {
+            "dielectricConstant": { "label": "유전율", "description": "신호 무결성을 위한 안정된 유전율" },
+            "glassCTE": { "label": "CTE", "description": "실리콘과 유사한 열팽창 계수" },
+            "waferSize": { "label": "패널/웨이퍼", "description": "300mm 및 패널 레벨 호환" },
+            "flatness": { "label": "평탄성", "description": "다중 다이 수율을 보장하는 평탄성" }
+          }
+        },
+        "applications": {
+          "eyebrow": "Use cases",
+          "title": "컴퓨팅을 위한 설계",
+          "description": "AI, 데이터센터, 모바일 등",
+          "items": {
+            "hpc": { "title": "HPC", "description": "고대역 서버와 AI 클러스터" },
+            "mobile": { "title": "모바일/XR", "description": "슬림 패키징과 개선된 열 관리" },
+            "ai": { "title": "AI 가속기", "description": "HBM 스택을 지원하는 글라스" }
+          }
+        },
+        "cta": {
+          "eyebrow": "Partner",
+          "title": "서브스트레이트 공동 설계",
+          "description": "패키징 스택을 공유하면 각 층을 함께 시뮬레이션합니다.",
+          "primary": { "label": "DFM 검토", "href": "/communication/contact" },
+          "secondary": { "label": "Absolics 데모", "href": "https://absolics.com" }
+        }
+      },
+      "eco": {
+        "meta": { "title": "친환경 소재", "description": "바이오 기반 PBAT, LIMEX, 순환 폴리머" },
+        "hero": {
+          "eyebrow": "Eco",
+          "title": "순환경제를 위한 폴리머",
+          "description": "바이오 원료, LIMEX, 화학적 재활용으로 탈탄소 공급망을 만듭니다.",
+          "stats": [ { "label": "바이오 함량", "value": "85%" }, { "label": "CO₂ 절감", "value": "-65%" } ],
+          "actions": [
+            { "label": "에코 카탈로그", "href": "/downloads/skc-eco-catalog.pdf" },
+            { "label": "소재 진단", "href": "/communication/contact", "variant": "ghost" }
+          ],
+          "highlights": [
+            { "icon": "🌾", "title": "바이오 피드스톡", "description": "추적 가능한 지속 가능 원료" },
+            { "icon": "♻️", "title": "클로즈드 루프", "description": "화학적 재활용으로 순환 유지" }
+          ]
+        },
+        "details": {
+          "eyebrow": "Platforms",
+          "title": "Eco 소재 스위트",
+          "description": "PBAT 필름, LIMEX 복합재, 화학적 재활용 툴킷",
+          "metrics": {
+            "co2Reduction": { "label": "CO₂ 감축", "description": "PET 대비 온실가스 절감" },
+            "biobasedContent": { "label": "바이오 함량", "description": "질량 밸런스 기반 재생 원료 비중" },
+            "recyclability": { "label": "재활용성", "description": "기계적·화학적 재사용 가능" }
+          },
+          "technologies": {
+            "title": "핵심 기술",
+            "items": {
+              "pbat": { "title": "PBAT 필름", "description": "퇴비화 가능한 유연 포장" },
+              "limex": { "title": "LIMEX", "description": "석회질을 활용해 플라스틱 사용량 절감" },
+              "chemRecycling": { "title": "화학적 재활용", "description": "용해/디폴리머화 기반 재생" }
+            }
+          }
+        },
+        "specs": {
+          "eyebrow": "Technical specs",
+          "title": "성능 지표",
+          "standards": "ASTM D6400 / EN 13432",
+          "items": {
+            "biodegradation": { "label": "생분해", "description": "산업용 퇴비 환경에서 90일" },
+            "strength": { "label": "인장강도", "description": "상업용 포장 라인을 견디는 강도" },
+            "temperatureRange": { "label": "온도 범위", "description": "냉장~고온 충진까지 견딤" },
+            "barrierPerformance": { "label": "차단성", "description": "산소 투과도 <1 cc/m²·day" }
+          }
+        },
+        "applications": {
+          "eyebrow": "Use cases",
+          "title": "활용 시장",
+          "description": "소비재, 패션, 모빌리티",
+          "items": {
+            "packaging": { "title": "플렉서블 패키징", "description": "식품·생활용품 포장" },
+            "textiles": { "title": "섬유", "description": "바이오 기반 섬유와 코팅" },
+            "mobility": { "title": "모빌리티", "description": "경량 복합재" }
+          }
+        },
+        "cta": {
+          "eyebrow": "Prototype",
+          "title": "순환 라인 런칭",
+          "description": "Eco 디자인 스튜디오와 함께 파일럿을 시작하세요.",
+          "primary": { "label": "파일럿 시작", "href": "/communication/contact" },
+          "secondary": { "label": "LCA 다운로드", "href": "/downloads/skc-eco-lca.pdf" }
+        }
+      }
     },
-    "newsletter": {
-      "title": "뉴스레터 가입",
-      "description": "이메일 유효성 검사 및 성공 상태"
+    "communication": {
+      "overview": {
+        "meta": { "title": "Communication 허브", "description": "뉴스룸, IR, 미디어 센터" },
+        "hero": {
+          "eyebrow": "Communication",
+          "title": "모든 이해관계자를 위한 투명성",
+          "description": "언론, 투자자, 파트너, 지원자가 동일한 커뮤니케이션 스택을 경험합니다.",
+          "stats": [ { "label": "연간 보도자료", "value": "40+" }, { "label": "투자자 세션", "value": "12" } ],
+          "actions": [
+            { "label": "뉴스룸 바로가기", "href": "/communication/news" },
+            { "label": "미디어 키트", "href": "/communication/media", "variant": "ghost" }
+          ]
+        },
+        "spotlight": {
+          "eyebrow": "Highlights",
+          "title": "이해관계자가 보는 화면",
+          "description": "투자자와 커뮤니티가 즉시 필요한 정보를 찾을 수 있습니다.",
+          "items": [
+            { "icon": "📰", "title": "온디맨드 IR", "description": "주간 업데이트와 요약본 제공" },
+            { "icon": "🎥", "title": "버추얼 팩토리", "description": "규제기관과 파트너를 위한 캡션 지원 투어" },
+            { "icon": "🔔", "title": "크라이시스 킷", "description": "템플릿과 워룸으로 빠르게 정렬" }
+          ]
+        },
+        "newsroom": {
+          "eyebrow": "Newsroom",
+          "title": "시그널 풍부한 뉴스룸",
+          "description": "현지화된 보도자료와 ESG 노트를 제공합니다.",
+          "items": [
+            { "icon": "📈", "title": "실적 키트", "description": "애널리스트용 단기 지표" },
+            { "icon": "♻️", "title": "ESG 트래커", "description": "월간 KPI와 정책 업데이트" },
+            { "icon": "🧾", "title": "규제 공시", "description": "감사에 대비한 다운로드 가능 파일" }
+          ]
+        },
+        "cta": {
+          "eyebrow": "Engage",
+          "title": "데이터가 급한가요?",
+          "description": "커뮤니케이션 데스크에 연락하거나 브리핑을 예약하세요.",
+          "primary": { "label": "커뮤니케이션 팀 연락", "href": "/communication/contact" },
+          "secondary": { "label": "미디어 키트", "href": "/communication/media" }
+        }
+      },
+      "news": {
+        "meta": { "title": "뉴스", "description": "최신 보도자료와 ESG 업데이트" },
+        "hero": {
+          "eyebrow": "Newsroom",
+          "title": "투명한 업데이트",
+          "description": "Cmd/Ctrl+K로 보도자료와 ESG 문서를 즉시 검색하세요.",
+          "stats": [ { "label": "FY24 기사", "value": "48" }, { "label": "평균 응답", "value": "<4h" } ]
+        },
+        "grid": {
+          "eyebrow": "News & Press",
+          "title": "최근 발표",
+          "description": "Press, ESG, Innovation으로 필터",
+          "filters": { "press": "보도", "esg": "ESG", "innovation": "혁신" },
+          "cta": "업데이트 읽기",
+          "items": {
+            "q3-results": { "title": "3분기 실적", "summary": "배터리 부문이 두 자릿수 성장으로 회복", "href": "/communication/news/q3-results" },
+            "merger-announcement": { "title": "SK enpulse 합병", "summary": "반도체 소재 역량 강화", "href": "/communication/news/merger-announcement" },
+            "limex-launch": { "title": "LIMEX 신제품", "summary": "플라스틱 사용량 50% 절감 솔루션", "href": "/communication/news/limex-launch" },
+            "ga4-rollout": { "title": "GA4 전면 도입", "summary": "동의 기반 분석 운영", "href": "/communication/news/ga4-rollout" }
+          }
+        }
+      },
+      "media": {
+        "meta": { "title": "미디어 라이브러리", "description": "브랜드 자산과 리포트" },
+        "hero": {
+          "eyebrow": "Media",
+          "title": "항상 최신으로 유지되는 자산",
+          "description": "벡터 로고, 공장 사진, 지속가능성 보고서를 내려받으세요."
+        },
+        "resources": {
+          "eyebrow": "Resources",
+          "title": "다운로드 센터",
+          "description": "연차보고서, ESG 브리프, 멀티미디어 자산",
+          "download": "다운로드",
+          "items": {
+            "annual-report": { "title": "2024 연차보고서", "description": "감사 재무제표와 경영진 논의" },
+            "sustainability-brief": { "title": "지속가능성 브리프", "description": "넷제로 진행 상황과 공급망 감사" },
+            "brand-assets": { "title": "브랜드 자산", "description": "로고, 색상, 타이포그래피" },
+            "factory-tour": { "title": "공장 투어 영상", "description": "SK넥실리스와 Absolics 현장" }
+          }
+        }
+      },
+      "contact": {
+        "meta": { "title": "문의 및 IR", "description": "언론, 투자자, 윤리 채널" },
+        "hero": {
+          "eyebrow": "Contact",
+          "title": "커뮤니케이션·IR·윤리팀으로 바로 연결",
+          "description": "채널을 선택하고 요청을 남기면 24시간 내 회신합니다.",
+          "stats": [ { "label": "지원 시간", "value": "24/5" }, { "label": "언어", "value": "EN · KO" } ]
+        },
+        "channels": {
+          "eyebrow": "Channels",
+          "title": "채널 선택",
+          "description": "언론, 투자자, 파트너용 전용 창구",
+          "cta": "연락하기",
+          "items": {
+            "press": { "title": "언론 데스크", "description": "press@skc.com" },
+            "investor": { "title": "IR 메일", "description": "ir@skc.com" },
+            "hq": { "title": "글로벌 HQ", "description": "경기도 성남시 판교로" },
+            "hotline": { "title": "윤리 핫라인", "description": "+82-2-2000-1000" },
+            "contactForm": { "title": "일반 문의", "description": "파트너와 공급사를 위한 보안 폼" }
+          }
+        },
+        "form": {
+          "title": "메시지를 남겨주세요",
+          "description": "프로젝트, 일정, 질문을 공유하면 영업일 기준 하루 이내 회신합니다."
+        },
+        "cta": {
+          "eyebrow": "Need instant access?",
+          "title": "지식 베이스 열기",
+          "description": "투자자 덱, ESG 덱, FAQ를 언제든 확인",
+          "primary": { "label": "리소스 센터", "href": "/communication/media" }
+        }
+      }
     },
-    "gallery": {
-      "title": "이미지 갤러리",
-      "description": "키보드 탐색 가능한 라이트박스 뷰어"
-    },
-    "videos": {
-      "title": "비디오 임베드",
-      "description": "지연 로딩이 적용된 YouTube 통합"
+    "career": {
+      "overview": {
+        "meta": { "title": "Careers", "description": "SKC 인재 브랜드" },
+        "hero": {
+          "eyebrow": "Careers",
+          "title": "다음 세대를 위한 소재를 함께 만듭니다",
+          "description": "엔지니어, 운영, 디자이너, 스토리텔러가 함께 일합니다.",
+          "stats": [ { "label": "현재 채용", "value": "120+" }, { "label": "프로그램", "value": "14" } ],
+          "actions": [
+            { "label": "채용 공고", "href": "/career/openings" },
+            { "label": "문화 알아보기", "href": "/career/culture", "variant": "ghost" }
+          ]
+        },
+        "narrative": {
+          "eyebrow": "People experience",
+          "title": "임팩트 중심의 일",
+          "description": "명확한 목표, 투명한 대시보드, 비동기 의사소통",
+          "items": [
+            { "icon": "🧭", "title": "명확성", "description": "결과 기반 목표와 공개 대시보드" },
+            { "icon": "🪴", "title": "성장", "description": "순환 보직과 길드, 학위 후원" },
+            { "icon": "🤗", "title": "소속감", "description": "여성·부모·재향군인 등 다양한 커뮤니티" }
+          ]
+        },
+        "programs": {
+          "eyebrow": "Programs",
+          "title": "인재 플랫폼",
+          "description": "졸업생, 전문가, 메이커를 위한 맞춤 프로그램",
+          "items": [
+            { "icon": "🎓", "title": "Graduate Fast Track", "description": "12개월 회전 프로그램" },
+            { "icon": "🌏", "title": "Global Mobility", "description": "한국·미국·동남아 순환 근무" },
+            { "icon": "🛠️", "title": "Builder Residency", "description": "신제품 파일럿 참여" }
+          ]
+        },
+        "cta": {
+          "eyebrow": "Join us",
+          "title": "한 번의 지원으로 다양한 포지션 탐색",
+          "description": "리크루터가 커리어 PM 역할을 수행합니다.",
+          "primary": { "label": "프로필 제출", "href": "/career/openings" },
+          "secondary": { "label": "리크루팅과 상담", "href": "/communication/contact" }
+        }
+      },
+      "culture": {
+        "meta": { "title": "문화와 가치", "description": "SKC의 가치, 의식, 프로그램" },
+        "hero": {
+          "eyebrow": "Culture",
+          "title": "대담한 빌더를 위한 문화",
+          "description": "신뢰 기반의 하이브리드 환경에서 책임감 있게 빌드합니다.",
+          "stats": [ { "label": "사내 커뮤니티", "value": "9" }, { "label": "내부 이동", "value": "27%" } ]
+        },
+        "eyebrow": "Values",
+        "title": "우리가 일하는 방식",
+        "description": "모든 스탠드업과 리뷰를 지탱하는 가치",
+        "values": {
+          "boldInnovation": { "title": "대담한 혁신", "description": "실험을 장려하고 가드레일을 설정" },
+          "esgLeadership": { "title": "ESG 리더십", "description": "모든 결정을 기후와 공동체 관점에서 평가" },
+          "humanCentered": { "title": "사람 중심", "description": "사람을 우선하는 운영과 제품" },
+          "learningMindset": { "title": "학습 지향", "description": "호기심과 데이터, 빠른 반복" }
+        },
+        "programs": {
+          "title": "시그니처 프로그램",
+          "items": {
+            "graduate": "Graduate Catalyst",
+            "global-rotation": "Global Rotation",
+            "women-leadership": "Women in Leadership",
+            "future-foundry": "Future Foundry"
+          }
+        }
+      },
+      "benefits": {
+        "meta": { "title": "복리후생", "description": "하이브리드 근무, 웰니스, 보상" },
+        "hero": {
+          "eyebrow": "Benefits",
+          "title": "현실적인 삶을 위한 설계",
+          "description": "유연 근무, 웰니스 지원, 공정한 보상",
+          "stats": [ { "label": "웰니스 지원금", "value": "$1,200" }, { "label": "휴가", "value": "무제한+" } ]
+        },
+        "eyebrow": "Benefits",
+        "title": "SKC 베네핏 스택",
+        "description": "웰니스부터 커리어 개발까지 빌더를 지원",
+        "items": {
+          "hybridWork": { "title": "하이브리드 근무", "description": "원격 우선 + 목적 있는 온사이트" },
+          "globalMobility": { "title": "글로벌 모빌리티", "description": "이전 지원과 비자 서비스" },
+          "wellness": { "title": "웰니스", "description": "치료, 헬스, 마음챙김 지원" },
+          "familyCare": { "title": "패밀리 케어", "description": "출산/육아/간병 지원" },
+          "education": { "title": "학습", "description": "학비 보조와 자격증 예산" },
+          "equity": { "title": "주식/보너스", "description": "주요 사업부 지분 프로그램" }
+        }
+      },
+      "openings": {
+        "meta": { "title": "채용 공고", "description": "현재 진행 중인 포지션" },
+        "hero": {
+          "eyebrow": "Open roles",
+          "title": "전 세계 소재인을 모집합니다",
+          "description": "주요 포지션을 확인하거나 프로필을 등록하세요."
+        },
+        "eyebrow": "Featured roles",
+        "title": "진행 중인 공고",
+        "description": "주요 포지션에 지원하거나 일반 프로필을 제출하세요.",
+        "viewAll": "전체 공고 보기",
+        "apply": "지원하기",
+        "commitment": {
+          "full-time": "정규직",
+          "contract": "계약직",
+          "internship": "인턴십"
+        },
+        "items": {
+          "battery-research": { "title": "배터리 연구 선임", "applyLink": "mailto:talent@skc.com?subject=Battery%20Research" },
+          "process-engineer": { "title": "동박 공정 엔지니어", "applyLink": "mailto:talent@skc.com?subject=Process%20Engineer" },
+          "esg-data": { "title": "ESG 데이터 사이언티스트", "applyLink": "mailto:talent@skc.com?subject=ESG%20Data" },
+          "product-designer": { "title": "디지털 경험 프로덕트 디자이너", "applyLink": "mailto:talent@skc.com?subject=Product%20Designer" }
+        }
+      }
     }
   }
 }

@@ -92,6 +92,7 @@ export function SkcHeroPanel({
             key={partner.name}
             href={partner.url}
             rel="noopener noreferrer"
+            target="_blank"
             className="hover:text-accent-primary transition-colors"
           >
             {partner.name}

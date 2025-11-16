@@ -70,6 +70,17 @@ src/
 
 ## 🛠️ Development
 
+### Environment Variables
+
+Create `apps/skc-site/.env.local` with the following keys before running the dev server:
+
+```
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX        # GA4 measurement ID (optional in dev)
+NEXT_PUBLIC_SITE_URL=http://localhost:3002
+```
+
+The GA script only loads after a visitor accepts cookies. Leave `NEXT_PUBLIC_GA_ID` empty if you do not want analytics in a given environment.
+
 ### Install Dependencies
 
 ```bash
@@ -199,6 +210,8 @@ This Next.js version replaces the Express + EJS prototype with:
 
 ### Vercel (Recommended)
 
+See `docs/vercel-skc-site.md` for the full dual-project configuration (SKC site + Giga site), required env vars, and verification checklist.
+
 ```bash
 pnpm build
 vercel --prod
@@ -224,3 +237,4 @@ Proprietary - SKC Corporation
 ---
 
 **Built with ❤️ using Next.js 16 + Framer Motion**
+# SK-Website

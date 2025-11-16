@@ -20,6 +20,12 @@ export function CookieConsent() {
     Cookies.set('cookie-consent', 'accepted', { expires: 365 });
     setShowBanner(false);
 
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(
+        new CustomEvent('cookie-consent', { detail: { status: 'accepted' } })
+      );
+    }
+
     // Initialize analytics if user consents
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('consent', 'update', {
@@ -31,6 +37,12 @@ export function CookieConsent() {
   const declineCookies = () => {
     Cookies.set('cookie-consent', 'declined', { expires: 30 });
     setShowBanner(false);
+
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(
+        new CustomEvent('cookie-consent', { detail: { status: 'declined' } })
+      );
+    }
   };
 
   return (

@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLocale, useTranslations } from 'next-intl';
 import Fuse from 'fuse.js';
 import { searchIndex, type SearchItem } from '@/data/searchIndex';
 
@@ -22,7 +23,7 @@ const categoryColors = {
   company: 'rgba(230, 117, 37, 0.2)',
 };
 
-const categoryLabels = {
+const defaultCategoryLabels = {
   page: 'Page',
   product: 'Product',
   news: 'News',
@@ -37,11 +38,26 @@ interface SiteSearchProps {
 export function SiteSearch({ isOpen, onClose }: SiteSearchProps) {
   const [query, setQuery] = useState('');
   const fuse = useMemo(() => new Fuse(searchIndex, fuseOptions), []);
+  const locale = useLocale();
+  const t = useTranslations('search');
 
   const results = useMemo(() => {
     if (!query.trim()) return [];
     return fuse.search(query).slice(0, 8);
   }, [query, fuse]);
+
+  const categoryLabels = {
+    page: t('categories.page'),
+    product: t('categories.product'),
+    news: t('categories.news'),
+    company: t('categories.company'),
+  } satisfies Record<SearchItem['category'], string>;
+
+  const buildHref = (url: string) => {
+    if (/^(https?:|mailto:)/.test(url)) return url;
+    const normalized = url.startsWith('/') ? url : `/${url}`;
+    return `/${locale}${normalized}`;
+  };
 
   // Close on Escape key
   useEffect(() => {
@@ -92,7 +108,7 @@ export function SiteSearch({ isOpen, onClose }: SiteSearchProps) {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search SKC..."
+                placeholder={t('placeholder')}
                 autoFocus
                 className="w-full bg-transparent border-none outline-none pl-12 pr-4 py-3 text-lg text-foreground placeholder:text-text-tertiary"
               />
@@ -128,7 +144,7 @@ export function SiteSearch({ isOpen, onClose }: SiteSearchProps) {
                         className="pill text-xs px-2 py-1 flex-shrink-0"
                         style={{ backgroundColor: categoryColors[item.category] }}
                       >
-                        {categoryLabels[item.category]}
+                        {categoryLabels[item.category] ?? defaultCategoryLabels[item.category]}
                       </span>
                       <div className="flex-1 min-w-0">
                         <div className="text-sm font-medium text-foreground mb-1">
@@ -152,7 +168,7 @@ export function SiteSearch({ isOpen, onClose }: SiteSearchProps) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                 >
-                  No results found for &quot;{query}&quot;
+                  {t('empty', { query })}
                 </motion.div>
               ) : (
                 <motion.div
@@ -161,9 +177,7 @@ export function SiteSearch({ isOpen, onClose }: SiteSearchProps) {
                   animate={{ opacity: 1 }}
                 >
                   <div className="text-4xl mb-2">🔍</div>
-                  <div className="text-sm">
-                    Search for products, news, pages, or companies
-                  </div>
+                  <div className="text-sm">{t('helper')}</div>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -173,9 +187,9 @@ export function SiteSearch({ isOpen, onClose }: SiteSearchProps) {
           <div className="px-4 py-3 border-t border-white/5 flex items-center justify-between text-xs text-text-tertiary">
             <div className="flex items-center gap-4">
               <kbd className="px-2 py-1 bg-white/5 rounded">↵</kbd>
-              <span>to select</span>
+              <span>{t('enter')}</span>
               <kbd className="px-2 py-1 bg-white/5 rounded">ESC</kbd>
-              <span>to close</span>
+              <span>{t('escape')}</span>
             </div>
             <div>{results.length} results</div>
           </div>

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { footerNav } from "@/data/sections";
-<<<<<<< HEAD
 import { Separator } from "@/components/ui/separator";
 
 export function SiteFooter() {
@@ -24,38 +23,12 @@ export function SiteFooter() {
           {Object.entries(footerNav).map(([section, links]) => (
             <div key={section}>
               <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground/70">
-=======
-
-export function SiteFooter() {
-  return (
-    <footer className="border-t border-white/10 py-16">
-      <div className="section-shell grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-        <div className="space-y-4">
-          <p className="text-2xl font-semibold">Giga</p>
-          <p className="text-sm text-white/60">
-            Giga’s AI agents handle complex workflows at scale while keeping humans in the loop.
-          </p>
-          <div className="flex gap-4 text-xs text-white/50">
-            <span>Compliant</span>
-            <span>Insights</span>
-            <span>Trust Center</span>
-          </div>
-        </div>
-        <div className="grid gap-8 text-sm text-white/70 md:grid-cols-3">
-          {Object.entries(footerNav).map(([section, links]) => (
-            <div key={section}>
-              <p className="text-xs uppercase tracking-[0.3em] text-white/40">
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
                 {section}
               </p>
               <ul className="mt-4 space-y-2">
                 {links.map((link) => (
                   <li key={link.label}>
-<<<<<<< HEAD
                     <Link href={link.href} className="hover:text-primary transition-colors">
-=======
-                    <Link href={link.href} className="hover:text-white">
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
                       {link.label}
                     </Link>
                   </li>
@@ -65,7 +38,6 @@ export function SiteFooter() {
           ))}
         </div>
       </div>
-<<<<<<< HEAD
       <Separator className="my-8" />
       <div className="section-shell flex flex-wrap items-center justify-between gap-4 text-xs text-muted-foreground">
         <p>© {new Date().getFullYear()} Intune Labs, Inc.</p>
@@ -74,15 +46,6 @@ export function SiteFooter() {
             Privacy Policy
           </Link>
           <Link href="/terms" className="hover:text-primary transition-colors">
-=======
-      <div className="section-shell mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/50">
-        <p>© {new Date().getFullYear()} Giga AI, Inc.</p>
-        <div className="flex gap-4">
-          <Link href="/privacy" className="hover:text-white">
-            Privacy Policy
-          </Link>
-          <Link href="/terms" className="hover:text-white">
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
             Terms of Service
           </Link>
         </div>

@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-<<<<<<< HEAD
 @layer base {
   :root {
     /* Light Theme - ElevenLabs Inspired */
@@ -54,32 +53,6 @@
 }
 
 @theme inline {
-=======
-:root {
-  /* Color System - Enhanced to match giga.ai */
-  --background: #020305;
-  --foreground: #f9f9f9;
-  --accent-primary: #09f; /* Bright blue for links/CTAs */
-  --accent-secondary: #66ffe4;
-  --muted: #8f9ba8;
-  --border: rgba(255, 255, 255, 0.12);
-  --glass: rgba(4, 7, 18, 0.65);
-  --glass-light: rgba(255, 255, 255, 0.05);
-
-  /* Gradients */
-  --gradient-radial-blue: radial-gradient(circle at 20% 20%, rgba(15, 82, 255, 0.35), transparent 45%);
-  --gradient-radial-teal: radial-gradient(circle at 80% 0%, rgba(0, 196, 160, 0.35), transparent 35%);
-  --gradient-base: linear-gradient(180deg, #020305 0%, #050710 45%, #070b15 100%);
-
-  color-scheme: dark;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   --font-sans: var(--font-inter);
   --font-mono: var(--font-fragment-mono);
 }
@@ -89,13 +62,8 @@ body {
   min-height: 100vh;
   font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
-<<<<<<< HEAD
   background: hsl(var(--background));
   color: hsl(var(--foreground));
-=======
-  background: var(--gradient-radial-blue), var(--gradient-radial-teal), var(--gradient-base);
-  color: var(--foreground);
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -111,38 +79,24 @@ html {
   }
 }
 
-<<<<<<< HEAD
 /* Subtle background pattern */
-=======
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-<<<<<<< HEAD
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   opacity: 1;
-=======
-  background-image: url("data:image/svg+xml,%3Csvg width='160' height='160' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='160' fill='rgba(255,255,255,0.05)'/%3E%3Crect width='160' height='1' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
-  opacity: 0.12;
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   pointer-events: none;
   z-index: -1;
 }
 
 ::selection {
-<<<<<<< HEAD
   background: hsl(var(--primary) / 0.2);
   color: hsl(var(--foreground));
-=======
-  background: rgba(0, 153, 255, 0.3);
-  color: var(--foreground);
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
 }
 
 /* Focus visible styles for accessibility */
 :focus-visible {
-<<<<<<< HEAD
   outline: 2px solid hsl(var(--ring));
   outline-offset: 2px;
 }
@@ -177,32 +131,6 @@ body::before {
 }
 
 /* Section container */
-=======
-  outline: 2px solid var(--accent-primary);
-  outline-offset: 2px;
-}
-
-.glass-card {
-  background: var(--glass);
-  border: 1px solid var(--border);
-  border-radius: 1.75rem;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 30px 80px rgba(2, 3, 5, 0.75);
-  backdrop-filter: blur(20px);
-}
-
-.pill {
-  border-radius: 999px;
-  padding: 0.25rem 0.85rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--foreground);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
 .section-shell {
   width: min(1200px, 100%);
   margin-inline: auto;
@@ -213,35 +141,22 @@ body::before {
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
   letter-spacing: -0.02em;
-<<<<<<< HEAD
   color: hsl(var(--foreground));
-=======
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
 }
 
 p {
   text-wrap: pretty;
-<<<<<<< HEAD
   color: hsl(var(--muted-foreground));
-=======
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
 }
 
 /* Link hover effect */
 a {
   transition: color 0.2s ease;
-<<<<<<< HEAD
   color: hsl(var(--foreground));
 }
 
 a:hover {
   color: hsl(var(--primary));
-=======
-}
-
-a:hover {
-  color: var(--accent-primary);
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
 }
 
 /* Button base styles */
@@ -253,7 +168,6 @@ button:active {
   transform: scale(0.98);
 }
 
-<<<<<<< HEAD
 /* Stats card */
 .stats-card {
   background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
@@ -278,8 +192,6 @@ button:active {
   border-color: hsl(var(--primary) / 0.3);
 }
 
-=======
->>>>>>> db85ad47a1502018f5973120911d75786935b0d4
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,

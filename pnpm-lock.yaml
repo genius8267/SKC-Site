@@ -17,6 +17,7 @@ importers:
 
   apps/giga-site:
     dependencies:
+<<<<<<< HEAD
       '@radix-ui/react-separator':
         specifier: ^1.1.8
         version: 1.1.8(@types/react-dom@19.2.3)(@types/react@19.2.4)(react-dom@19.2.0)(react@19.2.0)
@@ -38,6 +39,11 @@ importers:
       lucide-react:
         specifier: ^0.554.0
         version: 0.554.0(react@19.2.0)
+=======
+      framer-motion:
+        specifier: 12.23.24
+        version: 12.23.24(react-dom@19.2.0)(react@19.2.0)
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
       next:
         specifier: 16.0.3
         version: 16.0.3(@babel/core@7.28.5)(react-dom@19.2.0)(react@19.2.0)
@@ -47,9 +53,12 @@ importers:
       react-dom:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
+<<<<<<< HEAD
       tailwind-merge:
         specifier: ^3.4.0
         version: 3.4.0
+=======
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4
@@ -1536,6 +1545,7 @@ packages:
       react-remove-scroll: 2.7.1(@types/react@19.2.4)(react@19.2.0)
     dev: false
 
+<<<<<<< HEAD
   /@radix-ui/react-direction@1.1.1(@types/react@19.2.4)(react@19.2.0):
     resolution: {integrity: sha512-1UEWRX6jnOA2y4H5WczZ44gOOjTEmlqv1uNW4GAJEO5+bauCBhv8snY65Iw5/VOS/ghKN9gr2KjnLKxrsvoMVw==}
     peerDependencies:
@@ -1549,6 +1559,8 @@ packages:
       react: 19.2.0
     dev: false
 
+=======
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   /@radix-ui/react-dismissable-layer@1.1.11(@types/react-dom@19.2.3)(@types/react@19.2.4)(react-dom@19.2.0)(react@19.2.0):
     resolution: {integrity: sha512-Nqcp+t5cTB8BinFkZgXiMJniQH0PsUt2k51FUhbdfeKvc4ACcG2uQniY/8+h1Yv6Kza4Q7lD7PQV0z0oicE0Mg==}
     peerDependencies:
@@ -1684,6 +1696,7 @@ packages:
       react-dom: 19.2.0(react@19.2.0)
     dev: false
 
+<<<<<<< HEAD
   /@radix-ui/react-primitive@2.1.4(@types/react-dom@19.2.3)(@types/react@19.2.4)(react-dom@19.2.0)(react@19.2.0):
     resolution: {integrity: sha512-9hQc4+GNVtJAIEPEqlYqW5RiYdrr8ea5XQ0ZOnD6fgru+83kqT15mq2OCcbe8KnjRZl5vF3ks69AKz3kh1jrhg==}
     peerDependencies:
@@ -1752,6 +1765,8 @@ packages:
       react-dom: 19.2.0(react@19.2.0)
     dev: false
 
+=======
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   /@radix-ui/react-slot@1.2.3(@types/react@19.2.4)(react@19.2.0):
     resolution: {integrity: sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==}
     peerDependencies:
@@ -1766,6 +1781,7 @@ packages:
       react: 19.2.0
     dev: false
 
+<<<<<<< HEAD
   /@radix-ui/react-slot@1.2.4(@types/react@19.2.4)(react@19.2.0):
     resolution: {integrity: sha512-Jl+bCv8HxKnlTLVrcDE8zTMJ09R9/ukw4qBs/oZClOfoQk/cOTbDn+NceXfV7j09YPVQUryJPHurafcSg6EVKA==}
     peerDependencies:
@@ -1807,6 +1823,8 @@ packages:
       react-dom: 19.2.0(react@19.2.0)
     dev: false
 
+=======
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   /@radix-ui/react-toast@1.2.15(@types/react-dom@19.2.3)(@types/react@19.2.4)(react-dom@19.2.0)(react@19.2.0):
     resolution: {integrity: sha512-3OSz3TacUWy4WtOXV38DggwxoqJK4+eDkNMl5Z/MJZaoUPaP4/9lf81xXMe1I2ReTAptverZUpbPY4wWwWyL5g==}
     peerDependencies:
@@ -3271,12 +3289,15 @@ packages:
     engines: {node: '>= 16'}
     dev: true
 
+<<<<<<< HEAD
   /class-variance-authority@0.7.1:
     resolution: {integrity: sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==}
     dependencies:
       clsx: 2.1.1
     dev: false
 
+=======
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   /cli-cursor@5.0.0:
     resolution: {integrity: sha512-aCj4O5wKyszjMmDT4tZj93kxyydN/K5zPWSCe6/0AV/AA1pqe5ZBIw0a2ZfPQV7lL5/yb5HsUreJ6UFAF1tEQw==}
     engines: {node: '>=18'}
@@ -3307,11 +3328,14 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
+<<<<<<< HEAD
   /clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
     dev: false
 
+=======
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   /code-block-writer@13.0.3:
     resolution: {integrity: sha512-Oofo0pq3IKnsFtuHqSF7TqBfr71aeyZDVJ0HpmqB7FBM2qEigL0iPONSCZSO9pE9dZTAxANe5XHG9Uy0YMv8cg==}
     dev: true
@@ -5358,6 +5382,7 @@ packages:
     dependencies:
       yallist: 3.1.1
 
+<<<<<<< HEAD
   /lucide-react@0.554.0(react@19.2.0):
     resolution: {integrity: sha512-St+z29uthEJVx0Is7ellNkgTEhaeSoA42I7JjOCBCrc5X6LYMGSv0P/2uS5HDLTExP5tpiqRD2PyUEOS6s9UXA==}
     peerDependencies:
@@ -5366,6 +5391,8 @@ packages:
       react: 19.2.0
     dev: false
 
+=======
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   /lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
@@ -6742,10 +6769,13 @@ packages:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
     dev: true
 
+<<<<<<< HEAD
   /tailwind-merge@3.4.0:
     resolution: {integrity: sha512-uSaO4gnW+b3Y2aWoWfFpX62vn2sR3skfhbjsEnaBI81WD1wBLlHZe5sWf0AqjksNdYTbGBEd0UasQMT3SNV15g==}
     dev: false
 
+=======
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   /tailwindcss@4.1.17:
     resolution: {integrity: sha512-j9Ee2YjuQqYT9bbRTfTZht9W/ytp5H+jJpZKiYdP/bpnXARAuELt9ofP0lPnmHjbga7SNQIxdTAXCmtKVYjN+Q==}
     dev: true

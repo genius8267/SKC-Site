@@ -78,7 +78,11 @@ export const features: Feature[] = [
   {
     title: "Auto policy writing",
     description:
+<<<<<<< HEAD
       "Drop transcripts or SOPs and watch Intune Labs craft agent-ready policies with citations and guardrails.",
+=======
+      "Drop transcripts or SOPs and watch Giga craft agent-ready policies with citations and guardrails.",
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
     metric: "2 week deployment window",
   },
   {
@@ -231,9 +235,15 @@ export const customerSpotlight = {
   brand: "DoorDash",
   metricLabel: "DWR rate",
   metricValue: "80%",
+<<<<<<< HEAD
   title: "How DoorDash and Intune Labs built reliable support at scale",
   quote:
     "We operate at a massive scale across services, platforms, and languages. Intune Labs delivered measurable improvements—fewer escalations, faster resolutions, and tighter workflows across 40+ countries.",
+=======
+  title: "How DoorDash and Giga built reliable support at scale",
+  quote:
+    "We operate at a massive scale across services, platforms, and languages. Giga delivered measurable improvements—fewer escalations, faster resolutions, and tighter workflows across 40+ countries.",
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
   person: "Andy Fang",
   role: "Co-Founder at DoorDash",
 };

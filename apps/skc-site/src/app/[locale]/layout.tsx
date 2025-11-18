@@ -4,7 +4,10 @@ import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { AnalyticsProvider } from '@/components/providers/AnalyticsProvider';
+<<<<<<< HEAD
 import { ElevenLabsProvider } from '@/components/providers/ElevenLabsProvider';
+=======
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
 import { locales } from '@/i18n';
 import type { Metadata } from 'next';
 import '../globals.css';
@@ -58,7 +61,10 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             {children}
             <AnalyticsProvider />
+<<<<<<< HEAD
             <ElevenLabsProvider />
+=======
+>>>>>>> db85ad47a1502018f5973120911d75786935b0d4
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

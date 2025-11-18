@@ -1,0 +1,15 @@
+name: CI
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - main
+jobs:
+  call-org-ci:
+    # Use matrix fan-out if the project spans notebooks + python packages.
+    uses: your-org/.github/.github/workflows/reusable-ci.yml@main
+    with:
+      language: python
+    secrets: inherit

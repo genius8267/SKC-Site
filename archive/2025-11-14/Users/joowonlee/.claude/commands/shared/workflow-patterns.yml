@@ -1,0 +1,529 @@
+# Workflow Composition DSL
+# Chain multiple commands with automatic context flow and error handling
+
+## Legend
+@include universal-constants.yml#Universal_Legend
+
+## Workflow Composition Syntax
+
+```yaml
+DSL_Syntax:
+  Sequential_Flow:
+    Syntax: "cmd1 → cmd2 → cmd3"
+    Semantics: "Execute in order, pass context forward"
+    Symbol: "→"
+    Example: "/analyze → /improve → /test"
+    Context_Flow: "Each command receives previous output as $CONTEXT"
+
+  Parallel_Execution:
+    Syntax: "cmd1 & cmd2 & cmd3"
+    Semantics: "Execute concurrently, aggregate results"
+    Symbol: "&"
+    Example: "/test & /scan & /build"
+    Context_Flow: "All commands receive same input context"
+
+  Conditional_Flow:
+    Syntax: "cmd1 && cmd2 || cmd3"
+    Semantics: "Execute cmd2 if cmd1 succeeds, else cmd3"
+    Symbol: "&&" (success), "||" (failure)
+    Example: "/test && /deploy || /troubleshoot"
+    Context_Flow: "Success branch gets results, failure gets error context"
+
+  Iterative_Loop:
+    Syntax: "while(condition) { cmd1 → cmd2 }"
+    Semantics: "Loop until condition met"
+    Symbol: "while"
+    Example: "while(coverage < 80%) { /test → /improve }"
+    Context_Flow: "Each iteration receives previous iteration context"
+
+  Named_Workflows:
+    Syntax: "/workflow <name> [args]"
+    Semantics: "Execute pre-defined workflow template"
+    Example: "/workflow feature-dev --magic"
+    Predefined: ["feature-dev", "bug-fix", "deploy-safe", "quality-gate"]
+
+Workflow_Arguments:
+  Global_Flags:
+    Apply_To_All: "--think, --uc, --plan, --persona-*"
+    Example: "/workflow feature-dev --think --persona-frontend"
+    Behavior: "All commands in workflow inherit these flags"
+
+  Command_Specific:
+    Syntax: "cmd[--flag]"
+    Example: "/analyze[--code] → /improve[--quality]"
+    Scope: "Applies only to specified command"
+
+  Context_Variables:
+    Syntax: "$VAR"
+    Builtin: ["$FILES", "$CONTEXT", "$RESULT", "$ERROR"]
+    Example: "/analyze $FILES → /improve $RESULT"
+
+Workflow_Control:
+  Checkpointing:
+    Auto_Checkpoint: "Before each command in chain"
+    Manual_Checkpoint: "Save state at specific point"
+    Syntax: "→ @checkpoint → "
+    Example: "/build → @checkpoint → /deploy"
+
+  Error_Handling:
+    On_Error:
+      Continue: "Log error, proceed to next command"
+      Abort: "Stop workflow immediately"
+      Retry: "Retry failed command N times"
+      Fallback: "Execute alternative command path"
+    Syntax: "→ @on-error(strategy)"
+    Example: "/deploy → @on-error(rollback) → /verify"
+
+  Breakpoints:
+    User_Confirmation: "Pause for manual approval"
+    Syntax: "→ @confirm('message') → "
+    Example: "/scan → @confirm('Deploy to prod?') → /deploy --env prod"
+
+  Time_Limits:
+    Per_Command: "Maximum duration per command"
+    Total_Workflow: "Maximum duration for entire workflow"
+    Syntax: "→ @timeout(duration)"
+    Example: "/test → @timeout(5min) → /deploy"
+```
+
+## Predefined Workflow Templates
+
+```yaml
+Workflow_Library:
+  ace-full:
+    Name: "ACE Complete Workflow"
+    Chain: "ace:research → ace:compact → ace:plan → @confirm → start-task --ace-implement"
+    Flags: ["--think", "--ace"]
+    Description: "Full Advanced Context Engineering workflow with all phases"
+    Steps:
+      1: "/ace:research $TASK → Deep structured research with markdown"
+      2: "/ace:compact task → Compact research findings"
+      3: "/ace:plan $TASK → Create detailed implementation plan"
+      4: "@confirm('Approve plan?') → Wait for human approval"
+      5: "/start-task --ace-implement → Execute with context awareness"
+    Context_Management:
+      Initial: "30% (just task description)"
+      After_Research: "50% (research findings)"
+      After_Compact: "35% (research summary)"
+      After_Plan: "40% (plan + summary)"
+      Peak_Implementation: "60% (plan + active code)"
+
+  ace-rapid:
+    Name: "ACE Rapid Development"
+    Chain: "ace:research --surface → ace:plan → start-task --ace"
+    Flags: ["--think", "--ace", "--fast"]
+    Description: "Quick ACE workflow for simple tasks"
+    Steps:
+      1: "/ace:research --surface $TASK → Quick exploration"
+      2: "/ace:plan $TASK → Lightweight plan"
+      3: "/start-task --ace $TASK → Implement with ACE monitoring"
+    Use_When: "Task is well-understood or simple"
+
+  ace-research-only:
+    Name: "ACE Research Phase"
+    Chain: "ace:research --deep → ace:compact → ace:dashboard"
+    Flags: ["--think-hard"]
+    Description: "Deep research without implementation"
+    Steps:
+      1: "/ace:research --deep $TOPIC → Exhaustive exploration"
+      2: "/ace:compact research → Optimize findings"
+      3: "/ace:dashboard → Review context state"
+    Use_When: "Need thorough understanding before planning"
+
+  ace-recover:
+    Name: "ACE Recovery Workflow"
+    Chain: "ace:discard → ace:research --focused → ace:plan → start-task --ace"
+    Flags: ["--think", "--ace", "--safe"]
+    Description: "Recover from failed approach with lessons learned"
+    Steps:
+      1: "/ace:discard $REASON → Capture lessons, clean context"
+      2: "/ace:research --focused $GAPS → Fill knowledge gaps"
+      3: "/ace:plan $TASK → New plan applying lessons"
+      4: "/start-task --ace $TASK → Restart with improved approach"
+    Use_When: "Current approach fundamentally flawed"
+
+  feature-dev:
+    Name: "Feature Development"
+    Chain: "analyze → design → build → test → review"
+    Flags: ["--think", "--magic", "--tdd"]
+    Description: "Complete feature implementation workflow"
+    Steps:
+      1: "/analyze --code $FILES → Understand existing patterns"
+      2: "/design --feature $REQUIREMENTS → Plan implementation"
+      3: "/build --feature --magic → Implement with UI generation"
+      4: "/test --tdd --coverage → Ensure quality"
+      5: "/review --quality --evidence → Final validation"
+    Context_Flow:
+      analyze_to_design: "Code patterns, architecture constraints"
+      design_to_build: "API contracts, component structure"
+      build_to_test: "Implementation files, test requirements"
+      test_to_review: "Coverage report, test results"
+    Estimated_Duration: "2-6 hours"
+
+  bug-fix:
+    Name: "Bug Investigation and Fix"
+    Chain: "troubleshoot → improve → test → git-commit"
+    Flags: ["--think-hard", "--seq", "--fix"]
+    Description: "Systematic bug resolution workflow"
+    Steps:
+      1: "/troubleshoot --seq $ISSUE → Root cause analysis"
+      2: "/improve --fix $FILES → Apply corrections"
+      3: "/test --coverage → Verify fix & prevent regression"
+      4: "/git --commit 'fix: $SUMMARY'"
+    Context_Flow:
+      troubleshoot_to_improve: "Root cause, affected files, fix strategy"
+      improve_to_test: "Changed files, expected behavior"
+      test_to_git: "Test results, files modified"
+    Estimated_Duration: "1-4 hours"
+
+  deploy-safe:
+    Name: "Safe Production Deployment"
+    Chain: "test → scan → build → @checkpoint → @confirm → deploy → verify"
+    Flags: ["--think-hard", "--validate", "--security"]
+    Description: "Production deployment with safety checks"
+    Steps:
+      1: "/test --coverage → Ensure all tests pass"
+      2: "/scan --security --deps → Security validation"
+      3: "/build --production → Create production bundle"
+      4: "@checkpoint → Save rollback point"
+      5: "@confirm('Deploy to production?') → Manual approval"
+      6: "/deploy --env prod → Execute deployment"
+      7: "/test --e2e --env prod → Post-deployment verification"
+    Context_Flow:
+      test_to_scan: "Test results, coverage report"
+      scan_to_build: "Security clearance, dependency status"
+      build_to_deploy: "Build artifacts, version info"
+      deploy_to_verify: "Deployment status, endpoint URLs"
+    Estimated_Duration: "30-90 minutes"
+    Rollback_Ready: "Yes - checkpoint before deploy"
+
+  quality-gate:
+    Name: "Quality Assurance Gate"
+    Chain: "analyze & review & scan → improve → @repeat-until(threshold)"
+    Flags: ["--strict", "--evidence", "--iterate"]
+    Description: "Enforce quality standards before merge"
+    Steps:
+      1: "Parallel: /analyze --code & /review --quality & /scan --validate"
+      2: "/improve --quality --threshold 95% → Fix issues"
+      3: "Repeat until quality threshold met"
+      4: "Generate quality report"
+    Context_Flow:
+      parallel_to_improve: "Aggregated findings from all analyses"
+      improve_to_check: "Fixed issues, updated files"
+      check_to_repeat: "Quality metrics, remaining issues"
+    Estimated_Duration: "1-3 hours"
+    Success_Criteria: "Quality score >= 95%"
+
+  research-implement:
+    Name: "Research-Driven Implementation"
+    Chain: "explain → design → build --c7 → test"
+    Flags: ["--c7", "--seq", "--evidence"]
+    Description: "Research patterns before implementing"
+    Steps:
+      1: "/explain --c7 --depth expert $TOPIC → Research thoroughly"
+      2: "/design --seq --api $REQUIREMENTS → Design with research"
+      3: "/build --c7 --evidence → Implement with citations"
+      4: "/test --validate → Verify implementation"
+    Context_Flow:
+      explain_to_design: "Researched patterns, best practices, examples"
+      design_to_build: "Architecture decisions, API contracts, sources"
+      build_to_test: "Implementation, source citations, test requirements"
+    Estimated_Duration: "3-8 hours"
+    Research_Quality: "High - all sources cited"
+
+  refactor-safe:
+    Name: "Safe Refactoring Workflow"
+    Chain: "test → @checkpoint → improve --refactor → test → @diff-check"
+    Flags: ["--safe", "--iterate"]
+    Description: "Behavior-preserving refactoring"
+    Steps:
+      1: "/test → Establish baseline behavior"
+      2: "@checkpoint → Save current state"
+      3: "/improve --refactor --safe → Apply improvements"
+      4: "/test → Verify behavior preserved"
+      5: "@diff-check → Compare test results"
+      6: "If tests fail → rollback to checkpoint"
+    Context_Flow:
+      test1_to_checkpoint: "Baseline test results"
+      checkpoint_to_improve: "Safe refactoring targets"
+      improve_to_test2: "Refactored code"
+      test2_to_diff: "New test results"
+    Estimated_Duration: "2-5 hours"
+    Rollback_Strategy: "Automatic if behavior changes detected"
+```
+
+## Context Flow Management
+
+```yaml
+Context_Handoff_Rules:
+  Automatic_Context:
+    Files_Modified: "List of files changed by previous command"
+    Results: "Output/findings from previous command"
+    Metrics: "Performance/quality metrics collected"
+    Decisions: "Key decisions made in previous step"
+
+  Selective_Context:
+    Filter: "Only pass relevant information"
+    Transform: "Convert output format for next command"
+    Summarize: "Compress large contexts"
+    Example: "/analyze → summary() → /improve"
+
+  Context_Accumulation:
+    Append: "Add to existing context"
+    Replace: "Override previous context"
+    Merge: "Combine contexts intelligently"
+    Example: "All findings accumulated for final report"
+
+  Context_Storage:
+    Location: ".claudedocs/workflows/context-{workflow-id}.json"
+    Format: "JSON with command chain and results"
+    Persistence: "Duration of workflow"
+    Cleanup: "Remove after workflow completion"
+
+Error_Context_Flow:
+  On_Command_Failure:
+    Capture: "Error message, stack trace, command state"
+    Propagate: "Pass to error handler or fallback command"
+    Recovery: "Load context from last checkpoint"
+
+  On_Workflow_Abort:
+    Save: "Full workflow state to recovery file"
+    Location: ".claudedocs/workflows/aborted-{workflow-id}.json"
+    Resume_Command: "/workflow resume {workflow-id}"
+```
+
+## Workflow Execution Engine
+
+```yaml
+Execution_Control:
+  Dry_Run_Mode:
+    Command: "/workflow <name> --dry-run"
+    Behavior: "Show execution plan without running"
+    Output:
+      - Step-by-step breakdown
+      - Estimated duration
+      - Required resources
+      - Potential risks
+      - Checkpoint locations
+
+  Step_Mode:
+    Command: "/workflow <name> --step"
+    Behavior: "Execute one step at a time with confirmation"
+    Use_Case: "Testing new workflows, debugging"
+
+  Resume_Capability:
+    Detection: "Auto-detect interrupted workflows"
+    Command: "/workflow resume"
+    Behavior: "Continue from last successful checkpoint"
+
+  Parallel_Optimization:
+    Detection: "Identify independent commands"
+    Auto_Parallelize: "Execute concurrently when safe"
+    Example: "test & scan → automatically parallelized"
+
+Performance_Monitoring:
+  Track_Per_Step:
+    Duration: "Time taken for each command"
+    Resources: "CPU, memory, token usage"
+    Cache_Hits: "MCP cache effectiveness"
+
+  Workflow_Metrics:
+    Total_Duration: "End-to-end time"
+    Success_Rate: "Commands succeeded vs failed"
+    Efficiency: "Actual vs estimated duration"
+    Bottlenecks: "Slowest steps identified"
+
+  Historical_Analysis:
+    Storage: ".claudedocs/workflows/history-{workflow-name}.jsonl"
+    Trending: "Performance over time"
+    Optimization: "Suggest improvements"
+```
+
+## Advanced Workflow Features
+
+```yaml
+Dynamic_Workflows:
+  Conditional_Branching:
+    Syntax: "if(condition) { cmd1 } else { cmd2 }"
+    Example: "if($coverage < 80%) { /improve → /test } else { /deploy }"
+    Conditions:
+      - "$coverage < threshold"
+      - "$errors > 0"
+      - "$security_score < threshold"
+      - "file_exists(path)"
+
+  Loop_Constructs:
+    While_Loop:
+      Syntax: "while(condition) { commands }"
+      Max_Iterations: "10 (configurable)"
+      Example: "while($quality < 95%) { /improve → /scan }"
+
+    For_Each:
+      Syntax: "for file in $FILES { cmd }"
+      Example: "for file in src/**/*.ts { /analyze → /improve }"
+      Parallelization: "Auto-parallel if commands independent"
+
+  Variable_Assignment:
+    Syntax: "$VAR = command_output"
+    Example: "$coverage = /test --coverage → extract_coverage()"
+    Scope: "Workflow duration"
+
+Workflow_Composition:
+  Nested_Workflows:
+    Syntax: "/workflow parent { /workflow child1 → /workflow child2 }"
+    Use_Case: "Complex multi-phase projects"
+    Context: "Parent workflow manages child contexts"
+
+  Workflow_Functions:
+    Define: "Reusable workflow fragments"
+    Syntax: "function analyze_and_fix() { /analyze → /improve }"
+    Call: "analyze_and_fix($FILES)"
+
+  Workflow_Libraries:
+    Organization: "~/.claude/workflows/{category}/{name}.yml"
+    Categories: ["development", "deployment", "quality", "research"]
+    Sharing: "Export/import workflow definitions"
+```
+
+## Safety and Validation
+
+```yaml
+Pre_Execution_Validation:
+  Command_Availability:
+    Check: "All commands in chain exist and are valid"
+    Fail_Fast: "Abort before execution if invalid"
+
+  Context_Requirements:
+    Check: "Required context variables present"
+    Example: "Ensure $FILES defined before /analyze $FILES"
+
+  Resource_Check:
+    Estimate: "Required resources (time, memory, tokens)"
+    Warn: "If exceeds available resources"
+
+  Dependency_Check:
+    Verify: "Required tools/services available"
+    Example: "Check git available before /git commands"
+
+During_Execution_Safety:
+  Checkpoint_Strategy:
+    Auto_Checkpoint: "Before high-risk commands (deploy, migrate)"
+    Manual_Checkpoints: "@checkpoint in workflow definition"
+    Storage: ".claudedocs/workflows/checkpoints/{workflow-id}/"
+
+  Timeout_Management:
+    Per_Command: "Individual command timeouts"
+    Workflow_Total: "Overall workflow timeout"
+    Action: "Abort and save state on timeout"
+
+  Resource_Monitoring:
+    Track: "CPU, memory, disk, tokens"
+    Alert: "If approaching limits"
+    Throttle: "Slow down if resources constrained"
+
+Error_Recovery:
+  Automatic_Retry:
+    Transient_Errors: "Network, timeout errors"
+    Retry_Logic: "Exponential backoff, max 3 attempts"
+
+  Checkpoint_Rollback:
+    Trigger: "Critical command failure"
+    Action: "Restore from last checkpoint"
+    User_Confirmation: "Required for rollback"
+
+  Alternative_Paths:
+    Fallback_Commands: "Specify alternatives in workflow"
+    Example: "deploy || rollback"
+
+  Manual_Intervention:
+    Pause: "Stop workflow and await user input"
+    Context_Preservation: "Maintain full state"
+    Resume: "Continue after user fixes issue"
+```
+
+## Workflow Reporting
+
+```yaml
+Real_Time_Progress:
+  Status_Display:
+    Current_Step: "Which command executing"
+    Progress: "X of Y steps complete"
+    Estimated_Remaining: "Time remaining"
+    Context_Summary: "Key findings so far"
+
+  Live_Updates:
+    Format: "📍 Step 3/7: Running /test --coverage (2m elapsed)"
+    Frequency: "Every significant event"
+
+Completion_Report:
+  Summary:
+    Total_Duration: "Wall clock time"
+    Commands_Executed: "Count and list"
+    Success_Rate: "Percentage successful"
+    Checkpoints_Created: "Count"
+
+  Detailed_Results:
+    Per_Command_Results: "Output from each step"
+    Context_Flow: "How context evolved"
+    Performance_Metrics: "Duration, resource usage"
+
+  Recommendations:
+    Optimizations: "Suggested improvements"
+    Warnings: "Issues encountered"
+    Next_Steps: "Recommended follow-ups"
+
+  Storage:
+    Location: ".claudedocs/workflows/reports/{workflow-id}.md"
+    Format: "Markdown with sections"
+    Retention: "30 days (configurable)"
+```
+
+## Usage Examples
+
+```yaml
+Example_Workflows:
+  Basic_Sequential:
+    Command: "/workflow 'analyze → improve → test' src/"
+    Description: "Simple three-step workflow"
+
+  With_Global_Flags:
+    Command: "/workflow 'analyze → build → test' --think --magic"
+    Description: "All commands inherit --think and --magic"
+
+  Conditional_Flow:
+    Command: "/workflow 'test && deploy || troubleshoot'"
+    Description: "Deploy if tests pass, else troubleshoot"
+
+  Named_Template:
+    Command: "/workflow feature-dev --persona-frontend"
+    Description: "Use predefined feature-dev workflow"
+
+  Parallel_Execution:
+    Command: "/workflow 'test & scan & analyze' --parallel"
+    Description: "Run three commands concurrently"
+
+  With_Checkpoints:
+    Command: "/workflow 'build → @checkpoint → deploy → verify'"
+    Description: "Save state before deployment"
+
+  Iterative_Improvement:
+    Command: "/workflow 'while(coverage < 80%) { test → improve }'"
+    Description: "Loop until coverage threshold met"
+
+  Complex_Workflow:
+    Command: |
+      /workflow '
+        analyze $FILES →
+        if($issues > 0) {
+          improve --iterate →
+          test --coverage
+        } →
+        scan --security →
+        @confirm("Deploy?") →
+        deploy --env prod
+      ' --think-hard --validate
+    Description: "Full CI/CD pipeline with conditionals"
+```
+
+---
+*Workflow Composition DSL v1 - Chain commands with automatic context flow and error handling*

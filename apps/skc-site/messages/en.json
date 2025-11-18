@@ -1,0 +1,1580 @@
+{
+  "nav": {
+    "corporation": "Corporation",
+    "creation": "Creation",
+    "communication": "Communication",
+    "career": "Career",
+    "search": "Search",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "Creating Tomorrow's",
+    "subtitle": "Materials Today",
+    "description": "Leading global ESG material solutions company specializing in rechargeable batteries, semiconductors, and eco-friendly materials",
+    "cta": "Explore Our Solutions",
+    "categories": {
+      "battery": "Battery Materials",
+      "semiconductor": "Semiconductors",
+      "eco": "Eco-Friendly"
+    }
+  },
+  "stats": {
+    "years": {
+      "value": "60+",
+      "label": "Years of Innovation"
+    },
+    "countries": {
+      "value": "15",
+      "label": "Countries Worldwide"
+    },
+    "employees": {
+      "value": "3,500+",
+      "label": "Global Team"
+    },
+    "revenue": {
+      "value": "$2.5B",
+      "label": "Annual Revenue"
+    }
+  },
+  "products": {
+    "title": "Our Solutions",
+    "battery": {
+      "title": "Rechargeable Battery Materials",
+      "description": "Ultra-thin copper foil and silicon anodes for next-gen EVs",
+      "cta": "Learn More"
+    },
+    "semiconductor": {
+      "title": "Semiconductor Materials",
+      "description": "Advanced materials for cutting-edge chip manufacturing",
+      "cta": "Learn More"
+    },
+    "eco": {
+      "title": "Eco-Friendly Materials",
+      "description": "Sustainable solutions for a greener future",
+      "cta": "Learn More"
+    }
+  },
+  "news": {
+    "title": "Latest News",
+    "categories": {
+      "press": "Press Release",
+      "esg": "ESG",
+      "innovation": "Innovation"
+    },
+    "readMore": "Read More"
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Get the latest news and insights from SKC",
+    "placeholder": "Enter your email",
+    "button": "Subscribe",
+    "success": "Thank you for subscribing!",
+    "error": "Please enter a valid email address"
+  },
+  "footer": {
+    "tagline": "Creating sustainable materials for a better tomorrow",
+    "company": {
+      "title": "Company",
+      "about": "About SKC",
+      "history": "History",
+      "leadership": "Leadership",
+      "careers": "Careers"
+    },
+    "products": {
+      "title": "Products",
+      "battery": "Battery Materials",
+      "semiconductor": "Semiconductors",
+      "eco": "Eco Materials"
+    },
+    "resources": {
+      "title": "Resources",
+      "news": "News",
+      "investors": "Investors",
+      "sustainability": "Sustainability",
+      "contact": "Contact"
+    },
+    "copyright": "© {year} SKC Corporation. All rights reserved."
+  },
+  "advanced": {
+    "title": "Advanced Features",
+    "subtitle": "World-class UX features: dark mode, accessibility, social sharing, and more",
+    "darkMode": {
+      "title": "Dark Mode",
+      "description": "System preference detection + manual toggle"
+    },
+    "scrollProgress": {
+      "title": "Scroll Progress",
+      "description": "Visual reading progress indicator at the top"
+    },
+    "backToTop": {
+      "title": "Back to Top Button",
+      "description": "Floating button with scroll progress circle"
+    },
+    "cookieConsent": {
+      "title": "Cookie Consent",
+      "description": "GDPR-compliant cookie consent banner"
+    },
+    "accessibility": {
+      "title": "Accessibility Menu",
+      "description": "Font size, contrast, and motion controls"
+    },
+    "socialShare": {
+      "title": "Social Sharing",
+      "description": "Share to Twitter, LinkedIn, Facebook, Email"
+    },
+    "readingTime": {
+      "title": "Reading Time Estimator",
+      "description": "Automatically calculates reading time for articles"
+    },
+    "printOptimization": {
+      "title": "Print Optimization",
+      "description": "Printer-friendly styles"
+    }
+  },
+  "features": {
+    "title": "Premium Features",
+    "subtitle": "World-class UX components for modern websites",
+    "search": {
+      "title": "Site-Wide Search",
+      "description": "Powered by Fuse.js fuzzy search"
+    },
+    "contact": {
+      "title": "Contact Form",
+      "description": "Validated with React Hook Form + Zod"
+    },
+    "newsletter": {
+      "title": "Newsletter Signup",
+      "description": "Email validation and success states"
+    },
+    "gallery": {
+      "title": "Image Gallery",
+      "description": "Lightbox viewer with keyboard navigation"
+    },
+    "videos": {
+      "title": "Video Embeds",
+      "description": "YouTube integration with lazy loading"
+    }
+  },
+  "search": {
+    "placeholder": "Search SKC…",
+    "helper": "Search for products, news, pages, or affiliate companies",
+    "empty": "No results found for \"{query}\"",
+    "enter": "to select",
+    "escape": "to close",
+    "categories": {
+      "page": "Page",
+      "product": "Product",
+      "news": "News",
+      "company": "Company"
+    }
+  },
+  "pages": {
+    "corporation": {
+      "overview": {
+        "meta": {
+          "title": "SKC Corporation Overview",
+          "description": "Integrated platform company powering advanced materials, ESG strategy, and corporate governance."
+        },
+        "hero": {
+          "eyebrow": "Corporation",
+          "title": "Glassmorphic systems built for a net-zero era",
+          "description": "SKC orchestrates advanced materials, resilient manufacturing, and digital governance into a single experience across every market we serve.",
+          "stats": [
+            {
+              "label": "Global affiliates",
+              "value": "7"
+            },
+            {
+              "label": "Manufacturing sites",
+              "value": "12"
+            },
+            {
+              "label": "Active patents",
+              "value": "1,850"
+            },
+            {
+              "label": "ESG rating",
+              "value": "AA (MSCI)"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Download corporate profile",
+              "href": "/downloads/skc-corporate-profile.pdf"
+            },
+            {
+              "label": "Open investor brief",
+              "href": "/downloads/skc-investor-brief.pdf",
+              "variant": "ghost"
+            }
+          ],
+          "highlights": {
+            "research": {
+              "title": "Research constellations",
+              "description": "Six cross-functional labs advance copper foil, glass substrate, and eco polymers in parallel."
+            },
+            "manufacturing": {
+              "title": "Intelligent manufacturing mesh",
+              "description": "12 global plants synchronized with predictive maintenance, MES telemetry, and sustainability data."
+            },
+            "alliances": {
+              "title": "Strategic alliances",
+              "description": "Joint ventures with SK Nexilis, SK enpulse, and Absolics unlock scale for EV and AI workloads."
+            },
+            "innovation": {
+              "title": "Innovation velocity",
+              "description": "Average of 220 patent filings per year and rapid commercialization squads for pilot lines."
+            }
+          }
+        },
+        "story": {
+          "eyebrow": "Strategic pillars",
+          "title": "Modular platform company",
+          "description": "Each platform—corporation, creation, communication, and career—shares the same design tokens, compliance rules, and API contracts.",
+          "items": [
+            {
+              "icon": "🔋",
+              "title": "Energy platform",
+              "description": "Battery materials, copper foil, silicon anodes, and thermal technologies deployed at gigafactory scale."
+            },
+            {
+              "icon": "💠",
+              "title": "Semiconductor platform",
+              "description": "Glass substrate, CMP chemistry, and advanced packaging with sub-micron precision."
+            },
+            {
+              "icon": "♻️",
+              "title": "Circular platform",
+              "description": "Eco materials, LIMEX, PBAT, and closed-loop recycling services built for ESG leadership."
+            }
+          ]
+        },
+        "capabilities": {
+          "eyebrow": "Operating system",
+          "title": "Always-on governance fabric",
+          "description": "From digital twin factories to multi-lingual investor portals, SKC deploys a unified operating model.",
+          "items": [
+            {
+              "icon": "🛰️",
+              "title": "Digital command center",
+              "description": "Live dashboards connect OT telemetry, ESG KPIs, and procurement data for faster scenario planning."
+            },
+            {
+              "icon": "🧭",
+              "title": "Regulatory intelligence",
+              "description": "Centralized compliance rules keep battery, semiconductor, and chemical disclosures synchronized."
+            },
+            {
+              "icon": "🤝",
+              "title": "Partner ecosystem",
+              "description": "Open APIs and design tokens help suppliers, universities, and startups plug into our platforms."
+            }
+          ]
+        },
+        "cta": {
+          "eyebrow": "Experience",
+          "title": "Explore the SKC operating blueprint",
+          "description": "Download the corporate governance kit or meet our leadership team to see how we build responsibly.",
+          "primary": {
+            "label": "Meet leadership",
+            "href": "/corporation/leadership"
+          },
+          "secondary": {
+            "label": "Download governance kit",
+            "href": "/downloads/skc-governance-kit.pdf"
+          }
+        }
+      },
+      "about": {
+        "meta": {
+          "title": "About SKC",
+          "description": "Company story, applied research model, and global footprint."
+        },
+        "hero": {
+          "eyebrow": "About",
+          "title": "From film pioneer to advanced-materials architect",
+          "description": "Founded in 1976, SKC now operates as the applied brain for rechargeable batteries, semiconductors, and eco materials.",
+          "stats": [
+            {
+              "label": "Year founded",
+              "value": "1976"
+            },
+            {
+              "label": "Employees",
+              "value": "3,500+"
+            },
+            {
+              "label": "Innovation hubs",
+              "value": "8"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Download fact sheet",
+              "href": "/downloads/skc-facts.pdf"
+            }
+          ]
+        },
+        "mission": {
+          "eyebrow": "Mission",
+          "title": "Purpose-built for impact",
+          "description": "We align corporate governance with the SK Group double-bottom line and deliver measurable sustainability outcomes.",
+          "items": [
+            {
+              "icon": "🎯",
+              "title": "Purpose",
+              "description": "Accelerate net-zero materials for mobility, electronics, and everyday life."
+            },
+            {
+              "icon": "🌐",
+              "title": "Responsibility",
+              "description": "Measure every tonne of carbon, every liter of water, and every hour of community impact."
+            },
+            {
+              "icon": "🧑‍🤝‍🧑",
+              "title": "People",
+              "description": "Invest in inclusive culture, rotational assignments, and future-of-work skills."
+            }
+          ]
+        },
+        "labs": {
+          "eyebrow": "Labs",
+          "title": "Applied innovation labs",
+          "description": "We run rapid pilot lines across Seoul, Daejeon, Suwon, and Atlanta to shorten the learn-build-scale loop.",
+          "items": [
+            {
+              "icon": "🧪",
+              "title": "Battery Foundry",
+              "description": "Prototype thin copper foil, silicon composites, and solid-state stacks."
+            },
+            {
+              "icon": "🧊",
+              "title": "Substrate Studio",
+              "description": "Glass substrate, CMP, and packaging recipes validated for AI accelerators."
+            },
+            {
+              "icon": "🌱",
+              "title": "Eco Materials Garage",
+              "description": "PBAT, LIMEX, and chemical recycling pilots with municipal partners."
+            }
+          ]
+        },
+        "global": {
+          "eyebrow": "Global footprint",
+          "title": "Trusted in 15+ countries",
+          "description": "SKC synchronizes Korean excellence with global reach through SK Nexilis, SK enpulse, Absolics, and more.",
+          "items": [
+            {
+              "icon": "🇰🇷",
+              "title": "Korea HQ",
+              "description": "Strategic HQ in Seoul with corporate governance, HR, and ESG leadership."
+            },
+            {
+              "icon": "🇺🇸",
+              "title": "North America",
+              "description": "Absolics in Georgia powers advanced packaging for AI customers."
+            },
+            {
+              "icon": "🇲🇾",
+              "title": "Malaysia & Thailand",
+              "description": "Copper foil mega plants serve EV giants across Asia."
+            }
+          ]
+        },
+        "cta": {
+          "eyebrow": "Corporate library",
+          "title": "Access company playbooks",
+          "description": "Download our introductory deck or book a virtual factory tour.",
+          "primary": {
+            "label": "Book a briefing",
+            "href": "/communication/contact"
+          },
+          "secondary": {
+            "label": "Virtual factory tour",
+            "href": "https://youtube.com"
+          }
+        }
+      },
+      "history": {
+        "meta": {
+          "title": "History & Timeline",
+          "description": "Decades of materials innovation across film, battery, and semiconductor platforms."
+        },
+        "hero": {
+          "eyebrow": "History",
+          "title": "Decades of reinvention",
+          "description": "From PET film to copper foil to glass substrates, SKC keeps reinventing the materials stack.",
+          "stats": [
+            {
+              "label": "Years operating",
+              "value": "49"
+            },
+            {
+              "label": "Product pivots",
+              "value": "6"
+            }
+          ]
+        },
+        "timeline": {
+          "eyebrow": "Milestones",
+          "title": "Key infliction points",
+          "description": "Milestones shaping our portfolio for the next era of mobility and semiconductors.",
+          "items": {
+            "foundation": {
+              "title": "Founded as Korea’s first polyester film company",
+              "description": "SKC launches PET film production, laying the groundwork for materials leadership."
+            },
+            "materialsExpansion": {
+              "title": "Moves into chemical and advanced materials",
+              "description": "Expands from film to specialty chemicals, CMP slurries, and high-value resins."
+            },
+            "globalAlliances": {
+              "title": "Global alliances & expansion",
+              "description": "Launches SK Nexilis and overseas plants to serve global customers."
+            },
+            "batteryLeadership": {
+              "title": "Battery materials leadership",
+              "description": "Becomes a top-tier copper foil and silicon anode innovator for EV OEMs."
+            },
+            "esgPledge": {
+              "title": "Declares net-zero target",
+              "description": "Commits to net-zero 2040 pathway with Science Based Targets initiative."
+            },
+            "futureVision": {
+              "title": "Future-ready SKC 2030",
+              "description": "Deploys the SKC Future Playbook integrating digital twins, AI, and ESG intelligence."
+            }
+          }
+        }
+      },
+      "leadership": {
+        "meta": {
+          "title": "Leadership Team",
+          "description": "Executive committee guiding SKC’s material platforms and ESG governance."
+        },
+        "hero": {
+          "eyebrow": "Leadership",
+          "title": "Operators obsessed with materials, ESG, and people",
+          "description": "Our leadership team blends decades of semiconductor, mobility, and digital expertise.",
+          "stats": [
+            {
+              "label": "Average tenure",
+              "value": "18 yrs"
+            },
+            {
+              "label": "Countries represented",
+              "value": "5"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Download governance report",
+              "href": "/downloads/skc-governance-kit.pdf"
+            }
+          ]
+        },
+        "eyebrow": "Executive team",
+        "title": "Meet the SKC leaders",
+        "description": "Cross-disciplinary leaders scaling sustainable materials.",
+        "members": {
+          "ceo": {
+            "name": "Woncheol Park",
+            "role": "CEO & President",
+            "tenure": "Since 2022",
+            "bio": "Leads overall portfolio strategy, ESG governance, and capital allocation."
+          },
+          "cto": {
+            "name": "Eunji Kim",
+            "role": "Chief Technology Officer",
+            "tenure": "Since 2021",
+            "bio": "Runs research constellations, pilot fabs, and patent strategy."
+          },
+          "cso": {
+            "name": "Jinwoo Han",
+            "role": "Chief Sustainability Officer",
+            "tenure": "Since 2020",
+            "bio": "Owns ESG disclosures, circular materials, and responsible sourcing."
+          },
+          "cfo": {
+            "name": "Mina Choi",
+            "role": "Chief Financial Officer",
+            "tenure": "Since 2019",
+            "bio": "Drives portfolio optimization, investor relations, and M&A integration."
+          },
+          "coo": {
+            "name": "Daniel Seo",
+            "role": "Chief Operating Officer",
+            "tenure": "Since 2018",
+            "bio": "Oversees global manufacturing, OT security, and supply continuity."
+          },
+          "chro": {
+            "name": "Hana Lee",
+            "role": "Chief Human Resources Officer",
+            "tenure": "Since 2023",
+            "bio": "Builds learning programs, culture rituals, and leadership pipelines."
+          }
+        },
+        "focus": {
+          "strategy": "Strategy",
+          "partnerships": "Partnerships",
+          "esg": "ESG",
+          "innovation": "Innovation",
+          "labs": "Labs",
+          "sustainability": "Sustainability",
+          "compliance": "Compliance",
+          "finance": "Finance",
+          "investors": "Investors",
+          "operations": "Operations",
+          "global": "Global network",
+          "talent": "Talent",
+          "culture": "Culture"
+        },
+        "cta": {
+          "eyebrow": "Work with us",
+          "title": "Partner with SKC leadership",
+          "description": "Schedule a leadership roundtable or explore our culture toolkit.",
+          "primary": {
+            "label": "Explore culture deck",
+            "href": "/career/culture"
+          }
+        }
+      },
+      "esg": {
+        "meta": {
+          "title": "ESG Commitments",
+          "description": "Net-zero roadmap, circular materials, and responsible supply chain governance."
+        },
+        "hero": {
+          "eyebrow": "ESG",
+          "title": "Zero to One sustainability execution",
+          "description": "We design ESG into every product launch, supplier onboarding, and employee ritual.",
+          "stats": [
+            {
+              "label": "Net-zero target",
+              "value": "2040"
+            },
+            {
+              "label": "Supplier audits",
+              "value": "320+"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Download sustainability report",
+              "href": "/downloads/skc-esg-report.pdf"
+            }
+          ]
+        },
+        "eyebrow": "Scorecard",
+        "title": "ESG metrics in action",
+        "description": "Transparent KPIs highlight our decarbonization, renewable energy, and social commitments.",
+        "metrics": {
+          "emissions": {
+            "label": "Scope 1/2 emissions delta",
+            "description": "Absolute reduction from the 2019 baseline verified by SBTi."
+          },
+          "renewableEnergy": {
+            "label": "Renewable energy coverage",
+            "description": "Share of global facilities running on wind, solar, and RECs."
+          },
+          "circularMaterials": {
+            "label": "Circular materials shipped",
+            "description": "Annual throughput of PBAT, LIMEX, and recycled polymers."
+          },
+          "communityHours": {
+            "label": "Community hours",
+            "description": "Volunteer and STEM-education hours delivered by employees."
+          }
+        },
+        "initiatives": {
+          "netZero": {
+            "title": "Net-zero architecture",
+            "description": "Scope 1/2 elimination, Scope 3 engagement, and internal carbon pricing."
+          },
+          "responsibleSupply": {
+            "title": "Responsible supply chain",
+            "description": "24/7 supplier monitoring and AI-enabled traceability for key minerals."
+          },
+          "circularDesign": {
+            "title": "Circular design",
+            "description": "Designing disassembly into batteries, substrates, and eco packaging."
+          },
+          "equity": {
+            "title": "People & equity",
+            "description": "Global DEI councils, pay equity reviews, and accessibility standards."
+          }
+        },
+        "cta": {
+          "eyebrow": "Engage",
+          "title": "Co-create ESG pilots",
+          "description": "Bring your sustainability challenge—we will prototype and scale together.",
+          "primary": {
+            "label": "Schedule ESG workshop",
+            "href": "/communication/contact"
+          },
+          "secondary": {
+            "label": "Download ESG policies",
+            "href": "/downloads/skc-esg-policy.pdf"
+          }
+        }
+      }
+    },
+    "creation": {
+      "overview": {
+        "meta": {
+          "title": "Creation Platform",
+          "description": "Unified product experience spanning battery, semiconductor, and eco materials."
+        },
+        "hero": {
+          "eyebrow": "Creation",
+          "title": "Premium materials with a glassmorphic interface",
+          "description": "SKC Creation orchestrates copper foil, glass substrate, and eco materials through a single design language.",
+          "stats": [
+            {
+              "label": "NPI launches in 2024",
+              "value": "18"
+            },
+            {
+              "label": "Pilot lines",
+              "value": "9"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Explore battery platform",
+              "href": "/creation/battery"
+            },
+            {
+              "label": "Talk to an engineer",
+              "href": "/communication/contact",
+              "variant": "ghost"
+            }
+          ]
+        },
+        "platforms": {
+          "eyebrow": "Platforms",
+          "title": "Three product constellations",
+          "description": "Each platform ships with reference designs, sample kits, and technical onboarding sessions.",
+          "items": [
+            {
+              "icon": "🔋",
+              "title": "Battery materials",
+              "description": "Copper foil, silicon anodes, and thermal interface materials for giga-factories."
+            },
+            {
+              "icon": "💠",
+              "title": "Semiconductor materials",
+              "description": "Glass substrate, CMP slurries, and advanced packaging for AI silicon."
+            },
+            {
+              "icon": "♻️",
+              "title": "Eco platform",
+              "description": "Bio-based PBAT, LIMEX, and closed-loop recycling for CPG partners."
+            }
+          ]
+        },
+        "roadmap": {
+          "eyebrow": "Roadmap",
+          "title": "What we are shipping next",
+          "description": "A living roadmap of new chemistries, modules, and fabrication services.",
+          "items": [
+            {
+              "icon": "🧪",
+              "title": "Solid-state ready copper foil",
+              "description": "Ultra-thin foil for solid-state cells entering validation."
+            },
+            {
+              "icon": "🪟",
+              "title": "Glass substrate scaling",
+              "description": "Absolics mega line reaches high-volume validation for AI customers."
+            },
+            {
+              "icon": "🌿",
+              "title": "Circular polymers",
+              "description": "Mixed-plastic chemical recycling pilots partner with logistics majors."
+            }
+          ]
+        },
+        "cta": {
+          "eyebrow": "Engage",
+          "title": "Prototype with SKC Creation",
+          "description": "Secure sample kits or schedule a design sprint with our engineers.",
+          "primary": {
+            "label": "Request sample kit",
+            "href": "/communication/contact"
+          },
+          "secondary": {
+            "label": "View technical docs",
+            "href": "/downloads/skc-tech-brief.pdf"
+          }
+        }
+      },
+      "battery": {
+        "meta": {
+          "title": "Battery Materials",
+          "description": "Copper foil, silicon anodes, and thermal technologies."
+        },
+        "hero": {
+          "eyebrow": "Battery materials",
+          "title": "Gigafactory-ready copper foil and silicon anodes",
+          "description": "Thin, uniform, and high-conductivity foils with silicon innovations unlock higher energy density EV packs.",
+          "stats": [
+            {
+              "label": "Foil thickness",
+              "value": "2.5 µm"
+            },
+            {
+              "label": "Annual capacity",
+              "value": "250 kt"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Download spec sheet",
+              "href": "/downloads/skc-battery-spec.pdf"
+            },
+            {
+              "label": "Book technical session",
+              "href": "/communication/contact",
+              "variant": "ghost"
+            }
+          ],
+          "highlights": [
+            {
+              "icon": "🧲",
+              "title": "Extreme conductivity",
+              "description": "Uniform conductivity and low surface roughness for higher C-rate designs."
+            },
+            {
+              "icon": "🌡️",
+              "title": "Thermal stability",
+              "description": "Thermal control stack resists deformation even under aggressive cycling."
+            }
+          ]
+        },
+        "details": {
+          "eyebrow": "Platforms",
+          "title": "What the SKC battery platform includes",
+          "description": "Copper foil, silicon anodes, and cooling tech delivered as a single kit.",
+          "metrics": {
+            "energyDensity": {
+              "label": "Energy density",
+              "description": "Achieve up to 420 Wh/kg with silicon-boosted stacks."
+            },
+            "cycleLife": {
+              "label": "Cycle life",
+              "description": "Validated for more than 3,000 fast-charge cycles."
+            },
+            "thickness": {
+              "label": "Foil thickness",
+              "description": "Ultra-uniform foil with low variation."
+            }
+          },
+          "technologies": {
+            "title": "Core technologies",
+            "items": {
+              "copperFoil": {
+                "title": "Hyper-thin copper foil",
+                "description": "Stable conductivity, controllable roughness, and flexible widths."
+              },
+              "siliconAnode": {
+                "title": "Silicon anode suite",
+                "description": "Composite silicon and carbon solutions for 10x capacity boosts."
+              },
+              "thermalControl": {
+                "title": "Thermal control layers",
+                "description": "Phase-change and graphite composite solutions for safety."
+              }
+            }
+          }
+        },
+        "specs": {
+          "eyebrow": "Technical specs",
+          "title": "Specification snapshot",
+          "standards": "IEC / UL ready",
+          "items": {
+            "conductivity": {
+              "label": "Conductivity",
+              "description": "High conductivity for fast charge."
+            },
+            "tensileStrength": {
+              "label": "Tensile strength",
+              "description": "Mechanical strength for high-speed winding."
+            },
+            "surfaceRoughness": {
+              "label": "Surface roughness",
+              "description": "Smoothness for stable SEI formation."
+            },
+            "capacityRetention": {
+              "label": "Capacity retention",
+              "description": "Retention at 500 cycles, 1C/1C profile."
+            }
+          }
+        },
+        "applications": {
+          "eyebrow": "Use cases",
+          "title": "Where it performs best",
+          "description": "Designed for demanding EV, aviation, and grid markets.",
+          "items": {
+            "ev": {
+              "title": "Electric vehicles",
+              "description": "High-energy EV packs and ultra-fast charging networks."
+            },
+            "grid": {
+              "title": "Grid storage",
+              "description": "Utility-scale storage with long cycle stability."
+            },
+            "aviation": {
+              "title": "Advanced mobility",
+              "description": "eVTOL and aerospace-grade cells."
+            }
+          }
+        },
+        "cta": {
+          "eyebrow": "Next step",
+          "title": "Pilot SKC copper foil",
+          "description": "Request samples, BOM simulations, and process integration kits.",
+          "primary": {
+            "label": "Request samples",
+            "href": "/communication/contact"
+          },
+          "secondary": {
+            "label": "Access CAD files",
+            "href": "/downloads/skc-battery-cad.zip"
+          }
+        }
+      },
+      "semiconductor": {
+        "meta": {
+          "title": "Semiconductor Materials",
+          "description": "Glass substrate and CMP solutions for AI era."
+        },
+        "hero": {
+          "eyebrow": "Semiconductor",
+          "title": "Glass substrate and CMP ready for AI mega fabs",
+          "description": "Absolics glass substrate plus CMP chemistries deliver superior flatness and thermal stability.",
+          "stats": [
+            {
+              "label": "Packaging nodes",
+              "value": "2.5D / 3D"
+            },
+            {
+              "label": "Line width",
+              "value": "≤ 2 µm"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Download substrate brief",
+              "href": "/downloads/skc-substrate-brief.pdf"
+            },
+            {
+              "label": "Schedule fab review",
+              "href": "/communication/contact",
+              "variant": "ghost"
+            }
+          ]
+        },
+        "details": {
+          "eyebrow": "Platforms",
+          "title": "Semiconductor excellence",
+          "description": "Glass substrate, CMP slurries, and advanced packaging expertise.",
+          "metrics": {
+            "substrateFlatness": {
+              "label": "Flatness",
+              "description": "±0.5 µm flatness at panel scale."
+            },
+            "thermalStability": {
+              "label": "Thermal stability",
+              "description": "Stable up to 400 °C reflow cycles."
+            },
+            "yield": {
+              "label": "Pilot yield",
+              "description": "99.3% yield demonstrated across pilot lines."
+            }
+          },
+          "technologies": {
+            "title": "Core technologies",
+            "items": {
+              "glassSubstrate": {
+                "title": "Glass substrate",
+                "description": "High-rigidity panels for AI accelerators."
+              },
+              "cmpSlurry": {
+                "title": "CMP slurry",
+                "description": "Tailored slurries for copper and dielectric steps."
+              },
+              "advancedPackaging": {
+                "title": "Advanced packaging",
+                "description": "2.5D/3D integration stacks with RDL expertise."
+              }
+            }
+          }
+        },
+        "specs": {
+          "eyebrow": "Technical specs",
+          "title": "Fabrication targets",
+          "standards": "JEDEC ready",
+          "items": {
+            "dielectricConstant": {
+              "label": "Dielectric constant",
+              "description": "Stable dielectric constant for signal integrity."
+            },
+            "glassCTE": {
+              "label": "CTE",
+              "description": "Coefficient of thermal expansion near silicon."
+            },
+            "waferSize": {
+              "label": "Panel size",
+              "description": "Compatible with 300 mm and panel-level flows."
+            },
+            "flatness": {
+              "label": "Flatness",
+              "description": "Flatness spec ensures multi-die yield."
+            }
+          }
+        },
+        "applications": {
+          "eyebrow": "Use cases",
+          "title": "Built for compute",
+          "description": "AI accelerators, data centers, and mobile platforms.",
+          "items": {
+            "hpc": {
+              "title": "High-performance compute",
+              "description": "Servers and AI clusters requiring high bandwidth."
+            },
+            "mobile": {
+              "title": "Mobile & XR",
+              "description": "Thin packaging and improved thermals for next-gen devices."
+            },
+            "ai": {
+              "title": "AI accelerators",
+              "description": "Glass substrate enables denser HBM stacking."
+            }
+          }
+        },
+        "cta": {
+          "eyebrow": "Partner",
+          "title": "Co-design your substrate",
+          "description": "Bring your package stack and we will co-simulate every layer.",
+          "primary": {
+            "label": "Schedule DFM review",
+            "href": "/communication/contact"
+          },
+          "secondary": {
+            "label": "View Absolics demo",
+            "href": "https://absolics.com"
+          }
+        }
+      },
+      "eco": {
+        "meta": {
+          "title": "Eco Materials",
+          "description": "Bio-based PBAT, LIMEX, and circular polymers."
+        },
+        "hero": {
+          "eyebrow": "Eco materials",
+          "title": "Circular polymers for flexible packaging and mobility",
+          "description": "Bio-based feedstocks, LIMEX mineral blends, and chemical recycling for decarbonized supply chains.",
+          "stats": [
+            {
+              "label": "Biobased content",
+              "value": "85%"
+            },
+            {
+              "label": "CO₂ reduction",
+              "value": "-65%"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Download eco catalog",
+              "href": "/downloads/skc-eco-catalog.pdf"
+            },
+            {
+              "label": "Book material audit",
+              "href": "/communication/contact",
+              "variant": "ghost"
+            }
+          ],
+          "highlights": [
+            {
+              "icon": "🌾",
+              "title": "Bio feedstocks",
+              "description": "Sustainably farmed raw materials with traceable supply."
+            },
+            {
+              "icon": "♻️",
+              "title": "Closed-loop design",
+              "description": "Chemical recycling keeps materials in play."
+            }
+          ]
+        },
+        "details": {
+          "eyebrow": "Platforms",
+          "title": "Eco materials suite",
+          "description": "PBAT film, LIMEX composites, and chemical recycling toolkits.",
+          "metrics": {
+            "co2Reduction": {
+              "label": "CO₂ reduction",
+              "description": "Compared with conventional PET baselines."
+            },
+            "biobasedContent": {
+              "label": "Bio content",
+              "description": "Share of renewable feedstocks measured by mass balance."
+            },
+            "recyclability": {
+              "label": "Recyclability",
+              "description": "Engineered for repeated mechanical or chemical reuse."
+            }
+          },
+          "technologies": {
+            "title": "Core technologies",
+            "items": {
+              "pbat": {
+                "title": "PBAT film systems",
+                "description": "Flexible films for compostable packaging."
+              },
+              "limex": {
+                "title": "LIMEX minerals",
+                "description": "Mineral-rich composites with reduced plastic usage."
+              },
+              "chemRecycling": {
+                "title": "Chemical recycling",
+                "description": "Solvolysis and depolymerization technology kits."
+              }
+            }
+          }
+        },
+        "specs": {
+          "eyebrow": "Technical specs",
+          "title": "Performance snapshot",
+          "standards": "ASTM D6400 / EN 13432",
+          "items": {
+            "biodegradation": {
+              "label": "Biodegradation",
+              "description": "Time to reach 90% biodegradation in industrial settings."
+            },
+            "strength": {
+              "label": "Tensile strength",
+              "description": "Maintains form across commercial packaging lines."
+            },
+            "temperatureRange": {
+              "label": "Temperature range",
+              "description": "Performs across cold chain and hot-fill regimes."
+            },
+            "barrierPerformance": {
+              "label": "Barrier performance",
+              "description": "Oxygen transmission rate for premium products."
+            }
+          }
+        },
+        "applications": {
+          "eyebrow": "Use cases",
+          "title": "Designed for versatile markets",
+          "description": "Consumer goods, apparel, and mobility partners deploy SKC eco materials.",
+          "items": {
+            "packaging": {
+              "title": "Flexible packaging",
+              "description": "Food, beverage, and personal-care packaging."
+            },
+            "textiles": {
+              "title": "Textiles & apparel",
+              "description": "Bio-based fibers and coatings."
+            },
+            "mobility": {
+              "title": "Light mobility",
+              "description": "Lightweight composites for scooters and interiors."
+            }
+          }
+        },
+        "cta": {
+          "eyebrow": "Prototype",
+          "title": "Launch your circular line",
+          "description": "Partner with our eco design studio to pilot new materials.",
+          "primary": {
+            "label": "Start pilot",
+            "href": "/communication/contact"
+          },
+          "secondary": {
+            "label": "Download LCA",
+            "href": "/downloads/skc-eco-lca.pdf"
+          }
+        }
+      }
+    },
+    "communication": {
+      "overview": {
+        "meta": {
+          "title": "Communication Hub",
+          "description": "Newsroom, investor relations, and media center."
+        },
+        "hero": {
+          "eyebrow": "Communication",
+          "title": "Continuous transparency for every stakeholder",
+          "description": "Press, investors, partners, and candidates experience a cohesive communications stack.",
+          "stats": [
+            {
+              "label": "Press releases / yr",
+              "value": "40+"
+            },
+            {
+              "label": "Investor sessions",
+              "value": "12"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Visit newsroom",
+              "href": "/communication/news"
+            },
+            {
+              "label": "Access media kit",
+              "href": "/communication/media",
+              "variant": "ghost"
+            }
+          ]
+        },
+        "spotlight": {
+          "eyebrow": "Highlights",
+          "title": "What stakeholders see",
+          "description": "Our comms stack keeps investors informed and communities inspired.",
+          "items": [
+            {
+              "icon": "📰",
+              "title": "Investors on-demand",
+              "description": "Weekly updates with transcripts, deck downloads, and ESG data."
+            },
+            {
+              "icon": "🎥",
+              "title": "Virtual factory tours",
+              "description": "Immersive, captioned tours for regulators and partners."
+            },
+            {
+              "icon": "🔔",
+              "title": "Crisis-ready playbooks",
+              "description": "Comms templates and war rooms for rapid alignment."
+            }
+          ]
+        },
+        "newsroom": {
+          "eyebrow": "Newsroom",
+          "title": "Signal-rich newsroom",
+          "description": "Localized press releases, product updates, and ESG notes.",
+          "items": [
+            {
+              "icon": "📈",
+              "title": "Earnings kit",
+              "description": "Short-form earnings dashboards for analysts."
+            },
+            {
+              "icon": "♻️",
+              "title": "ESG tracker",
+              "description": "KPIs and policy updates updated monthly."
+            },
+            {
+              "icon": "🧾",
+              "title": "Regulatory filings",
+              "description": "Downloadable disclosures ready for auditors."
+            }
+          ]
+        },
+        "cta": {
+          "eyebrow": "Engage",
+          "title": "Need data fast?",
+          "description": "Ping our comms desk or book a press briefing in minutes.",
+          "primary": {
+            "label": "Contact communications",
+            "href": "/communication/contact"
+          },
+          "secondary": {
+            "label": "Download media kit",
+            "href": "/communication/media"
+          }
+        }
+      },
+      "news": {
+        "meta": {
+          "title": "News & Press",
+          "description": "Latest press releases and ESG updates."
+        },
+        "hero": {
+          "eyebrow": "Newsroom",
+          "title": "Transparent updates for investors and media",
+          "description": "Use Cmd/Ctrl+K anytime to search releases, ESG filings, and performance notes.",
+          "stats": [
+            {
+              "label": "FY24 articles",
+              "value": "48"
+            },
+            {
+              "label": "Average response time",
+              "value": "<4h"
+            }
+          ]
+        },
+        "grid": {
+          "eyebrow": "News & Press",
+          "title": "Recent announcements",
+          "description": "Filter by press, ESG, or innovation topics.",
+          "filters": {
+            "press": "Press",
+            "esg": "ESG",
+            "innovation": "Innovation"
+          },
+          "cta": "Read update",
+          "items": {
+            "q3-results": {
+              "title": "Q3 earnings: sustained recovery, visible progress",
+              "summary": "Battery division exits inventory correction with double-digit growth.",
+              "href": "/communication/news/q3-results"
+            },
+            "merger-announcement": {
+              "title": "SKC to merge with SK enpulse",
+              "summary": "Creates a unified semiconductor materials powerhouse.",
+              "href": "/communication/news/merger-announcement"
+            },
+            "limex-launch": {
+              "title": "New LIMEX eco line launches",
+              "summary": "Circular packaging offering reduces plastic intensity by 50%.",
+              "href": "/communication/news/limex-launch"
+            },
+            "ga4-rollout": {
+              "title": "GA4 measurement rolled out across sites",
+              "summary": "Consent-driven analytics now live on SKC digital properties.",
+              "href": "/communication/news/ga4-rollout"
+            }
+          }
+        }
+      },
+      "media": {
+        "meta": {
+          "title": "Media Library",
+          "description": "Brand assets, reports, and videos."
+        },
+        "hero": {
+          "eyebrow": "Media",
+          "title": "Always up-to-date brand assets and reports",
+          "description": "Downloadable kits with vector logos, plant photography, and sustainability reports."
+        },
+        "resources": {
+          "eyebrow": "Resources",
+          "title": "Download center",
+          "description": "Single source for annual reports, ESG briefs, and multimedia assets.",
+          "download": "Download",
+          "items": {
+            "annual-report": {
+              "title": "Annual report 2024",
+              "description": "Audited financial statements and management discussion."
+            },
+            "sustainability-brief": {
+              "title": "Sustainability brief",
+              "description": "Net-zero progress, supplier audits, and KPI tracker."
+            },
+            "brand-assets": {
+              "title": "Brand asset pack",
+              "description": "Logos, color palettes, typography, and system tokens."
+            },
+            "factory-tour": {
+              "title": "Factory tour video",
+              "description": "Behind-the-scenes look at SK Nexilis and Absolics."
+            }
+          }
+        }
+      },
+      "contact": {
+        "meta": {
+          "title": "Contact & Investor Relations",
+          "description": "Reach press, investor, and ethics teams."
+        },
+        "hero": {
+          "eyebrow": "Contact",
+          "title": "Direct access to communications, IR, and ethics teams",
+          "description": "Choose a channel, outline your request, and our specialists will respond within 24 hours.",
+          "stats": [
+            {
+              "label": "Timezone coverage",
+              "value": "24/5"
+            },
+            {
+              "label": "Languages",
+              "value": "EN · KO"
+            }
+          ]
+        },
+        "channels": {
+          "eyebrow": "Channels",
+          "title": "Pick your channel",
+          "description": "Dedicated desks for press, investors, and partners.",
+          "cta": "Contact",
+          "items": {
+            "press": {
+              "title": "Press desk",
+              "description": "press@skc.com"
+            },
+            "investor": {
+              "title": "Investor relations",
+              "description": "ir@skc.com"
+            },
+            "hq": {
+              "title": "Global HQ",
+              "description": "SKC HQ, 310 Pangyo-ro, Korea"
+            },
+            "hotline": {
+              "title": "Ethics hotline",
+              "description": "+82-2-2000-1000"
+            },
+            "contactForm": {
+              "title": "General inquiry form",
+              "description": "Secure portal for partners and suppliers."
+            }
+          }
+        },
+        "form": {
+          "title": "Send us a note",
+          "description": "Share your project, timeline, or question. We typically respond in less than one business day."
+        },
+        "cta": {
+          "eyebrow": "Need instant access?",
+          "title": "View knowledge base",
+          "description": "Download investor decks, ESG decks, and FAQs anytime.",
+          "primary": {
+            "label": "Open resource center",
+            "href": "/communication/media"
+          }
+        }
+      }
+    },
+    "career": {
+      "overview": {
+        "meta": {
+          "title": "Careers",
+          "description": "SKC talent brand and programs."
+        },
+        "hero": {
+          "eyebrow": "Careers",
+          "title": "Build materials for the next generation",
+          "description": "Join engineers, operators, designers, and storytellers powering SKC’s platforms.",
+          "stats": [
+            {
+              "label": "Open roles",
+              "value": "120+"
+            },
+            {
+              "label": "Programs",
+              "value": "14"
+            }
+          ],
+          "actions": [
+            {
+              "label": "Browse openings",
+              "href": "/career/openings"
+            },
+            {
+              "label": "Meet our culture",
+              "href": "/career/culture",
+              "variant": "ghost"
+            }
+          ]
+        },
+        "narrative": {
+          "eyebrow": "People experience",
+          "title": "Work shaped around impact",
+          "description": "We ship faster because our teams have clarity, context, and trust.",
+          "items": [
+            {
+              "icon": "🧭",
+              "title": "Clarity",
+              "description": "Outcome-based goals, transparent dashboards, and async rituals."
+            },
+            {
+              "icon": "🪴",
+              "title": "Growth",
+              "description": "Rotation programs, internal guilds, and sponsored degrees."
+            },
+            {
+              "icon": "🤗",
+              "title": "Belonging",
+              "description": "Communities for women, parents, veterans, and allies worldwide."
+            }
+          ]
+        },
+        "programs": {
+          "eyebrow": "Programs",
+          "title": "Talent platforms",
+          "description": "Purpose-built programs for graduates, experts, and makers.",
+          "items": [
+            {
+              "icon": "🎓",
+              "title": "Graduate fast track",
+              "description": "12-month rotation across labs."
+            },
+            {
+              "icon": "🌏",
+              "title": "Global mobility",
+              "description": "Assignments in Korea, US, and SEA for top talent."
+            },
+            {
+              "icon": "🛠️",
+              "title": "Builder residency",
+              "description": "Hands-on experience shipping new pilot lines."
+            }
+          ]
+        },
+        "cta": {
+          "eyebrow": "Join us",
+          "title": "Apply once, explore many teams",
+          "description": "Our recruiters act as product managers for your career journey.",
+          "primary": {
+            "label": "Submit profile",
+            "href": "/career/openings"
+          },
+          "secondary": {
+            "label": "Talk to recruiting",
+            "href": "/communication/contact"
+          }
+        }
+      },
+      "culture": {
+        "meta": {
+          "title": "Culture & Values",
+          "description": "Values, rituals, and programs at SKC."
+        },
+        "hero": {
+          "eyebrow": "Culture",
+          "title": "Culture engineered for bold builders",
+          "description": "A hybrid-first, trust-rich environment where people can build responsibly.",
+          "stats": [
+            {
+              "label": "Employee resource groups",
+              "value": "9"
+            },
+            {
+              "label": "Internal mobility rate",
+              "value": "27%"
+            }
+          ]
+        },
+        "eyebrow": "Values",
+        "title": "How we show up",
+        "description": "Values that anchor every stand-up, lab build, and board review.",
+        "values": {
+          "boldInnovation": {
+            "title": "Bold innovation",
+            "description": "Challenge conventions and ship experiments with guardrails."
+          },
+          "esgLeadership": {
+            "title": "ESG leadership",
+            "description": "Make every decision climate- and community-positive."
+          },
+          "humanCentered": {
+            "title": "Human-centered",
+            "description": "Design operations and products that uplift people."
+          },
+          "learningMindset": {
+            "title": "Learning mindset",
+            "description": "Default to curiosity, data, and rapid iteration."
+          }
+        },
+        "programs": {
+          "title": "Signature programs",
+          "items": {
+            "graduate": "Graduate Catalyst",
+            "global-rotation": "Global Rotation",
+            "women-leadership": "Women in Leadership",
+            "future-foundry": "Future Foundry Fellowship"
+          }
+        }
+      },
+      "benefits": {
+        "meta": {
+          "title": "Benefits & Wellbeing",
+          "description": "Hybrid work, wellness, and equity."
+        },
+        "hero": {
+          "eyebrow": "Benefits",
+          "title": "Designed for real life",
+          "description": "Hybrid flexibility, wellbeing stipends, and equitable rewards.",
+          "stats": [
+            {
+              "label": "Wellness stipend",
+              "value": "$1,200"
+            },
+            {
+              "label": "Paid time off",
+              "value": "Unlimited+"
+            }
+          ]
+        },
+        "eyebrow": "Benefits",
+        "title": "The SKC benefits stack",
+        "description": "From wellbeing to career development, we back builders.",
+        "items": {
+          "hybridWork": {
+            "title": "Hybrid-first work",
+            "description": "Remote-friendly with purposeful onsite rituals."
+          },
+          "globalMobility": {
+            "title": "Global mobility",
+            "description": "Relocation support and visa services."
+          },
+          "wellness": {
+            "title": "Wellness",
+            "description": "Therapy credits, gym memberships, mindfulness apps."
+          },
+          "familyCare": {
+            "title": "Family care",
+            "description": "Parental leave, childcare support, and caregiver stipends."
+          },
+          "education": {
+            "title": "Learning",
+            "description": "Tuition reimbursement and certification budget."
+          },
+          "equity": {
+            "title": "Equity & bonus",
+            "description": "Ownership programs across main business units."
+          }
+        }
+      },
+      "openings": {
+        "meta": {
+          "title": "Openings",
+          "description": "Current job listings."
+        },
+        "hero": {
+          "eyebrow": "Open roles",
+          "title": "Join our global materialists",
+          "description": "Browse featured roles or submit your profile for future opportunities."
+        },
+        "eyebrow": "Featured roles",
+        "title": "Current openings",
+        "description": "Apply for a featured role or drop a general profile.",
+        "viewAll": "See all roles",
+        "apply": "Apply now",
+        "commitment": {
+          "full-time": "Full-time",
+          "contract": "Contract",
+          "internship": "Internship"
+        },
+        "items": {
+          "battery-research": {
+            "title": "Senior Battery Research Engineer",
+            "applyLink": "mailto:talent@skc.com?subject=Battery%20Research%20Application"
+          },
+          "process-engineer": {
+            "title": "Process Engineer, Copper Foil",
+            "applyLink": "mailto:talent@skc.com?subject=Process%20Engineer"
+          },
+          "esg-data": {
+            "title": "ESG Data Scientist",
+            "applyLink": "mailto:talent@skc.com?subject=ESG%20Data%20Scientist"
+          },
+          "product-designer": {
+            "title": "Product Designer, Digital Experience",
+            "applyLink": "mailto:talent@skc.com?subject=Product%20Designer"
+          }
+        }
+      }
+    }
+  }
+}

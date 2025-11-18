@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skc.vercel.app/sitemap.xml

@@ -1,0 +1,56 @@
+{
+  "articles": [
+    {
+      "id": 1684,
+      "category": "battery",
+      "title": "SKC Announces Q3 Earnings: 'Sustained Recovery, Visible Progress in New Businesses'",
+      "date": "2025-11-05",
+      "excerpt": "SKC reports continued growth in battery materials division...",
+      "content": "<p>SKC Corporation announced strong Q3 earnings driven by battery materials segment...</p>"
+    },
+    {
+      "id": 1678,
+      "category": "semiconductor",
+      "title": "SKC to Merge with SK enpulse, Restructuring Toward High-Value Semiconductor Back-End Business",
+      "date": "2025-10-16",
+      "excerpt": "Strategic merger to strengthen semiconductor materials portfolio...",
+      "content": "<p>SKC announced plans to merge with SK enpulse to create a comprehensive semiconductor materials provider...</p>"
+    },
+    {
+      "id": 1670,
+      "category": "eco-friendly",
+      "title": "SKC Launches New Biodegradable Material Line",
+      "date": "2025-09-20",
+      "excerpt": "Expanding eco-friendly product portfolio with LIMEX technology...",
+      "content": "<p>SKC introduces new range of biodegradable materials for packaging industry...</p>"
+    }
+  ],
+  "pressReleases": [
+    { "id": 101, "title": "SKC Q3 2024 Financial Results", "date": "2025-11-05", "file": "/pr/q3-2024.pdf" },
+    { "id": 102, "title": "New Factory Opening in Vietnam", "date": "2025-10-10", "file": "/pr/vietnam-factory.pdf" }
+  ],
+  "media": [
+    { "type": "image", "title": "SKC Factory Tour", "url": "/media/factory-tour.jpg" },
+    { "type": "video", "title": "Corporate Overview Video", "url": "https://youtube.com/..." }
+  ],
+  "focusStories": [
+    { "id": 201, "title": "Innovation at SKC: Silicon Anode Development", "date": "2025-11-01" }
+  ],
+  "ir": {
+    "financial": {
+      "reports": [
+        { "year": "2024", "quarter": "Q3", "revenue": "1.7T KRW", "file": "/ir/2024-q3.pdf" }
+      ]
+    },
+    "dividend": {
+      "history": [
+        { "year": "2024", "amount": "500 KRW/share", "date": "2024-12-15" }
+      ]
+    },
+    "archive": {
+      "documents": [
+        { "title": "Annual Report 2023", "date": "2024-03-01", "file": "/ir/annual-2023.pdf" }
+      ]
+    }
+  }
+}

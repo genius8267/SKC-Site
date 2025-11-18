@@ -1,0 +1,326 @@
+/**
+ * SKC Responsive Design
+ *
+ * Mobile-first responsive breakpoints.
+ * All values use design system tokens.
+ *
+ * Breakpoints:
+ * - Mobile:  < 768px (default, no media query)
+ * - Tablet:  >= 768px
+ * - Desktop: >= 1024px
+ * - Wide:    >= 1400px
+ */
+
+/* ========================================
+   TABLET (768px and up)
+   ======================================== */
+
+@media (max-width: 1023px) {
+  /* Hero */
+  .hero__title {
+    font-size: var(--font-size-5xl);
+  }
+
+  .hero__categories {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  /* Corporation */
+  .corporation__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .corporation__cta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Creation */
+  .creation__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Communication */
+  .communication__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  /* Page Nav - Hide on tablet */
+  .page-nav {
+    display: none;
+  }
+}
+
+/* ========================================
+   MOBILE (< 768px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  /* Typography Scale Down */
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Header */
+  .header__container {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .header__logo {
+    font-size: var(--font-size-2xl);
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__utilities {
+    gap: var(--space-2);
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero__content {
+    padding: var(--space-4);
+  }
+
+  .hero__title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__categories {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+  }
+
+  .hero__category-icon {
+    width: var(--space-16);
+    height: var(--space-16);
+    font-size: var(--font-size-4xl);
+  }
+
+  .hero__partners {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  /* Section */
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .section__container {
+    padding: 0 var(--space-4);
+  }
+
+  /* Section Heading */
+  .section-heading {
+    margin-bottom: var(--space-8);
+  }
+
+  .section-heading__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .section-heading__subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  /* Corporation */
+  .corporation__stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .corporation__business {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .corporation__cta-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  /* Stat Card */
+  .stat-card {
+    padding: var(--space-5);
+  }
+
+  .stat-card__value {
+    font-size: var(--font-size-4xl);
+  }
+
+  /* Creation */
+  .creation__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Icon Card */
+  .icon-card {
+    padding: var(--space-6);
+  }
+
+  .icon-card__icon {
+    width: var(--space-16);
+    height: var(--space-16);
+    font-size: var(--font-size-5xl);
+  }
+
+  /* Communication */
+  .communication__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--space-12) 0 var(--space-6);
+  }
+
+  .footer__top {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .footer__links {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  /* Page Nav - Hide on mobile */
+  .page-nav {
+    display: none;
+  }
+
+  /* Card */
+  .card {
+    padding: var(--space-5);
+  }
+}
+
+/* ========================================
+   DESKTOP (1024px and up)
+   ======================================== */
+
+@media (min-width: 1024px) {
+  /* Enhanced hover effects for desktop */
+  .header__nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: var(--transition-base);
+    transform: translateX(-50%);
+  }
+
+  .header__nav-link:hover::after {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   WIDE SCREENS (1400px and up)
+   ======================================== */
+
+@media (min-width: 1400px) {
+  /* Larger container */
+  .section__container {
+    max-width: var(--container-2xl);
+  }
+
+  /* Larger type scale */
+  .hero__title {
+    font-size: var(--font-size-6xl);
+  }
+
+  .section-heading__title {
+    font-size: var(--font-size-6xl);
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .header,
+  .page-nav,
+  .scroll-indicator,
+  .btn,
+  .footer__top {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: var(--color-text-black);
+  }
+
+  .section {
+    page-break-inside: avoid;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-indicator {
+    animation: none;
+  }
+}
+
+/* ========================================
+   HIGH CONTRAST
+   ======================================== */
+
+@media (prefers-contrast: high) {
+  :root {
+    --color-text-primary: rgb(0, 0, 0);
+    --color-bg-primary: rgb(255, 255, 255);
+    --border-width-thin: 2px;
+  }
+
+  .btn,
+  .card,
+  .icon-card {
+    border-width: var(--border-width-medium);
+  }
+}

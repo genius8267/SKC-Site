@@ -1,0 +1,6 @@
+seed: 42
+model: baseline
+training:
+  epochs: 10
+  batch_size: 32
+  learning_rate: 3e-4

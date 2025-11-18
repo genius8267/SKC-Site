@@ -1,0 +1,343 @@
+@import "tailwindcss";
+
+/* SKC + Giga Hybrid Design System */
+:root {
+  /* === SKC Brand Colors === */
+  --skc-red: #e00529;
+  --skc-orange: #e67525;
+
+  /* === Backgrounds (darker for glassmorphism) === */
+  --background: #0a0b0f;
+  --background-secondary: #12141a;
+  --background-tertiary: #1a1c24;
+
+  /* === Text Colors === */
+  --foreground: #f9f9f9;
+  --text-secondary: #8f9ba8;
+  --text-tertiary: #666d76;
+  --text-disabled: #464950;
+
+  /* === Accent Colors (blend SKC + Giga) === */
+  --accent-primary: #0099ff;        /* Bright blue for links */
+  --accent-secondary: #66ffe4;      /* Teal for highlights */
+  --accent-skc: var(--skc-red);     /* SKC red for CTAs */
+
+  /* === Glassmorphism Effects === */
+  --glass: rgba(4, 7, 18, 0.65);
+  --glass-light: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-hover: rgba(255, 255, 255, 0.25);
+
+  /* === Gradients === */
+  --gradient-radial-blue: radial-gradient(
+    circle at 20% 20%,
+    rgba(0, 153, 255, 0.15) 0%,
+    transparent 40%
+  );
+  --gradient-radial-red: radial-gradient(
+    circle at 80% 80%,
+    rgba(224, 5, 41, 0.12) 0%,
+    transparent 40%
+  );
+  --gradient-skc: linear-gradient(135deg, var(--skc-red) 0%, var(--skc-orange) 100%);
+
+  /* === SKC Spacing Scale (4px increments) === */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* === SKC Typography Scale === */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+
+  /* === Line Heights === */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* === Shadows === */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.25);
+  --shadow-glass: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 30px 80px rgba(2, 3, 5, 0.75);
+
+  /* === Border Radius === */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.75rem;
+  --radius-2xl: 2rem;
+  --radius-full: 999px;
+
+  /* === Transitions === */
+  --transition-base: 0.2s ease-in-out;
+  --transition-slow: 0.3s ease-in-out;
+  --transition-fast: 0.15s ease-in-out;
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* === Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--foreground);
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+/* Background gradients */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    var(--gradient-radial-blue),
+    var(--gradient-radial-red),
+    linear-gradient(to bottom, var(--background) 0%, rgba(10, 11, 15, 0.95) 100%);
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Grid pattern overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* === Typography === */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--font-size-6xl);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-normal);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* === Utility Classes === */
+.glass-card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-card:hover {
+  border-color: var(--border-hover);
+  transition: border-color var(--transition-base);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.25rem 0.85rem;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--foreground);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+.pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--border-hover);
+}
+
+.section-shell {
+  max-width: min(1200px, 100%);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+.text-gradient-skc {
+  background: var(--gradient-skc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === Accessibility === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(0, 153, 255, 0.25);
+  color: var(--foreground);
+}
+
+/* === Responsive Typography === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* === Dark Mode === */
+.dark {
+  --background: #000000;
+  --background-secondary: #0a0a0a;
+  --background-tertiary: #141414;
+  --foreground: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-tertiary: #707070;
+  --glass: rgba(10, 10, 10, 0.7);
+  --border: rgba(255, 255, 255, 0.15);
+}
+
+.dark body::before {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0, 153, 255, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(224, 5, 41, 0.08) 0%, transparent 40%),
+    linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.98) 100%);
+}
+
+/* === Accessibility Font Sizes === */
+.font-default {
+  font-size: 100%;
+}
+
+.font-large {
+  font-size: 112.5%; /* 18px base */
+}
+
+.font-xlarge {
+  font-size: 125%; /* 20px base */
+}
+
+/* === High Contrast Mode === */
+.contrast-high {
+  --foreground: #ffffff;
+  --text-secondary: #cccccc;
+  --border: rgba(255, 255, 255, 0.3);
+  --glass: rgba(4, 7, 18, 0.85);
+}
+
+.contrast-high .glass-card {
+  border-width: 2px;
+}
+
+/* === Print Styles === */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  body::before,
+  body::after {
+    display: none !important;
+  }
+
+  .header,
+  .site-footer,
+  .back-to-top,
+  .accessibility-menu,
+  .cookie-consent,
+  .social-share {
+    display: none !important;
+  }
+
+  .glass-card {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}

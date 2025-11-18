@@ -1,0 +1,18 @@
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ocean" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f6ad7"/>
+      <stop offset="60%" stop-color="#1a8dbf"/>
+      <stop offset="100%" stop-color="#5ed7c0"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff7e6"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="#041831"/>
+  <circle cx="230" cy="160" r="140" fill="url(#sun)" opacity="0.9"/>
+  <path d="M0 360 C220 300, 420 310, 640 360 C780 392, 900 398, 960 380 V540 H0Z" fill="url(#ocean)" opacity="0.9"/>
+  <path d="M0 410 C240 350, 480 370, 720 420 C820 445, 900 450, 960 430 V540 H0Z" fill="#e25a2f" opacity="0.35"/>
+  <path d="M0 470 C260 430, 520 440, 780 470 C860 485, 920 488, 960 480 V540 H0Z" fill="#fffef9" opacity="0.18"/>
+</svg>

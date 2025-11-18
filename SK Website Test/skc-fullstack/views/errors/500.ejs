@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>500 - Server Error | SKC</title>
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <%- include('../layouts/partials/header') %>
+
+  <main>
+    <section class="section" style="min-height: 60vh; display: flex; align-items: center; justify-content: center;">
+      <div class="section__container" style="text-align: center; max-width: 600px;">
+        <h1 style="font-size: var(--font-size-6xl); color: var(--color-primary); margin-bottom: var(--space-4);">500</h1>
+        <h2 style="font-size: var(--font-size-3xl); margin-bottom: var(--space-6);">Internal Server Error</h2>
+        <p style="font-size: var(--font-size-lg); color: var(--color-text-secondary); margin-bottom: var(--space-12);">
+          Something went wrong on our end. We're working to fix it. Please try again later.
+        </p>
+
+        <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+          <a href="/eng" class="btn btn--primary">Go to Homepage</a>
+          <a href="javascript:history.back()" class="btn btn--secondary">Go Back</a>
+          <a href="/eng/communication/contact" class="btn btn--ghost">Contact Support</a>
+        </div>
+
+        <% if (process.env.NODE_ENV === 'development' && error) { %>
+        <div style="margin-top: var(--space-16); padding: var(--space-8); background: var(--color-background-secondary); border-radius: var(--border-radius-lg); text-align: left;">
+          <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-4); color: var(--color-error);">Development Error Details</h3>
+          <p style="font-family: var(--font-family-mono); font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-4);">
+            <strong>Message:</strong> <%= error.message %>
+          </p>
+          <pre style="background: var(--color-background); padding: var(--space-4); border-radius: var(--border-radius-md); overflow-x: auto; font-size: var(--font-size-xs);"><%= error.stack %></pre>
+        </div>
+        <% } %>
+
+        <div style="margin-top: var(--space-12); padding: var(--space-6); background: var(--color-background-secondary); border-radius: var(--border-radius-md);">
+          <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+            If this problem persists, please contact our technical support team.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('../layouts/partials/footer') %>
+</body>
+</html>

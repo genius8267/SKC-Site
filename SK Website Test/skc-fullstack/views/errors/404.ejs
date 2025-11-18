@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | SKC</title>
+  <link rel="stylesheet" href="/css/design-system.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <%- include('../layouts/partials/header') %>
+
+  <main>
+    <section class="section" style="min-height: 60vh; display: flex; align-items: center; justify-content: center;">
+      <div class="section__container" style="text-align: center; max-width: 600px;">
+        <h1 style="font-size: var(--font-size-6xl); color: var(--color-primary); margin-bottom: var(--space-4);">404</h1>
+        <h2 style="font-size: var(--font-size-3xl); margin-bottom: var(--space-6);">Page Not Found</h2>
+        <p style="font-size: var(--font-size-lg); color: var(--color-text-secondary); margin-bottom: var(--space-12);">
+          The page you're looking for doesn't exist or has been moved.
+        </p>
+
+        <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+          <a href="/eng" class="btn btn--primary">Go to Homepage</a>
+          <a href="/eng/corporation/intro/company" class="btn btn--secondary">About SKC</a>
+          <a href="/eng/communication/newsroom" class="btn btn--ghost">Latest News</a>
+        </div>
+
+        <div style="margin-top: var(--space-16); padding: var(--space-8); background: var(--color-background-secondary); border-radius: var(--border-radius-lg);">
+          <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-4);">Popular Sections</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4); text-align: left;">
+            <div>
+              <strong style="color: var(--color-primary);">Corporation</strong>
+              <ul style="list-style: none; padding: 0; margin-top: var(--space-2);">
+                <li><a href="/eng/corporation/intro/company" style="color: var(--color-text-secondary);">Company Overview</a></li>
+                <li><a href="/eng/corporation/intro/ceo" style="color: var(--color-text-secondary);">CEO Message</a></li>
+                <li><a href="/eng/corporation/sustain/governance" style="color: var(--color-text-secondary);">Governance</a></li>
+              </ul>
+            </div>
+            <div>
+              <strong style="color: var(--color-primary);">Creation</strong>
+              <ul style="list-style: none; padding: 0; margin-top: var(--space-2);">
+                <li><a href="/eng/creation/battery" style="color: var(--color-text-secondary);">Battery Materials</a></li>
+                <li><a href="/eng/creation/semiconductor" style="color: var(--color-text-secondary);">Semiconductor</a></li>
+                <li><a href="/eng/creation/eco-friendly" style="color: var(--color-text-secondary);">Eco-friendly</a></li>
+              </ul>
+            </div>
+            <div>
+              <strong style="color: var(--color-primary);">Communication</strong>
+              <ul style="list-style: none; padding: 0; margin-top: var(--space-2);">
+                <li><a href="/eng/communication/newsroom" style="color: var(--color-text-secondary);">Newsroom</a></li>
+                <li><a href="/eng/communication/pr/news" style="color: var(--color-text-secondary);">Press Releases</a></li>
+                <li><a href="/eng/communication/ir/investor" style="color: var(--color-text-secondary);">Investor Relations</a></li>
+              </ul>
+            </div>
+            <div>
+              <strong style="color: var(--color-primary);">Career</strong>
+              <ul style="list-style: none; padding: 0; margin-top: var(--space-2);">
+                <li><a href="/eng/career/jobs" style="color: var(--color-text-secondary);">Job Openings</a></li>
+                <li><a href="/eng/career/recruitment" style="color: var(--color-text-secondary);">Recruitment</a></li>
+                <li><a href="/eng/career/family" style="color: var(--color-text-secondary);">SKC Family</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('../layouts/partials/footer') %>
+</body>
+</html>

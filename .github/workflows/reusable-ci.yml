@@ -1,0 +1,89 @@
+name: Reusable CI
+on:
+  workflow_call:
+    inputs:
+      language:
+        description: Primary language/runtime (node|python|go|rust)
+        required: false
+        type: string
+    secrets:
+      GH_TOKEN:
+        required: false
+jobs:
+  build_test_scan:
+    # Repos can fan out by using this workflow in a matrix, e.g.
+    # strategy: { matrix: { language: ["python", "node"] } }
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Node runtime
+        if: inputs.language == 'node'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Set up Python
+        if: inputs.language == 'python'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Set up Go
+        if: inputs.language == 'go'
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+      - name: Set up Rust
+        if: inputs.language == 'rust'
+        uses: dtolnay/rust-toolchain@stable
+      - name: Resolve dependencies
+        run: |
+          if [ -f Makefile ]; then
+            make deps || true
+          elif [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          elif [ -f package.json ]; then
+            npm install
+          elif [ "${{ inputs.language }}" = "go" ]; then
+            go mod tidy
+          elif [ "${{ inputs.language }}" = "rust" ]; then
+            cargo fetch
+          fi
+      - name: Run CI target
+        run: |
+          if [ -f Makefile ]; then
+            make ci
+          elif [ -f package.json ]; then
+            npm test
+          elif [ -f requirements.txt ]; then
+            pytest
+          elif [ "${{ inputs.language }}" = "go" ]; then
+            go test ./...
+          elif [ "${{ inputs.language }}" = "rust" ]; then
+            cargo test
+          else
+            echo "No default CI command defined" && exit 1
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: 'cpp,java,python,javascript,go,ruby'
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+      - name: OpenSSF Scorecard
+        uses: ossf/scorecard-action@v2
+        with:
+          results_file: results.sarif
+          publish_results: true
+      - name: Upload Scorecard results
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: results.sarif
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: '.'

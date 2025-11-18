@@ -1,0 +1,343 @@
+# ace-patterns.yml — Advanced Context Engineering Patterns
+# Inspired by HumanLayer's ACE methodology for optimal AI-assisted coding
+
+ACE_Core_Principles:
+  Context_Is_Primary_Lever:
+    Philosophy: "The contents of your context window are the ONLY lever you have to affect the quality of your output"
+    Target_Utilization: "40-60% for optimal performance"
+    Warning_Threshold: ">70% triggers automatic compaction suggestion"
+    Critical_Threshold: ">85% requires immediate compaction"
+
+  Frequent_Intentional_Compaction:
+    Description: "Deliberately structure and compact context at key stages"
+    Triggers:
+      - "After research phase completion"
+      - "After plan approval"
+      - "After each major implementation milestone"
+      - "When context utilization exceeds 60%"
+      - "Before switching between unrelated tasks"
+    Methods:
+      - "Summarize research findings into structured markdown"
+      - "Replace verbose exploration with key insights only"
+      - "Archive completed implementation details"
+      - "Extract patterns and discard examples"
+
+  High_Leverage_Human_Review:
+    Description: "Focus human attention on research and planning stages"
+    Critical_Points:
+      Research: "Human validates research direction and findings"
+      Planning: "Human approves implementation strategy (most critical)"
+      Implementation: "Human spot-checks, not line-by-line review"
+      Verification: "Human validates success criteria met"
+    Rationale: "A bad line of a plan could lead to hundreds of bad lines of code"
+
+ACE_Workflow_Pattern:
+  Three_Phase_Structure:
+    Research:
+      Objective: "Understand codebase, files, information flow"
+      Output: ".claudedocs/tasks/{task-id}/research.md"
+      Context_Impact: "HIGH - builds foundation"
+      Compaction_Strategy: "Summarize into key findings before planning"
+
+    Planning:
+      Objective: "Outline precise implementation steps"
+      Output: ".claudedocs/tasks/{task-id}/plan.md"
+      Context_Impact: "CRITICAL - most important phase"
+      Compaction_Strategy: "Keep plan detailed, discard verbose research"
+
+    Implementation:
+      Objective: "Execute plan systematically"
+      Output: "Code changes + progress.md"
+      Context_Impact: "MEDIUM - follows established plan"
+      Compaction_Strategy: "Keep plan + current step, archive completed steps"
+
+Context_Compaction_Strategies:
+  Structured_Summarization:
+    Technique: "Replace verbose content with structured summaries"
+    Example: |
+      BEFORE: [1000 lines of exploration logs]
+      AFTER:
+      ## Key Findings
+      - Auth system uses JWT in packages/auth/src/jwt.ts:45
+      - Database schema in packages/database/prisma/schema.prisma
+      - Test pattern: src/**/*.test.ts using Vitest
+
+  Pattern_Extraction:
+    Technique: "Extract patterns and discard specific examples"
+    Example: |
+      BEFORE: [5 similar function implementations]
+      AFTER:
+      ## Pattern Identified
+      All handlers follow: validate input → business logic → return response
+      Template: src/templates/handler-template.ts
+
+  Progressive_Archival:
+    Technique: "Move completed work to archive files"
+    Example: |
+      .claudedocs/tasks/{task-id}/
+      ├── research.md (active during research)
+      ├── plan.md (active during planning & implementation)
+      ├── progress.md (active during implementation)
+      └── archive/
+          ├── research-raw.md (verbose original)
+          └── exploration-logs.md (detailed logs)
+
+Subagent_Delegation_Patterns:
+  Research_Subagent:
+    Purpose: "Deep research without code implementation"
+    Context_Scope: "Read-only access to codebase"
+    Output: "Structured findings in research.md"
+    Compaction: "Parent agent summarizes before next phase"
+
+  Planning_Subagent:
+    Purpose: "Architecture and design without implementation"
+    Context_Scope: "Research summary + codebase structure"
+    Output: "Detailed implementation plan"
+    Compaction: "Keep plan, discard intermediate reasoning"
+
+  Implementation_Subagent:
+    Purpose: "Code execution following approved plan"
+    Context_Scope: "Plan + current step + relevant files"
+    Output: "Code changes + progress updates"
+    Compaction: "Keep plan + progress, archive completed steps"
+
+Discard_And_Restart_Pattern:
+  When_To_Discard:
+    - "Initial approach is fundamentally wrong"
+    - "Research revealed better alternative"
+    - "Plan complexity spiraling out of control"
+    - "Context pollution from failed attempts"
+
+  How_To_Discard:
+    Steps:
+      1. "Save 'Lessons Learned' (what didn't work and why)"
+      2. "Extract any useful patterns/insights"
+      3. "Archive failed attempt: .claudedocs/tasks/{task-id}/discarded/{timestamp}/"
+      4. "Start fresh with clean context"
+      5. "Apply lessons learned immediately"
+
+  Lessons_Learned_Template: |
+    ## Discarded Approach: {approach-name}
+
+    **Why it failed:**
+    - [specific reason 1]
+    - [specific reason 2]
+
+    **What we learned:**
+    - [insight 1]
+    - [insight 2]
+
+    **New approach:**
+    - [better strategy]
+
+Context_Window_Management:
+  Monitoring:
+    Metrics:
+      - "Estimated token count"
+      - "Percentage utilization"
+      - "Rate of growth per phase"
+      - "Time since last compaction"
+
+  Optimization_Techniques:
+    Smart_File_Reading:
+      - "Read only relevant sections (offset + limit)"
+      - "Summarize large files before full read"
+      - "Use Grep to identify target lines first"
+
+    Selective_History:
+      - "Keep only last N messages of conversation"
+      - "Archive older context to markdown files"
+      - "Reference archived content by ID, not content"
+
+    Incremental_Loading:
+      - "Load context on-demand, not upfront"
+      - "Lazy-load dependencies"
+      - "Fetch documentation only when needed"
+
+ACE_Quality_Gates:
+  Research_Phase_Complete:
+    Checklist:
+      - "[ ] Key findings documented in research.md"
+      - "[ ] Confidence scores >80% for critical findings"
+      - "[ ] Integration points identified"
+      - "[ ] No major unknowns blocking planning"
+    Context_Check: "Can you explain the system in <5 bullet points?"
+
+  Planning_Phase_Complete:
+    Checklist:
+      - "[ ] Implementation steps are specific and sequential"
+      - "[ ] Each step has clear inputs/outputs"
+      - "[ ] Risks identified with mitigations"
+      - "[ ] Success criteria defined"
+    Context_Check: "Can you execute the plan without re-reading research?"
+
+  Implementation_Phase_Complete:
+    Checklist:
+      - "[ ] All plan steps executed"
+      - "[ ] Tests passing"
+      - "[ ] Code follows project patterns"
+      - "[ ] No hardcoded secrets"
+    Context_Check: "Can you summarize changes in <3 sentences?"
+
+ACE_Best_Practices:
+  Mental_Alignment:
+    - "Maintain shared understanding with human throughout process"
+    - "Regular check-ins at phase transitions"
+    - "Explicit communication of assumptions and uncertainties"
+
+  Iterative_Refinement:
+    - "Research findings refined during planning"
+    - "Plan adjusted based on implementation realities"
+    - "Continuous improvement based on verification results"
+
+  Context_Trajectory:
+    - "Plan context growth over entire workflow"
+    - "Schedule compaction points in advance"
+    - "Maintain clear narrative thread through phases"
+
+  Documentation_Discipline:
+    - "All findings go to markdown, not memory"
+    - "Reference files by path:line, not content"
+    - "Keep running glossary of key concepts"
+
+ACE_Anti_Patterns:
+  Magic_Prompt_Fallacy:
+    Problem: "Relying on a single perfect prompt to solve complex problems"
+    Solution: "Use structured multi-phase workflow with compaction"
+
+  Context_Flooding:
+    Problem: "Dumping all information into context at once"
+    Solution: "Progressive loading with just-in-time retrieval"
+
+  No_Compaction:
+    Problem: "Letting context grow unbounded across phases"
+    Solution: "Deliberate summarization at phase boundaries"
+
+  Premature_Implementation:
+    Problem: "Writing code before completing research and planning"
+    Solution: "Enforce approval gates between phases"
+
+  Plan_Quality_Neglect:
+    Problem: "Rushing through planning to get to implementation"
+    Solution: "Remember: bad plan line → hundreds of bad code lines"
+
+Markdown_Artifact_Templates:
+  Research_Template: |
+    # Research: {task-name}
+
+    **Task**: {one-line description}
+    **Started**: {timestamp}
+
+    ## Context
+    - What we're trying to accomplish
+    - Why this task is needed
+
+    ## Exploration
+
+    ### Files Analyzed
+    - path/to/file.ts - [purpose/findings]
+
+    ### Key Findings
+    1. **Finding 1** [Confidence: 95%]
+       - Evidence: file.ts:123
+       - Implications: ...
+
+    ### Integration Points
+    - Database: ...
+    - APIs: ...
+    - Auth: ...
+
+    ### Unknowns / Questions
+    - [ ] Question 1
+    - [ ] Question 2
+
+    ## Summary
+    [3-5 bullet point summary suitable for planning phase]
+
+  Plan_Template: |
+    # Plan: {task-name}
+
+    **Based on**: research.md
+    **Approved**: {timestamp or "PENDING"}
+
+    ## Implementation Steps
+    1. **Step 1**: {description}
+       - Modify: path/to/file.ts:100-150
+       - Add: validation logic
+       - Test: test case X
+
+    ## Files Changed
+    **Create:**
+    - path/to/new/file.ts - purpose
+
+    **Modify:**
+    - path/to/existing.ts - changes
+
+    ## Dependencies
+    - package@version - reason
+
+    ## Risk Assessment
+    **Technical Risks:**
+    - Risk 1
+      - Mitigation: strategy
+      - Likelihood: LOW/MEDIUM/HIGH
+
+    **Rollback Plan:**
+    1. Git revert
+    2. Restore from checkpoint
+
+    ## Success Criteria
+    - [ ] Criterion 1
+    - [ ] Criterion 2
+
+    ## Estimated Effort
+    - Optimistic: X hours
+    - Realistic: Y hours
+    - Pessimistic: Z hours
+    - Confidence: N%
+
+  Progress_Template: |
+    # Progress: {task-name}
+
+    **Plan**: plan.md
+    **Started**: {timestamp}
+
+    ## Completed Steps
+    - [x] Step 1 - {timestamp} - Notes: ...
+    - [x] Step 2 - {timestamp} - Notes: ...
+
+    ## Current Step
+    - [ ] Step 3 - In progress
+      - Started: {timestamp}
+      - Blockers: none
+      - Next: ...
+
+    ## Pending Steps
+    - [ ] Step 4
+    - [ ] Step 5
+
+    ## Deviations from Plan
+    1. Changed approach for Step 2 because ...
+    2. Added extra step for edge case ...
+
+    ## Context Compaction Log
+    - {timestamp}: Archived research-raw.md (saved 5K tokens)
+    - {timestamp}: Summarized steps 1-3 (saved 3K tokens)
+
+Integration_Hooks:
+  Start_Task_Integration:
+    Trigger: "/start-task --ace {description}"
+    Behavior: "Enable ACE mode with all patterns active"
+
+  Workflow_Integration:
+    Trigger: "/workflow ace-full '{task}'"
+    Chain: "ace:research → ace:plan → @confirm → start-task --ace-implement"
+
+  Automatic_Compaction:
+    Trigger: "Context utilization >60%"
+    Action: "Suggest: 'I notice context is at {X}%. Run /ace:compact to optimize?'"
+
+  Phase_Transitions:
+    Research_To_Planning: "Compact research into summary.md, keep only key findings"
+    Planning_To_Implementation: "Keep plan.md, archive research.md"
+    Implementation_To_Verification: "Keep progress.md + final code, archive intermediate steps"

@@ -1,0 +1,53 @@
+name: Reusable Release
+on:
+  workflow_call:
+    inputs:
+      release-type:
+        description: Release flavor (service|library|sdk)
+        required: true
+        type: string
+    secrets:
+      GH_TOKEN:
+        required: true
+      PACKAGE_REGISTRY_TOKEN:
+        description: Optional token for publishing (npm/pypi/etc)
+        required: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate secrets
+        run: |
+          if [ -z "${{ secrets.GH_TOKEN }}" ]; then
+            echo "GH_TOKEN is required for release workflows" >&2
+            exit 1
+          fi
+      - name: Set up semantic release
+        run: |
+          npm install -g semantic-release@23
+      - name: Run release pipeline
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          PACKAGE_REGISTRY_TOKEN: ${{ secrets.PACKAGE_REGISTRY_TOKEN }}
+        run: |
+          semantic-release --branches main
+      - name: Generate SBOM
+        run: |
+          if command -v syft >/dev/null 2>&1; then
+            syft packages dir:. -o json > sbom.json
+          else
+            curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b $HOME/.local/bin
+            $HOME/.local/bin/syft packages dir:. -o json > sbom.json
+          fi
+      - name: Attest release artifacts
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: 'dist/**'

@@ -1,0 +1,49 @@
+name: Bug Report
+description: Report a problem to help us improve.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Brief description of the bug.
+      placeholder: Fail to run reusable CI on PR
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Provide clear steps to trigger the issue.
+      placeholder: |
+        1. Go to ...
+        2. Run ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include versions, OS, runner image, etc.
+      placeholder: GitHub Actions ubuntu-latest, Node 20
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context

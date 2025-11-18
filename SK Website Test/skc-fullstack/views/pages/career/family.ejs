@@ -1,0 +1,23 @@
+<section class="section">
+  <div class="section__container">
+    <div class="section-heading">
+      <h1 class="section-heading__title"><%= data.title %></h1>
+      <p class="section-heading__subtitle"><%= data.description %></p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-6); margin-top: var(--space-12);">
+      <% data.values.forEach(value => { %>
+        <div class="card" style="text-align: center; padding: var(--space-10);">
+          <h2 style="color: var(--color-primary); margin-bottom: var(--space-4);"><%= value %></h2>
+          <p class="card__description">Core to our company culture</p>
+        </div>
+      <% }); %>
+    </div>
+
+    <div style="margin-top: var(--space-16); text-align: center;">
+      <h2 style="margin-bottom: var(--space-6);">Ready to Join SKC?</h2>
+      <a href="/eng/career/jobs" class="btn btn--primary">View Open Positions →</a>
+      <a href="/eng/career/recruitment" class="btn btn--secondary">Learn About Our Process →</a>
+    </div>
+  </div>
+</section>

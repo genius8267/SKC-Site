@@ -1,0 +1,390 @@
+# Command Aliases System
+# Shortcuts for common workflow patterns
+
+## Legend
+@include universal-constants.yml#Universal_Legend
+
+## Alias System Overview
+
+```yaml
+Alias_Structure:
+  Syntax: "/alias-name → expands to full command chain"
+  Benefits:
+    - "Faster typing for common workflows"
+    - "Consistent best practices"
+    - "Easier for beginners"
+    - "Shareable across team"
+
+  Usage:
+    Short_Form: "/alias-name [args]"
+    Expansion: "Full command chain with flags"
+    Context: "Args passed to appropriate commands"
+```
+
+## Development Aliases
+
+```yaml
+Development_Workflow_Aliases:
+  /quick-fix:
+    Expands_To: "/troubleshoot --fix --quick"
+    Description: "Fast bug fix for simple issues"
+    Use_Case: "Quick typo fixes, simple bugs"
+    Example: "/quick-fix src/auth.ts"
+
+  /safe-deploy:
+    Expands_To: "/workflow 'test → scan --validate → deploy'"
+    Description: "Deploy with full validation"
+    Use_Case: "Production deployments"
+    Example: "/safe-deploy --env prod"
+
+  /deep-review:
+    Expands_To: "/analyze --code --security --perf --evidence"
+    Description: "Comprehensive code review"
+    Use_Case: "Pre-merge review, security audits"
+    Example: "/deep-review src/"
+
+  /feature:
+    Expands_To: "/workflow feature-dev"
+    Description: "Complete feature implementation"
+    Use_Case: "New feature development"
+    Example: "/feature --magic --persona-frontend"
+
+  /fix-bug:
+    Expands_To: "/workflow bug-fix"
+    Description: "Systematic bug resolution"
+    Use_Case: "Bug investigation and fixing"
+    Example: "/fix-bug --seq"
+
+  /ship-it:
+    Expands_To: "/workflow deploy-safe"
+    Description: "Safe production deployment"
+    Use_Case: "Shipping to production"
+    Example: "/ship-it --env prod"
+
+  /quality-check:
+    Expands_To: "/workflow quality-gate"
+    Description: "Enforce quality standards"
+    Use_Case: "Pre-merge quality validation"
+    Example: "/quality-check --strict"
+
+  /research:
+    Expands_To: "/workflow research-implement"
+    Description: "Research-driven development"
+    Use_Case: "Implementing new technologies"
+    Example: "/research 'GraphQL subscriptions'"
+
+  /refactor:
+    Expands_To: "/workflow refactor-safe"
+    Description: "Safe code refactoring"
+    Use_Case: "Improving code structure"
+    Example: "/refactor src/legacy/"
+```
+
+## Quick Analysis Aliases
+
+```yaml
+Analysis_Aliases:
+  /check:
+    Expands_To: "/analyze --code --quick"
+    Description: "Quick code quality check"
+    Example: "/check src/"
+
+  /security-audit:
+    Expands_To: "/analyze --security --deps --strict"
+    Description: "Full security audit"
+    Example: "/security-audit"
+
+  /perf-check:
+    Expands_To: "/analyze --perf --profile --seq"
+    Description: "Performance analysis"
+    Example: "/perf-check src/api/"
+
+  /arch-review:
+    Expands_To: "/analyze --arch --think-hard --persona-architect"
+    Description: "Architecture review"
+    Example: "/arch-review"
+
+  /debug:
+    Expands_To: "/troubleshoot --seq --ultrathink"
+    Description: "Deep debugging session"
+    Example: "/debug 'memory leak in dashboard'"
+
+  /explain-this:
+    Expands_To: "/explain --c7 --seq --depth expert"
+    Description: "Deep explanation with research"
+    Example: "/explain-this 'React Suspense'"
+
+  /find-bugs:
+    Expands_To: "/analyze --code --strict"
+    Description: "Find potential bugs"
+    Example: "/find-bugs src/"
+```
+
+## Build & Test Aliases
+
+```yaml
+Build_Test_Aliases:
+  /quick-build:
+    Expands_To: "/build --feature"
+    Description: "Fast feature build"
+    Example: "/quick-build --magic"
+
+  /full-build:
+    Expands_To: "/build --init --tdd"
+    Description: "Complete project build"
+    Example: "/full-build --react"
+
+  /test-all:
+    Expands_To: "/test --coverage --e2e"
+    Description: "Run all tests with coverage"
+    Example: "/test-all"
+
+  /test-watch:
+    Expands_To: "/test --watch --tdd"
+    Description: "Continuous testing"
+    Example: "/test-watch src/"
+
+  /ui-gen:
+    Expands_To: "/build --magic --react --persona-frontend"
+    Description: "Generate UI component"
+    Example: "/ui-gen 'responsive navbar'"
+
+  /api-build:
+    Expands_To: "/build --api --c7 --persona-backend"
+    Description: "Build API endpoint"
+    Example: "/api-build 'user authentication'"
+```
+
+## Git & Deploy Aliases
+
+```yaml
+Git_Deploy_Aliases:
+  /commit:
+    Expands_To: "/git --commit"
+    Description: "Smart git commit"
+    Example: "/commit 'Add user profile feature'"
+
+  /pr:
+    Expands_To: "/git --pr --reviewers auto"
+    Description: "Create pull request"
+    Example: "/pr --labels feature,frontend"
+
+  /deploy-staging:
+    Expands_To: "/deploy --env staging --validate"
+    Description: "Deploy to staging"
+    Example: "/deploy-staging"
+
+  /deploy-prod:
+    Expands_To: "/workflow deploy-safe --env prod"
+    Description: "Safe production deploy"
+    Example: "/deploy-prod"
+
+  /rollback:
+    Expands_To: "/deploy --rollback --env prod"
+    Description: "Rollback deployment"
+    Example: "/rollback <checkpoint-id>"
+
+  /hotfix:
+    Expands_To: "/workflow bug-fix --quick → /deploy --env prod"
+    Description: "Emergency production fix"
+    Example: "/hotfix 'login broken'"
+```
+
+## Maintenance Aliases
+
+```yaml
+Maintenance_Aliases:
+  /clean:
+    Expands_To: "/cleanup --all --dry-run"
+    Description: "Preview cleanup actions"
+    Example: "/clean"
+
+  /clean-now:
+    Expands_To: "/cleanup --all"
+    Description: "Execute full cleanup"
+    Example: "/clean-now"
+
+  /update-deps:
+    Expands_To: "/analyze --security --deps → /cleanup --deps"
+    Description: "Update dependencies"
+    Example: "/update-deps"
+
+  /security-fix:
+    Expands_To: "/analyze --security --fix"
+    Description: "Auto-fix security issues"
+    Example: "/security-fix"
+
+  /optimize:
+    Expands_To: "/improve --perf --iterate --threshold 95%"
+    Description: "Performance optimization"
+    Example: "/optimize src/"
+
+  /improve-quality:
+    Expands_To: "/improve --quality --iterate"
+    Description: "Code quality improvements"
+    Example: "/improve-quality src/"
+```
+
+## Team Collaboration Aliases
+
+```yaml
+Team_Aliases:
+  /onboard:
+    Expands_To: "/load --scope full → /document --type dev → /explain --depth beginner"
+    Description: "Onboard new team member"
+    Example: "/onboard"
+
+  /handoff:
+    Expands_To: "/task:create → /document --type dev → /git --checkpoint"
+    Description: "Prepare work handoff"
+    Example: "/handoff 'Authentication refactor'"
+
+  /review-pr:
+    Expands_To: "/analyze --code --pr --evidence"
+    Description: "Review pull request"
+    Example: "/review-pr 123"
+
+  /pair-code:
+    Expands_To: "/build --interactive --introspect"
+    Description: "Pair programming mode"
+    Example: "/pair-code 'payment API'"
+
+  /doc-update:
+    Expands_To: "/document --type api → /document --type user"
+    Description: "Update all documentation"
+    Example: "/doc-update"
+```
+
+## Learning & Research Aliases
+
+```yaml
+Learning_Aliases:
+  /learn:
+    Expands_To: "/explain --c7 --depth beginner"
+    Description: "Learn new concept"
+    Example: "/learn 'React hooks'"
+
+  /deep-dive:
+    Expands_To: "/explain --c7 --seq --depth expert --introspect"
+    Description: "Deep learning session"
+    Example: "/deep-dive 'distributed systems'"
+
+  /compare:
+    Expands_To: "/explain --c7 --seq 'X vs Y'"
+    Description: "Compare technologies"
+    Example: "/compare 'REST vs GraphQL'"
+
+  /best-practice:
+    Expands_To: "/explain --c7 --evidence 'X best practices'"
+    Description: "Learn best practices"
+    Example: "/best-practice 'React testing'"
+
+  /tutorial:
+    Expands_To: "/explain --depth beginner --visual → /build --magic"
+    Description: "Tutorial with implementation"
+    Example: "/tutorial 'authentication flow'"
+```
+
+## Custom Alias Creation
+
+```yaml
+User_Defined_Aliases:
+  Location: "~/.claude/aliases.yml"
+  Format:
+    alias_name:
+      expands_to: "command chain"
+      description: "What it does"
+      tags: ["category", "tags"]
+
+  Example_Custom:
+    /my-workflow:
+      expands_to: "/analyze → /improve --quality → /test --coverage"
+      description: "My custom quality workflow"
+      tags: ["quality", "custom"]
+
+    /team-review:
+      expands_to: "/analyze --code --security --perf --evidence"
+      description: "Our team's review standards"
+      tags: ["review", "team"]
+
+  Precedence:
+    1: "User aliases override built-in aliases"
+    2: "Project aliases override user aliases"
+    3: "Built-in aliases are default"
+
+  Loading:
+    Global: "~/.claude/aliases.yml"
+    Project: ".claude/aliases.yml in project root"
+    Session: "Define aliases for current session"
+```
+
+## Alias Discovery
+
+```yaml
+Discovery_Features:
+  List_All:
+    Command: "/help aliases"
+    Output: "All available aliases with descriptions"
+
+  Search:
+    Command: "/help aliases <keyword>"
+    Example: "/help aliases deploy"
+    Output: "Aliases matching keyword"
+
+  By_Category:
+    Command: "/help aliases --category <cat>"
+    Example: "/help aliases --category testing"
+    Output: "All aliases in category"
+
+  Show_Expansion:
+    Command: "/alias-show <name>"
+    Example: "/alias-show quick-fix"
+    Output: "Full expansion and description"
+
+  Suggest:
+    Behavior: "Auto-suggest aliases based on command patterns"
+    Example: "You typed '/troubleshoot --fix --quick' 5 times → Suggest '/quick-fix'"
+```
+
+## Alias Composition
+
+```yaml
+Combining_Aliases:
+  Chain_Aliases:
+    Syntax: "/alias1 → /alias2"
+    Example: "/check → /quick-fix"
+    Expands_To: "Full expansion of both aliases"
+
+  Conditional_Aliases:
+    Syntax: "/alias1 && /alias2 || /alias3"
+    Example: "/test-all && /deploy-prod || /rollback"
+
+  Parameterized_Aliases:
+    Variables: "$1, $2, $3 for positional arguments"
+    Example:
+      /deploy-to:
+        expands_to: "/deploy --env $1 --validate"
+        usage: "/deploy-to prod"
+```
+
+## Performance & Caching
+
+```yaml
+Alias_Performance:
+  Expansion_Caching:
+    Cache: "Expanded commands cached per session"
+    Benefit: "Instant expansion on repeated use"
+
+  Validation:
+    Pre_Execute: "Validate alias expansion before execution"
+    Catch: "Invalid command chains"
+    Warn: "Deprecated aliases or commands"
+
+  Analytics:
+    Track: "Most used aliases"
+    Suggest: "Create custom aliases for frequent patterns"
+    Optimize: "Suggest workflow improvements"
+```
+
+---
+*Command Aliases v1 - Shortcuts for common workflow patterns*

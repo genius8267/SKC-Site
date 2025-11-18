@@ -1,0 +1,3 @@
+*              @team-platform
+/docs/**       @team-docs
+/infra/**      @team-infra
